@@ -61,6 +61,12 @@ const CakeStats = () => {
             Stats
           </Title>
           <Row>
+            <Sub>Labo Price</Sub>
+            <Sub className="lightColor">
+              <CardValue value={eggPrice.toNumber()} prefix="$" />
+            </Sub>
+          </Row>
+          <Row>
             <Sub>Total Supply</Sub>
             <Sub className="lightColor">
               {cakeSupply && <CardValue value={cakeSupply} decimals={0} />}

@@ -62,7 +62,6 @@ const NextDrawPage: React.FC = () => {
         </SecondCardColumnWrapper>
       </Cards>
       {/* legacy page content */}
-      <WinningNumbers />
     </>
   )
 }

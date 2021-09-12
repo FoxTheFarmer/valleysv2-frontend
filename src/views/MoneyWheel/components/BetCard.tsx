@@ -49,7 +49,7 @@ const BetCard: React.FC<BetCardProps> = ({max, tokenName = '', onResult}) => {
 
     return (
         <div>
-            <Heading as="h1" size="lg" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
+            <Heading as="h1" size="lg" color="#00AEE9" mb="50px" style={{ textAlign: 'center' }}>
                 {fullBalance.toLocaleString()} {tokenName} {TranslateString(526, 'Available')}
             </Heading>
             <Flex>

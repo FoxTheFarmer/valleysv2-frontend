@@ -173,6 +173,7 @@ const Column = styled.div`
 const CenteredText = styled.div`
   text-align: center;
   align-items: center;
+  color: white;
 `
 
 const CenteredTextWithPadding = styled.div`
@@ -180,6 +181,7 @@ const CenteredTextWithPadding = styled.div`
   align-items: center;
   padding-left: 2px;
   padding-right: 2px;
+  color: white;
 `
 
 const TicketNumberBox = styled.div`

@@ -72,7 +72,7 @@ const NftProgress = () => {
             {!isInitialized ? (
               '...'
             ) : (
-              <Link href={`https://bscscan.com/block/${endBlockNumber}`} target="_blank" rel="noreferrer noopener">
+              <Link href={`https://explorer.harmony.one/block/${endBlockNumber}`} target="_blank" rel="noreferrer noopener">
                 {`Block ${endBlockNumber}`}
                 <OpenNewIcon color="primary" ml="2px" />
               </Link>

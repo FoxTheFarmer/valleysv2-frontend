@@ -263,7 +263,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'WONE-BUSD LP',
     lpAddresses: {
       97: '',
-      1666600000: '0x8c36ede15c5e4b0e1f9764351a7a7a0037c5e103',
+      1666600000: '0x8c36Ede15c5E4B0E1f9764351a7A7A0037c5e103',
     },
     tokenSymbol: 'WONE',
     tokenAddresses: {
@@ -272,7 +272,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-    version: 1
   },
   /* {
     pid:labo.pids.pidList[3],
