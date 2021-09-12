@@ -206,7 +206,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-    version: 1
   },
   {
     pid:labo.pids.pidList[1],
@@ -223,7 +222,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.WONE,
     quoteTokenAdresses: contracts.wbnb,
-    version: 1
   },
   /* {
     pid:labo.pids.pidList[23],
