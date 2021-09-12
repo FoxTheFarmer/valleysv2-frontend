@@ -42,7 +42,7 @@ const Actions = styled.div`
 `
 
 const Label = styled.label`
-  color: #23439c;
+  color: #00AEE9;
   display: block;
   margin-bottom: 8px;
   margin-top: 21px;

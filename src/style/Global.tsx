@@ -15,19 +15,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    background: rgb(193,176,255);
-    background: linear-gradient(45deg, rgba(193,209,255,1) 0%, rgba(255,255,255,1) 68%);
+    background-image: url('/images/egg/bg.svg');
+    background-repeat: no-repeat;
 
   }
 
   div {
-    color: #23439c !important;
+    color: #00AEE9 !important;
     font-size: 1em !important
   }
 
 
   h2 {
-    color: #23439c !important;
+    color: #00AEE9 !important;
   }
 
   button {
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    color: #23439c;
+    color: #00AEE9;
   }
 
   a:hover{
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   svg{
-    fill: #23439c;
+    fill: #00AEE9;
   }
 
 
@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
  }
 
   ::-webkit-scrollbar-thumb {
-    background: #23439c;
+    background: #00AEE9;
     border-radius: 8px;
 }
 
