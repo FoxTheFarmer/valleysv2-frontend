@@ -19,9 +19,10 @@ const Wrapper = styled(Flex)`
 `
 
 const MultiplierTag = styled(Tag)`
-  margin-left: 4px;
+  margin-left: 3px;
   background-color: rgba(0,0,0,0);
   border-color: #6E4EED
+  size: 1px;
 `
 
 const CardHeading: React.FC<ExpandableSectionProps> = ({
@@ -33,11 +34,11 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   depositFee,
 }) => {
   return (
-    <Wrapper justifyContent="space-between" alignItems="center" mb="12px">
+    <Wrapper justifyContent="space-between" alignItems="center" mb="20px">
       {/* <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} /> */}
       <object type="image/svg+xml" data={`/images/farms/${farmImage}.svg`} width="81px">&nbsp;</object>
       <Flex flexDirection="column" alignItems="flex-end">
-        <Heading size="md" mb="4px">{lpLabel}</Heading>
+        <Heading size="md" mb="5px">{lpLabel}</Heading>
         <Flex justifyContent="center">
           {depositFee === 0 ? <NoFeeTag /> : null}
           {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}

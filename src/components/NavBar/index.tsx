@@ -149,7 +149,7 @@ const NavBar = (props) => {
       <header>
           <div className="nav-wrapper">
               <div className="logo-container">
-                  <img className="logo" src="images/icon.svg" alt="Logo"/><Logo>&nbsp;artemisprotocol.one</Logo>
+                  <img className="logo" src="images/icon.svg" alt="Logo"/><Logo>&nbsp;Artemis Protocol</Logo>
               </div>
               <nav>
                   <input className="hidden" type="checkbox" checked={isChecked} id="menuToggle"/>
@@ -247,7 +247,7 @@ const NavBar = (props) => {
                   <li className="web3li insideMainNav">
                     <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.1inch.io/#/56/swap/BNB/${labo.addr.laboAddr}` } className="nav-links connect">
                       <Button style={{'fontSize': '15px', 'borderRadius': '16px', 'width': '100% !important'}}>
-                        <b>Buy LABO</b>
+                        <b>Swap</b>
                       </Button>
                     </a>
                   </li>
@@ -291,9 +291,9 @@ const NavBar = (props) => {
                     <p>{ ( !cakePriceUsd.isNaN() ? cakePriceUsd.toNumber().toFixed(5).concat("$") : '...loading') }</p></Price>
                   </a></li>
                   <li className="web3li">
-                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.1inch.io/#/56/swap/BNB/${labo.addr.laboAddr}` } className="nav-links connect">
-                      <Button style={{'fontSize': '15px', 'borderRadius': '16px', 'width': '100% !important'}}>
-                        <b>Buy LABO</b>
+                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.sushi.com/swap?outputCurrency=${labo.addr.laboAddr}` } className="nav-links connect">
+                      <Button style={{'fontSize': '15px', 'borderRadius': '15px', 'width': '100% !important'}}>
+                        <b>Swap</b>
                       </Button>
                     </a>
                   </li>
@@ -306,7 +306,7 @@ const NavBar = (props) => {
                     backgroundColor: 'rgb(22, 35, 73) !important',
                     border: '0px',
                     color: '#8299dd !important',
-                    borderRadius: '16px',
+                    borderRadius: '15px',
                     fontSize: '15px',
                     fontWeight: '800',
                     width: '100%',

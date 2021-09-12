@@ -141,8 +141,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         tokenSymbol={farm.tokenSymbol}
       />
       {!removed && (
-        <Flex justifyContent='space-between' alignItems='center'>
-          <Quote>{TranslateString(352, 'APR')}:</Quote>
+        <Flex justifyContent='space-between' alignItems='center' mt="10px">
+          <Quote>{TranslateString(352, 'APR')}</Quote>
           <Quote style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
@@ -162,12 +162,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           </Quote>
         </Flex>
       )}
-      <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(318, 'Earn')}:</Quote>
+      <Flex justifyContent='space-between' mt="0px">
+        <Quote>{TranslateString(318, 'Earn')}</Quote>
         <Quote>{earnLabel}</Quote>
       </Flex>
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(10001, 'Deposit Fee')}:</Quote>
+        <Quote>{TranslateString(10001, 'Deposit Fee')}</Quote>
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
       </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
@@ -182,9 +182,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           isTokenOnly={farm.isTokenOnly}
           bscScanAddress={
             farm.isTokenOnly ?
-              `https://bscscan.com/token/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              `https://explorer.harmony.one/token/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
               :
-              `https://bscscan.com/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              `https://explorer.harmony.one/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
           totalValueFormated={totalValueFormated}
           lpLabel={lpLabel}
