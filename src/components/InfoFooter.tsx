@@ -16,7 +16,7 @@ const InfoFooter = () => {
 
   return (
     <StyledFooter>
-        <p><FaComment/> hello@thelab.finance</p>
+        <p> </p>
     </StyledFooter>
   )
 }

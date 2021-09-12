@@ -149,7 +149,7 @@ const NavBar = (props) => {
       <header>
           <div className="nav-wrapper">
               <div className="logo-container">
-                  <img className="logo" src="images/icon.svg" alt="Logo"/><Logo>&nbsp;thelab.finance</Logo>
+                  <img className="logo" src="images/icon.svg" alt="Logo"/><Logo>&nbsp;artemisprotocol.one</Logo>
               </div>
               <nav>
                   <input className="hidden" type="checkbox" checked={isChecked} id="menuToggle"/>
