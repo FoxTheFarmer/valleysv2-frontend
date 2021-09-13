@@ -27,6 +27,12 @@ interface FarmCardActionsProps {
   account?: string
 }
 
+const Quote = styled.p`
+      font-size: 14px;
+      margin-bottom: 0px;
+      color: #004871
+`
+
 const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
@@ -55,6 +61,9 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       console.error(e)
     }
   }, [onApprove])
+
+
+
 
   const renderApprovalOrStakeButton = () => {
     return isApproved ? (
@@ -85,21 +94,13 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   return (
     <Action>
       <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
-          LABO
-        </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
-          {TranslateString(999, 'Earned')}
-        </Text>
+        <Quote>{TranslateString(192, 'Pending Rewards')}</Quote>
       </Flex>
       <HarvestAction earnings={earnings} pid={pid} />
+      
       <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
-          {lpName}
-        </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
-          {TranslateString(999, 'Staked')}
-        </Text>
+        <Quote>{TranslateString(192, 'LP Staked')}</Quote>
+
       </Flex>
       {!account ? <UnlockButton mt="8px" fullWidth /> : renderApprovalOrStakeButton()}
     </Action>

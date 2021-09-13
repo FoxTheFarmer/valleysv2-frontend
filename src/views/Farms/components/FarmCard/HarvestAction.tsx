@@ -65,7 +65,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
             'color': 'white'
           }}
         >
-          {TranslateString(999, 'Harvest')}
+          {TranslateString(999, 'Settle')}
         </Button>
       </BalanceAndCompound>
     </Flex>

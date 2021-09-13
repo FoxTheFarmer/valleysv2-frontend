@@ -44,7 +44,7 @@ const StyledCardAccent = styled.div`
   rgba(255, 0, 0, 1) 100%);
   background-size: 300% 300%;
   animation: ${RainbowLight} 2s linear infinite;
-  border-radius: 15px;
+  border-radius: 1px;
   filter: blur(6px);
   position: absolute;
   top: -2px;
@@ -76,6 +76,10 @@ const Divider = styled.div`
 const Quote = styled.p`
     font-size: 15px;
     margin-bottom: 8px;
+`
+
+const APRTEXT = styled.p`
+    font-size: 15px;
 `
 
 const ExpandingWrapper = styled.div<{ expanded: boolean }>`
@@ -140,10 +144,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
       />
+
+
       {!removed && (
-        <Flex justifyContent='space-between' alignItems='center' mt="10px">
-          <Quote>{TranslateString(352, 'APR')}</Quote>
-          <Quote style={{ display: 'flex', alignItems: 'center' }}>
+        <Flex justifyContent='space-between' alignItems='center' mt="5px">
+          <APRTEXT>{TranslateString(352, 'APR')}</APRTEXT>
+          <APRTEXT style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
                 <ApyButton
@@ -159,9 +165,16 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
             ) : (
               <Skeleton height={24} width={80} />
             )}
-          </Quote>
+          </APRTEXT>
         </Flex>
       )}
+
+      <Flex justifyContent='space-between'>
+        <Quote>{TranslateString(10005, 'Earn')}</Quote>
+        <Quote>{TranslateString(10006, 'ART + Fees')}</Quote>
+      </Flex>
+
+
       <Flex justifyContent='space-between'>
         <Quote>{TranslateString(10001, 'Deposit Fee')}</Quote>
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
