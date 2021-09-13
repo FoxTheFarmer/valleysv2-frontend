@@ -49,24 +49,27 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
 
   return (
+
     <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text>{TranslateString(316, 'Stake')}:</Text>
+
+      {!removed && (
+        <Flex justifyContent="space-between">
+          <Text bold>{TranslateString(23, 'Total Liquidity')}:</Text>
+          <Text bold>{totalValueFormated}</Text>
+        </Flex>
+      )}
+
+      <Flex justifyContent="left">
         <StyledLinkExternal style={{"color": "#4c68ef"}} href={
           isTokenOnly ?
-            `https://exchange.pancakeswap.finance/#/swap/${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+            `https://app.sushi.com/swap?inputCurrency=${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
             :
-            `https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`
+            `https://app.sushi.com/add/${liquidityUrlPathParts}`
         }>
           {lpLabel}
         </StyledLinkExternal>
       </Flex>
-      {!removed && (
-        <Flex justifyContent="space-between">
-          <Text>{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text>{totalValueFormated}</Text>
-        </Flex>
-      )}
+
       <Flex justifyContent="flex-start">
         <Link external href={bscScanAddress} bold={false} style={{"color": "#4c68ef"}}>
           {TranslateString(999, 'View on Explorer')}

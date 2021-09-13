@@ -72,7 +72,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 1 day row */}
         <GridItem>
-          <Text>1d</Text>
+          <Text>1 Day</Text>
         </GridItem>
         <GridItem>
           <Text>
@@ -84,7 +84,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 7 day row */}
         <GridItem>
-          <Text>7d</Text>
+          <Text>7 Days</Text>
         </GridItem>
         <GridItem>
           <Text>
@@ -96,7 +96,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 30 day row */}
         <GridItem>
-          <Text>30d</Text>
+          <Text>30 Days</Text>
         </GridItem>
         <GridItem>
           <Text>
@@ -108,7 +108,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         {/* 365 day / APY row */}
         <GridItem>
-          <Text>365d(APY)</Text>
+          <Text bold>APY (Anual Yield)</Text>
         </GridItem>
         <GridItem>
           <Text>
@@ -126,7 +126,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         )}
       </Description>
       <Flex justifyContent="center">
-        <LinkExternal href={`https://exchange.pancakeswap.finance/#/add/${liquidityUrlPathParts}`} style={{'color': 'rgb(76, 104, 239)'}}>
+        <LinkExternal href={`https://app.sushi.com/add/${liquidityUrlPathParts}`} style={{'color': 'rgb(76, 104, 239)'}}>
           {TranslateString(999, 'Get')} {lpLabel}
         </LinkExternal>
       </Flex>
