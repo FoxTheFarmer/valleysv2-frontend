@@ -2,16 +2,16 @@
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
 
-// LABO ADDRESSES
+// Labo ADDRESSES
 
-const laboBusdAddr = '0x306223ae4cd16a7623e9ff93bde461a60c5dcaf8'
-const laboBnbAddr = '0xf36067d88a49682d89638a3ed75431181585dbf4'
-const laboBusdAddrV2 = '0x306223ae4cd16a7623e9ff93bde461a60c5dcaf8'
-const laboBnbAddrV2 = '0xf36067d88a49682d89638a3ed75431181585dbf4'
-const laboAddr = '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2'
+const LaboBusdAddr = '0x306223ae4cd16a7623e9ff93bde461a60c5dcaf8'
+const LaboBnbAddr = '0xf36067d88a49682d89638a3ed75431181585dbf4'
+const LaboBusdAddrV2 = '0x306223ae4cd16a7623e9ff93bde461a60c5dcaf8'
+const LaboBnbAddrV2 = '0xf36067d88a49682d89638a3ed75431181585dbf4'
+const LaboAddr = '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2'
 const masterChef = '0x21262941bd12FB01218afCF64AD0E23655E9F5f9'
 
-// LABO RELATED PIDS
+// Labo RELATED PIDS
 
 const pidLaboBusd = 0
 const pidLaboBnb = 1
@@ -26,7 +26,7 @@ const pidBnbBusd = 2
 const countBack = false
 const countLength = 2
 
-// CHANGE LABO FOR THE TOKEN BEIGN TESTED
+// CHANGE Labo FOR THE TOKEN BEIGN TESTED
 
 const xPerBlock = "laboPerBlock" // referenced in getMasterChefAddress()
 const pendingX = "pendingLabo"
@@ -59,11 +59,11 @@ const showFarmInfoModal = true;
 
 const labo = {
     addr: {
-        laboBusdAddr,
-        laboBnbAddr,
-        laboBusdAddrV2,
-        laboBnbAddrV2,
-        laboAddr,
+        LaboBusdAddr,
+        LaboBnbAddr,
+        LaboBusdAddrV2,
+        LaboBnbAddrV2,
+        LaboAddr,
         masterChef,
     },
     pids: {
@@ -72,8 +72,8 @@ const labo = {
         pidLabo,
         pidBnbBusd,
         pidList: [
-            pidLaboBusd, // LABO-BUSD LP [0]
-            pidLaboBnb, // LABO-BNB LP [1]
+            pidLaboBusd, // Labo-BUSD LP [0]
+            pidLaboBnb, // Labo-BNB LP [1]
             pidBnbBusd, // BNB-BUSD LP [2]
             /* 1, // USDT-BUSD LP [3]
             2, // BTCB-BNB LP [4]
@@ -83,7 +83,7 @@ const labo = {
             6, // DOT-BNB LP [8]
             7, // CAKE-BUSD LP [9]
             8, // CAKE-BNB LP [10] */
-            pidLabo, // LABO [3]
+            pidLabo, // Labo [3]
             /* 10, // BUSD [12]
             11, // WBNB [13]
             12, // EGG [14]
@@ -94,10 +94,10 @@ const labo = {
             17, // DOT [19]
             19, // BSCX [20]
             13, // AUTO [21]
-            22, // LABO-GYA [22]
-            23, // LABO-DSL [23]
-            24, // LABO-BUSD LP V2 [24]
-            25, // LABO-BNB LP V2 [25]
+            22, // Labo-GYA [22]
+            23, // Labo-DSL [23]
+            24, // Labo-BUSD LP V2 [24]
+            25, // Labo-BNB LP V2 [25]
             26, // BUSD-BNB LP V2 [26]
             27, // USDT-BUSD LP V2 [27]
             28, // BTCB-BNB LP V2 [28] 

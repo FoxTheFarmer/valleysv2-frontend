@@ -61,7 +61,7 @@ const CakeStats = () => {
             Stats
           </Title>
           <Row>
-            <Sub>Labo Price</Sub>
+            <Sub>Price</Sub>
             <Sub className="lightColor">
               <CardValue value={eggPrice.toNumber()} prefix="$" />
             </Sub>
@@ -83,7 +83,7 @@ const CakeStats = () => {
             </Sub>
           </Row>
           <Row style={{'marginBottom': '0 !important'}}>
-            <Sub>New LABO/Block</Sub>
+            <Sub>New ART/Block</Sub>
             <Sub className="lightColor">
               {vikingPerBlock}
             </Sub>

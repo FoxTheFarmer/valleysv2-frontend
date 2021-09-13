@@ -41,7 +41,7 @@ const Lottery: React.FC = () => {
   const [mostRecentLotteryNumber, setMostRecentLotteryNumber] = useState(1)
 
   useEffect(() => {
-    fetch(`https://gatsby-labo-api-jet.vercel.app/api/lotteryHistory`)
+    fetch(`https://gatsby-ART-api-jet.vercel.app/api/lotteryHistory`)
       .then((response) => response.json())
       .then((data) => setHistoryData(data))
       .catch(() => {

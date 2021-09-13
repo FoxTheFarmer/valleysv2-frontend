@@ -2,7 +2,7 @@ import labo from "./labo"
 
 export default {
   cake: {
-    1666600000: labo.addr.laboAddr,
+    1666600000: labo.addr.LaboAddr,
     97: '',
   },
   masterChef: {

@@ -47,7 +47,7 @@ export const rewardsPools ={
   'address':'0x28415ff2C35b65B9E5c7de82126b4015ab9d031F',
   'isTokenOnly': false
   },
-  'LABO': {
+  'ART': {
   'address':'0x171401a3d18B21BFa3f9bF4F9637F3691158365A',
   'isTokenOnly': true
   },
@@ -671,7 +671,7 @@ const Nfts: Nft[] = [
     }
   },
   {
-    name: "Pokemon LABO",
+    name: "Pokemon ART",
     description: 'The Lab Finance official NFT, provides yield generation for its owners from minting and deposit fees.',
     images: {
       lg: 'cakeston-easter-21-lg.png',
@@ -719,7 +719,7 @@ const Nfts: Nft[] = [
     }
   },
   {
-    name: "OG LABO",
+    name: "OG ART",
     description: 'The Lab Finance official NFT, provides yield generation for its owners from minting and deposit fees.',
     images: {
       lg: 'cakeston-easter-21-lg.png',

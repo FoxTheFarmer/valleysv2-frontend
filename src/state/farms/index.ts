@@ -68,7 +68,7 @@ export const fetchFarmUserDataAsync = (account) => async (dispatch) => {
 export const fetchLaboPriceAsync = () => async (dispatch) => { // Change the address below to LABO-BUSD LP
   const query = `
   {ethereum(network: bsc){
-    address(address: {is: "${labo.addr.laboBusdAddr}"}){
+    address(address: {is: "${labo.addr.LaboBusdAddr}"}){
     balances {
     currency {
     symbol

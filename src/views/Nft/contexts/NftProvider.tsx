@@ -109,13 +109,13 @@ const NftProvider: React.FC<NftProviderProps> = ({ children }) => {
     const response = await fetch(`${baseUrl}/stat`)
     const responsedata = await response.json()
     const laboWbnbPrice = responsedata.trade_pairs.filter((pair) => {
-      if (pair.base_symbol === 'LABO' && pair.quote_symbol === 'WBNB') {
+      if (pair.base_symbol === 'ART' && pair.quote_symbol === 'WBNB') {
         return pair
       }
       return null
     })
     const laboBusdPrice = responsedata.trade_pairs.filter((pair) => {
-      if (pair.base_symbol === 'LABO' && pair.quote_symbol === 'BUSD') {
+      if (pair.base_symbol === 'ART' && pair.quote_symbol === 'BUSD') {
         return pair
       }
       return null
@@ -127,7 +127,7 @@ const NftProvider: React.FC<NftProviderProps> = ({ children }) => {
     pricesMap.BUSD = 1
     pricesMap.USDT = 1
 
-    const SINGLE_TOKENS = ['DOT','CAKE','ADA','BTCB','EGG','WBNB','LABO','BUSD','AUTO','ETH','DAI','USDC','BSCX']
+    const SINGLE_TOKENS = ['DOT','CAKE','ADA','BTCB','EGG','WBNB','ART','BUSD','AUTO','ETH','DAI','USDC','BSCX']
 
     const pricesList = responsedata.trade_pairs
       .filter((pair) => {

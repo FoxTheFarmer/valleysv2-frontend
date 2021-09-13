@@ -70,8 +70,8 @@ const Hero = () => {
     <StyledHero>
       <StyledContainer>
         <LeftWrapper>
-          <Title>The Labo Lottery</Title>
-          <Blurb>Buy Tickets With Labo</Blurb>
+          <Title>The ART Lottery</Title>
+          <Blurb>Buy Tickets With ART</Blurb>
           <Blurb>Win if 2, 3, or 4 of your ticket numbers match!</Blurb>
         </LeftWrapper>
         <RightWrapper>

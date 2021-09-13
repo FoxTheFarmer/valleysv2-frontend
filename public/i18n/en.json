@@ -75,7 +75,7 @@
     {
       "data": {
         "stringId": 304,
-        "text": "Total LABO burned since launch"
+        "text": "Total ART burned since launch"
       }
     },
     {
@@ -123,13 +123,13 @@
     {
       "data": {
         "stringId": 320,
-        "text": "Stake LP tokens to earn LABO"
+        "text": "Stake LP tokens to earn ART"
       }
     },
     {
       "data": {
         "stringId": 322,
-        "text": "Stake LABO, get SYRUP."
+        "text": "Stake ART, get SYRUP."
       }
     },
     {
@@ -153,7 +153,7 @@
     {
       "data": {
         "stringId": 334,
-        "text": "Every time you stake and unstake LABO tokens, the contract will automatically harvest LABO rewards for you!"
+        "text": "Every time you stake and unstake ART tokens, the contract will automatically harvest ART rewards for you!"
       }
     },
     {
@@ -219,7 +219,7 @@
     {
       "data": {
         "stringId": 358,
-        "text": "LABO price"
+        "text": "ART price"
       }
     },
     {
@@ -243,7 +243,7 @@
     {
       "data": {
         "stringId": 380,
-        "text": "1 LABO = 1 SYRUP"
+        "text": "1 ART = 1 SYRUP"
       }
     },
     {
@@ -291,7 +291,7 @@
     {
       "data": {
         "stringId": 400,
-        "text": "SYRUP holders proportionally split 25% of LABO block emissions each day (10 LABO per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 25% of ART block emissions each day (10 ART per block), Rewards are distributed each block."
       }
     },
     {
@@ -351,13 +351,13 @@
     {
       "data": {
         "stringId": 424,
-        "text": "%num% LABO"
+        "text": "%num% ART"
       }
     },
     {
       "data": {
         "stringId": 426,
-        "text": "Spend LABO to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
+        "text": "Spend ART to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
       }
     },
     {
@@ -435,19 +435,19 @@
     {
       "data": {
         "stringId": 454,
-        "text": "%num% LABO Available"
+        "text": "%num% ART Available"
       }
     },
     {
       "data": {
         "stringId": 456,
-        "text": "Your amount must be a multiple of 10 LABO"
+        "text": "Your amount must be a multiple of 10 ART"
       }
     },
     {
       "data": {
         "stringId": 458,
-        "text": "1 Ticket = 10 LABO"
+        "text": "1 Ticket = 10 ART"
       }
     },
     {
@@ -495,7 +495,7 @@
     {
       "data": {
         "stringId": 478,
-        "text": "Ticket purchases are final. Your LABO cannot be returned to you after buying tickets."
+        "text": "Ticket purchases are final. Your ART cannot be returned to you after buying tickets."
       }
     },
     {
@@ -507,7 +507,7 @@
     {
       "data": {
         "stringId": 482,
-        "text": "LABO prizes to be claimed"
+        "text": "ART prizes to be claimed"
       }
     },
     {
@@ -543,13 +543,13 @@
     {
       "data": {
         "stringId": 494,
-        "text": "Approve LABO"
+        "text": "Approve ART"
       }
     },
     {
       "data": {
         "stringId": 496,
-        "text": "SYRUP holders proportionally split 40% of LABO block emissions each day (10 LABO per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 40% of ART block emissions each day (10 ART per block), Rewards are distributed each block."
       }
     },
     {
@@ -567,19 +567,19 @@
     {
       "data": {
         "stringId": 504,
-        "text": "You\u2019ll pay for the new tokens using LABO-BNB LP tokens, which means you need to stake equal amounts of LABO and BNB in a liquidity pool to take part."
+        "text": "You\u2019ll pay for the new tokens using ART-BNB LP tokens, which means you need to stake equal amounts of ART and BNB in a liquidity pool to take part."
       }
     },
     {
       "data": {
         "stringId": 506,
-        "text": "Get LABO-BNB LP >"
+        "text": "Get ART-BNB LP >"
       }
     },
     {
       "data": {
         "stringId": 508,
-        "text": "The project gets the BNB, The Lab burns the LABO."
+        "text": "The project gets the BNB, The Lab burns the ART."
       }
     },
     {
@@ -645,25 +645,25 @@
     {
       "data": {
         "stringId": 534,
-        "text": "LABO Stats"
+        "text": "ART Stats"
       }
     },
     {
       "data": {
         "stringId": 536,
-        "text": "Total LABO Supply"
+        "text": "Total ART Supply"
       }
     },
     {
       "data": {
         "stringId": 538,
-        "text": "Total LABO Burned"
+        "text": "Total ART Burned"
       }
     },
     {
       "data": {
         "stringId": 540,
-        "text": "New LABO\/block"
+        "text": "New ART\/block"
       }
     },
     {
@@ -675,19 +675,19 @@
     {
       "data": {
         "stringId": 544,
-        "text": "LABO to Harvest"
+        "text": "ART to Harvest"
       }
     },
     {
       "data": {
         "stringId": 546,
-        "text": "LABO in Wallet"
+        "text": "ART in Wallet"
       }
     },
     {
       "data": {
         "stringId": 548,
-        "text": "Collecting LABO"
+        "text": "Collecting ART"
       }
     },
     {
@@ -699,7 +699,7 @@
     {
       "data": {
         "stringId": 552,
-        "text": "LABO to Collect"
+        "text": "ART to Collect"
       }
     },
     {
@@ -765,7 +765,7 @@
     {
       "data": {
         "stringId": 580,
-        "text": "Stake LABO to earn new tokens."
+        "text": "Stake ART to earn new tokens."
       }
     },
     {
@@ -783,7 +783,7 @@
     {
       "data": {
         "stringId": 586,
-        "text": "LABO to burn (USD)"
+        "text": "ART to burn (USD)"
       }
     },
     {
@@ -795,7 +795,7 @@
     {
       "data": {
         "stringId": 590,
-        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest LABO rewards for you!"
+        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest ART rewards for you!"
       }
     },
     {
@@ -813,13 +813,13 @@
     {
       "data": {
         "stringId": 596,
-        "text": "Buy LABO and BNB tokens"
+        "text": "Buy ART and BNB tokens"
       }
     },
     {
       "data": {
         "stringId": 598,
-        "text": "Get LABO-BNB LP tokens by adding LABO and BNB liquidity"
+        "text": "Get ART-BNB LP tokens by adding ART and BNB liquidity"
       }
     },
     {
@@ -831,7 +831,7 @@
     {
       "data": {
         "stringId": 602,
-        "text": "While the sale is live, commit your LABO-LP tokens to buy the IFO tokens"
+        "text": "While the sale is live, commit your ART-LP tokens to buy the IFO tokens"
       }
     },
     {
@@ -867,7 +867,7 @@
     {
       "data": {
         "stringId": 614,
-        "text": "Trade in for LABO, or keep for your collection!"
+        "text": "Trade in for ART, or keep for your collection!"
       }
     },
     {
@@ -909,7 +909,7 @@
     {
       "data": {
         "stringId": 628,
-        "text": "When you trade in this NFT to receive LABO, you will lose access to it forever!"
+        "text": "When you trade in this NFT to receive ART, you will lose access to it forever!"
       }
     },
     {
@@ -939,7 +939,7 @@
     {
       "data": {
         "stringId": 638,
-        "text": "Winners can trade in their NFTs for a LABO value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
+        "text": "Winners can trade in their NFTs for a ART value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
       }
     },
     {
@@ -981,7 +981,7 @@
     {
       "data": {
         "stringId": 654,
-        "text": "Trade in for LABO"
+        "text": "Trade in for ART"
       }
     },
     {
@@ -1107,7 +1107,7 @@
     {
       "data": {
         "stringId": 696,
-        "text": "Stake LP tokens to earn LABO"
+        "text": "Stake LP tokens to earn ART"
       }
     },
     {
@@ -1149,13 +1149,13 @@
     {
       "data": {
         "stringId": 708,
-        "text": "The LABO Lottery"
+        "text": "The ART Lottery"
       }
     },
     {
       "data": {
         "stringId": 710,
-        "text": "Buy tickets with LABO"
+        "text": "Buy tickets with ART"
       }
     },
     {
@@ -1209,7 +1209,7 @@
     {
       "data": {
         "stringId": 10000,
-        "text": "Deposit Fee will be used to buyback LABO"
+        "text": "Deposit Fee will be used to buyback ART"
       }
     },
     {
@@ -1221,7 +1221,7 @@
     {
       "data": {
         "stringId": 10002,
-        "text": "Stake tokens to earn LABO"
+        "text": "Stake tokens to earn ART"
       }
     },
     {

@@ -73,20 +73,20 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="LABO"
+        availableSymbol="ART"
       />
       <div>
-        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 LABO')}</Tips>
-        <Tips>{TranslateString(458, '1 Ticket = 10 LABO')}</Tips>
+        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 ART')}</Tips>
+        <Tips>{TranslateString(458, '1 Ticket = 10 ART')}</Tips>
       </div>
       <div>
         <Announce>
           {TranslateString(
             478,
-            'Ticket purchases are final. Your LABO cannot be returned to you after buying tickets.',
+            'Ticket purchases are final. Your ART cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} LABO`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${cakeCosts(val)} ART`)}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>

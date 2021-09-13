@@ -34,7 +34,7 @@ const TicketCard: React.FC = () => {
   const ticketsLength = tickets.length
   const [onPresentMyTickets] = useModal(<MyTicketsModal myTicketNumbers={tickets} from="buy" />)
   const [onPresentApprove] = useModal(<PurchaseWarningModal />)
-  const [onPresentBuy] = useModal(<BuyTicketModal max={cakeBalance} tokenName="LABO" />)
+  const [onPresentBuy] = useModal(<BuyTicketModal max={cakeBalance} tokenName="ART" />)
 
   const handleApprove = useCallback(async () => {
     try {
@@ -58,7 +58,7 @@ const TicketCard: React.FC = () => {
             {TranslateString(432, 'View your tickets')}
           </Button>
           <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
-            {TranslateString(999, 'Approve LABO')}
+            {TranslateString(999, 'Approve ART')}
           </Button>
         </>
       )

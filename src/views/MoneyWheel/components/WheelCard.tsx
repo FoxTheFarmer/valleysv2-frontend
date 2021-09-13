@@ -114,7 +114,7 @@ const WheelCard: React.FC<WheelCardProps> = ({prizeNumber, mustSpin, onStopping}
           </Left>
           <Right>
              <Title>
-             The LABO Wheel  
+             The ART Wheel  
              </Title>
           </Right>
         </CardHeading>

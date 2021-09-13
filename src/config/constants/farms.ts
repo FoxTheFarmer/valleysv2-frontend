@@ -197,12 +197,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'LABO-BUSD LP',
     lpAddresses: {
       97: '',
-      1666600000: labo.addr.laboBusdAddr, // (to LABO BUSD LP)
+      1666600000: labo.addr.LaboBusdAddr, // (to LABO BUSD LP)
     },
     tokenSymbol: 'LABO',
     tokenAddresses: {
       97: '',
-      1666600000: labo.addr.laboAddr,
+      1666600000: labo.addr.LaboAddr,
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -213,12 +213,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'LABO-BNB LP',
     lpAddresses: {
       97: '',
-      1666600000: labo.addr.laboBnbAddr, // (to LABO BNB LP ) 
+      1666600000: labo.addr.LaboBnbAddr, // (to LABO BNB LP ) 
     },
     tokenSymbol: 'LABO',
     tokenAddresses: {
       97: '',
-      1666600000: labo.addr.laboAddr,
+      1666600000: labo.addr.LaboAddr,
     },
     quoteTokenSymbol: QuoteToken.WONE,
     quoteTokenAdresses: contracts.wbnb,
@@ -230,12 +230,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'LABO',
     lpAddresses: {
       97: '',
-      1666600000: labo.addr.laboBusdAddr, // change (to LABO BUSD LP)
+      1666600000: labo.addr.LaboBusdAddr, // change (to LABO BUSD LP)
     },
     tokenSymbol: 'LABO',
     tokenAddresses: {
       97: '',
-      1666600000: labo.addr.laboAddr,
+      1666600000: labo.addr.LaboAddr,
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
