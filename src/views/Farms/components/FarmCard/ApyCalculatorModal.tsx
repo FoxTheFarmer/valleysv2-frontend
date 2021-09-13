@@ -21,7 +21,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 `
 
 const GridItem = styled.div`
@@ -29,8 +29,8 @@ const GridItem = styled.div`
 `
 
 const Description = styled(Text)`
-  max-width: 320px;
-  margin-bottom: 28px;
+  max-width: 650px;
+  margin-bottom: 10px;
 `
 
 const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
@@ -53,21 +53,21 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   const cakeEarnedPerThousand365D = calculateCakeEarnedPerThousandDollars({ numberOfDays: 365, farmApy, cakePrice })
 
   return (
-    <Modal title="ROI" onDismiss={onDismiss}>
+    <Modal title="Return on Investment Calculator" onDismiss={onDismiss}>
       <Grid>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+          <Text fontSize="11px" bold color="textSubtle" textTransform="uppercase" mb="20px">
             {TranslateString(999, 'Timeframe')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+          <Text fontSize="11px" bold color="textSubtle" textTransform="uppercase" mb="20px">
             {TranslateString(999, 'ROI')}
           </Text>
         </GridItem>
         <GridItem>
-          <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
-            {TranslateString(999, 'LABO per $1000')}
+          <Text fontSize="11px" bold color="textSubtle" textTransform="uppercase" mb="20px">
+            {TranslateString(999, 'Rewards/$1000')}
           </Text>
         </GridItem>
         {/* 1 day row */}
@@ -95,41 +95,26 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
           <Text>{cakeEarnedPerThousand7D}</Text>
         </GridItem>
         {/* 30 day row */}
-        <GridItem>
-          <Text>30 Days</Text>
-        </GridItem>
-        <GridItem>
-          <Text>
-            {apyModalRoi({ amountEarned: cakeEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfCake })}%
-          </Text>
-        </GridItem>
-        <GridItem>
-          <Text>{cakeEarnedPerThousand30D}</Text>
-        </GridItem>
+
         {/* 365 day / APY row */}
         <GridItem>
           <Text bold>APY (Anual Yield)</Text>
         </GridItem>
         <GridItem>
-          <Text>
+          <Text bold>
             {apyModalRoi({ amountEarned: cakeEarnedPerThousand365D, amountInvested: oneThousandDollarsWorthOfCake })}%
           </Text>
         </GridItem>
         <GridItem>
-          <Text>{cakeEarnedPerThousand365D}</Text>
+          <Text bold>{cakeEarnedPerThousand365D}</Text>
         </GridItem>
       </Grid>
       <Description fontSize="12px" color="textSubtle">
         {TranslateString(
           999,
-          'Calculated based on current rates. Compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.',
+          'Calculated based on an estimate of current rates, compounding once daily. Rates are estimates provided for your convenience only, and by no means represent guaranteed returns.',
         )}
       </Description>
-      <Flex justifyContent="center">
-        <LinkExternal href={`https://app.sushi.com/add/${liquidityUrlPathParts}`} style={{'color': 'rgb(76, 104, 239)'}}>
-          {TranslateString(999, 'Get')} {lpLabel}
-        </LinkExternal>
-      </Flex>
     </Modal>
   )
 }

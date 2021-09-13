@@ -162,10 +162,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           </Quote>
         </Flex>
       )}
-      <Flex justifyContent='space-between' mt="0px">
-        <Quote>{TranslateString(318, 'Earn')}</Quote>
-        <Quote>{earnLabel}</Quote>
-      </Flex>
       <Flex justifyContent='space-between'>
         <Quote>{TranslateString(10001, 'Deposit Fee')}</Quote>
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
