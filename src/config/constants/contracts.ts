@@ -13,9 +13,17 @@ export default {
     1666600000: '0x57F3b7885b6bcBeaABa96779f1073Af53a2d1E65',
     97: '',
   },
+  wheel2: {
+    1666600000: '0x57F3b7885b6bcBeaABa96779f1073Af53a2d1E65',
+    97: '',
+  },
   // this is WONE "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a"
   wbnb: {
     1666600000: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
+    97: '',
+  },
+  one: {
+    1666600000: '0x00eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     97: '',
   },
   lottery: {

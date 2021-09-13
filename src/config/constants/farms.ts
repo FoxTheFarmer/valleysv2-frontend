@@ -223,40 +223,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.WONE,
     quoteTokenAdresses: contracts.wbnb,
   },
-  /* {
-    pid:labo.pids.pidList[23],
-    risk: 5,
-    lpSymbol: 'LABO-DSL LP',
-    lpAddresses: {
-      97: '',
-      1666600000: '0x9053308f23B98bf5c8B5CbCB15F0e5F29f1E1A62', 
-    },
-    tokenSymbol: 'LABO',
-    tokenAddresses: {
-      97: '',
-      1666600000: labo.addr.laboAddr,
-    },
-    quoteTokenSymbol: QuoteToken.DSL,
-    quoteTokenAdresses: contracts.dsl,
-    version: 1
-  },
   {
-    pid:labo.pids.pidList[22],
+    pid: labo.pids.pidList[3],
     risk: 5,
-    lpSymbol: 'LABO-GYA LP',
+    isTokenOnly: true,
+    lpSymbol: 'LABO',
     lpAddresses: {
       97: '',
-      1666600000: '0x75E2661694bBf06359D5F81bD7b57E980a4166660000044d', 
+      1666600000: labo.addr.laboBusdAddr, // change (to LABO BUSD LP)
     },
     tokenSymbol: 'LABO',
     tokenAddresses: {
       97: '',
       1666600000: labo.addr.laboAddr,
     },
-    quoteTokenSymbol: QuoteToken.GYA,
-    quoteTokenAdresses: contracts.gya,
-    version: 1
-  }, */
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
   {
     pid:labo.pids.pidList[2],
     risk: 3,

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Contract } from 'web3-eth-contract'
-import { useCake, useLottery, useMoneyWheel } from './useContract'
+import { useCake, useLottery, useMoneyWheel, useMoneyWheel2, useWone } from './useContract'
 import { getAllowance } from '../utils/erc20'
 
 // Retrieve lottery allowance
@@ -51,6 +51,28 @@ export const useMoneyWheelAllowance = () => {
   return allowance
 }
 
+// Retrieve MoneyWheel2 allowance
+export const useMoneyWheel2Allowance = () => {
+  const [allowance, setAllowance] = useState(new BigNumber(0))
+  const { account }: { account: string } = useWallet()
+  const moneyWheelContract2 = useMoneyWheel2()
+  const oneContract = useWone()
+
+  useEffect(() => {
+    const fetchAllowance = async () => {
+      const res = await getAllowance(oneContract, moneyWheelContract2, account)
+      setAllowance(new BigNumber(res))
+    }
+
+    if (account && oneContract && oneContract) {
+      fetchAllowance()
+    }
+    const refreshInterval = setInterval(fetchAllowance, 10000)
+    return () => clearInterval(refreshInterval)
+  }, [account, oneContract, moneyWheelContract2])
+
+  return allowance
+}
 
 // Retrieve IFO allowance
 export const useIfoAllowance = (tokenContract: Contract, spenderAddress: string, dependency?: any) => {

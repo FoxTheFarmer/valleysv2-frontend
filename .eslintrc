@@ -29,7 +29,9 @@
     "react/prop-types": "off", // Since we do not use prop-types
     "react/require-default-props": "off", // Since we do not use prop-types
     "radix": 0,
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/named": 0
     // End temporary rules
   }
 }

@@ -8,7 +8,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import UnlockButton from 'components/UnlockButton'
 import {Accordion, Button, Card, useAccordionToggle} from 'react-bootstrap';
-import { FaMediumM, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaBinoculars, FaChartBar } from 'react-icons/fa';
+import { FaChartLine, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaTicketAlt, FaChartBar, FaMoneyBillAlt } from 'react-icons/fa';
 import ReactTooltip from 'react-tooltip';
 import labo from 'config/constants/labo';
 
@@ -89,12 +89,12 @@ const NavBar = (props) => {
   function InfoToggle() {
     return (
       <Accordion id="infoToggleMobile">
-        <Card style={{"backgroundColor": "black0", "border": "0"}}>
-          <Card.Header style={{"backgroundColor": "black", "border": "0"}}>
+        <Card style={{"backgroundColor": "white0", "border": "0"}}>
+          <Card.Header style={{"backgroundColor": "white", "border": "0"}}>
             <CustomToggle eventKey="0" />
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body style={{"backgroundColor": "black", "border": "0"}}>
+            <Card.Body style={{"backgroundColor": "white", "border": "0"}}>
             <ul className="dropdown-items">
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance" className="nav-links">
@@ -103,7 +103,7 @@ const NavBar = (props) => {
                 </li>
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
-                    <FaMediumM /> <span className="dditem">MEDIUM</span>
+                    <FaChartLine /> <span className="dditem">VFAT</span>
                   </a>
                 </li>
                 <li>
@@ -138,6 +138,30 @@ const NavBar = (props) => {
       </Accordion>
     );
   }
+
+  function WheelToggle() {
+    return (
+      <Accordion id="wheelToggleMobile">
+          <Accordion.Collapse eventKey="0">
+            <Card.Body style={{"backgroundColor": "white", "border": "0"}}>
+            <ul className="dropdown-items">
+                <li>
+                  <Link to="/wheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}> 
+                    <FaTicketAlt /> <span className="dditem">LABO WHEEL</span>
+                  </Link>
+                </li>
+                <li>
+                  <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
+                    <FaMoneyBillAlt /> <span className="dditem">ONE WHEEL</span>
+                  </a>
+                </li>
+              </ul>
+            </Card.Body>
+          </Accordion.Collapse>
+      </Accordion>
+    );
+  }
+
 
   return (
     <div>
@@ -175,11 +199,24 @@ const NavBar = (props) => {
                               LOTTO
                             </Link>
                           </li>
-                          <li className="nav-tab">
-                            <Link to="/wheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                              WHEEL
+                          <li className="nav-tab dropdown" id="wheelToggleDesktop">
+                            <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                              WHEELS
                             </Link>
+                            <ul className="dropdown-content dropdown-items">
+                             <li>
+                                <Link to="/wheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <FaTicketAlt /> <span className="dditem">LABO WHEEL</span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/onewheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <FaMoneyBillAlt /> <span className="dditem">ONE WHEEL</span>
+                                </Link>
+                              </li>
+                            </ul>
                           </li>
+                          <WheelToggle />
                           <li className="nav-tab dropdown" id="infoToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               INFO
@@ -192,7 +229,7 @@ const NavBar = (props) => {
                               </li>
                               <li>
                                 <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
-                                  <FaMediumM /> <span className="dditem">MEDIUM</span>
+                                  <FaChartLine /> <span className="dditem">VFAT</span>
                                 </a>
                               </li>
                               <li>
