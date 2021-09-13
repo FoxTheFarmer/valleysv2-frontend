@@ -15,8 +15,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    background-image: url('/images/egg/bg.svg');
-    background-repeat: no-repeat;
+    background: rgb(193,176,255);
+    background: linear-gradient(45deg, rgba(193,209,255,1) 0%, rgba(255,255,255,1) 68%);
 
   }
 

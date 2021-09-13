@@ -8,7 +8,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import UnlockButton from 'components/UnlockButton'
 import {Accordion, Button, Card, useAccordionToggle} from 'react-bootstrap';
-import { FaMediumM, FaTelegramPlane, FaTwitter, FaShieldAlt, FaFileAlt, FaGithub, FaBinoculars, FaChartBar } from 'react-icons/fa';
+import { FaMediumM, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaBinoculars, FaChartBar } from 'react-icons/fa';
 import ReactTooltip from 'react-tooltip';
 import labo from 'config/constants/labo';
 
@@ -89,12 +89,12 @@ const NavBar = (props) => {
   function InfoToggle() {
     return (
       <Accordion id="infoToggleMobile">
-        <Card style={{"backgroundColor": "white0", "border": "0"}}>
-          <Card.Header style={{"backgroundColor": "white", "border": "0"}}>
+        <Card style={{"backgroundColor": "black0", "border": "0"}}>
+          <Card.Header style={{"backgroundColor": "black", "border": "0"}}>
             <CustomToggle eventKey="0" />
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body style={{"backgroundColor": "white", "border": "0"}}>
+            <Card.Body style={{"backgroundColor": "black", "border": "0"}}>
             <ul className="dropdown-items">
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance" className="nav-links">
@@ -123,12 +123,7 @@ const NavBar = (props) => {
                 </li>
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
-                    <FaShieldAlt />  <span className="dditem">AUDIT</span>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blanK" rel="noreferrer" href={ `https://bscscan.com/address/${labo.addr.laboAddr}` } className="nav-links">
-                    <FaBinoculars />  <span className="dditem">BSCSCAN</span>
+                    <FaDiscord />  <span className="dditem">DISCORD</span>
                   </a>
                 </li>
                 <li>
@@ -217,12 +212,7 @@ const NavBar = (props) => {
                               </li>
                               <li>
                                 <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
-                                <FaShieldAlt />  <span className="dditem">AUDIT</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a target="_blanK" rel="noreferrer" href={ `https://bscscan.com/address/${labo.addr.laboAddr}` } className="nav-links">
-                                <FaBinoculars />  <span className="dditem">BSCSCAN</span>
+                                <FaDiscord />  <span className="dditem">DISCORD</span>
                                 </a>
                               </li>
                               <li>
