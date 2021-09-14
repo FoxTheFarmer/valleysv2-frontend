@@ -111,16 +111,19 @@ const NavBar = (props) => {
                     <FaFileAlt /> <span className="dditem">DOCS</span>
                   </a>
                 </li>
-                <li>
-                  <a target="_blanK" rel="noreferrer" href="https://t.me/thelabfinance" className="nav-links">
-                    <FaTelegramPlane /> <span className="dditem">TELEGRAM</span>
-                  </a>
-                </li>
+
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://twitter.com/TheLabFinance" className="nav-links">
                     <FaTwitter />  <span className="dditem">TWITTER</span>
                   </a>
                 </li>
+
+                <li>
+                  <a target="_blanK" rel="noreferrer" href="https://t.me/thelabfinance" className="nav-links">
+                    <FaTelegramPlane /> <span className="dditem">TELEGRAM</span>
+                  </a>
+                </li>
+
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
                     <FaDiscord />  <span className="dditem">DISCORD</span>
@@ -167,8 +170,9 @@ const NavBar = (props) => {
     <div>
       <header>
           <div className="nav-wrapper">
+
               <div className="logo-container">
-                  <img className="logo" src="images/icon.svg" alt="Logo"/><Logo>&nbsp;Artemis Protocol</Logo>
+                  <img  alt=""/><Logo>&nbsp;Artemis Protocol</Logo>
               </div>
               <nav>
                   <input className="hidden" type="checkbox" checked={isChecked} id="menuToggle"/>
