@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styled from 'styled-components'
 import { FaComment } from 'react-icons/fa';
@@ -16,7 +17,7 @@ const InfoFooter = () => {
 
   return (
     <StyledFooter>
-        <p> </p>
+        <p><FaComment/> hello@artemis.one </p>
     </StyledFooter>
   )
 }
