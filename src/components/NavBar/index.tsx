@@ -269,7 +269,7 @@ const NavBar = (props) => {
                     style={{ marginRight: '4px',
                             backgroundColor: 'transparent' }}
                   >
-                    <Token src="images/icon.svg" alt='1' width="21px" height="21px"/>
+                    <Token src="images/icon.svg" alt='1' width="30px" height="30px"/>
                     <p>{ ( !cakePriceUsd.isNaN() ? cakePriceUsd.toNumber().toFixed(5).concat("$") : '...loading') }</p></Price>
                   </a></li>
                   <li className="web3li insideMainNav">
@@ -305,31 +305,32 @@ const NavBar = (props) => {
                   </div>
               </nav>
               <ul className="nav-tabs outsideMainNav">
-                <li className="web3li">
-                  <a target="_blank" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links price">
-                  <Price
-                    style={{ 
-                      marginRight: '4px',
-                      'flexFlow': 'row',
-                      alignItems: 'center',
-                      justifyContent: 'space-between'
-                    }}
-                  >
-                    <Token src="images/icon.svg" alt='1' width="21px" height="21px"/>
-                    <p>{ ( !cakePriceUsd.isNaN() ? cakePriceUsd.toNumber().toFixed(5).concat("$") : '...loading') }</p></Price>
-                  </a></li>
-                  <li className="web3li">
+              <li className="web3li">
                     <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.sushi.com/swap?outputCurrency=${labo.addr.LaboAddr}` } className="nav-links connect">
                       <Button style={{'fontSize': '15px', 'borderRadius': '15px', 'width': '100% !important'}}>
                         <b>Swap</b>
                       </Button>
                     </a>
                   </li>
+                <li className="web3li">
+                  <a target="_blank" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links price">
+                  <Price
+                    style={{ 
+                      marginRight: '0px',
+                      'flexFlow': 'row',
+                      alignItems: 'center',
+                      justifyContent: 'space-between'
+                    }}
+                  >
+   
+                    <p>{ ( !cakePriceUsd.isNaN() ? cakePriceUsd.toNumber().toFixed(5).concat("$") : '...loading') }</p></Price>
+                  </a></li>
+
                
                 <li className="web3li">
                   <Link to="/" className="nav-links connect">
                   { account != null && account.length > 1? 
-                    <Price>{account.substring(0,8).concat("...")} <p style={{'color': '#4c68ef'}}>Connected</p></Price>:
+                    <Price>{account.substring(0,8).concat("...")} <p style={{'color': '#4c68ef'}}> ✓</p></Price>:
                   <UnlockButton style={{
                     backgroundColor: 'rgb(22, 35, 73) !important',
                     border: '0px',
