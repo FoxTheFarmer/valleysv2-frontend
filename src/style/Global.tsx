@@ -15,27 +15,27 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    background: rgb(193,176,255);
-    background: linear-gradient(45deg, rgba(193,209,255,1) 0%, rgba(255,255,255,1) 68%);
+    background-image: url('/images/egg/bg.svg');
+    background-repeat: no-repeat;
 
   }
 
   div {
-    color: #00AEE9 !important;
+    color: #3D3D3D !important;
     font-size: 1em !important
   }
 
 
   h2 {
-    color: #00AEE9 !important;
+    color: #3D3D3D !important;
   }
 
   button {
-    background-color: #4c68ef;
+    background-color: #3D3D3D;
   }
 
   button:hover {
-    background-color: #778dfc;
+    background-color: #3D3D3D;
   }
 
 
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    color: #00AEE9;
+    color: #3D3D3D;
   }
 
   a:hover{
@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .nav-links:hover{
-    color: #4a6bc7;
+    color: #3D3D3D;
   }
 
   .nav-links.price button:hover{
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   svg{
-    fill: #00AEE9;
+    fill: #3D3D3D;
   }
 
 
@@ -69,14 +69,14 @@ const GlobalStyle = createGlobalStyle`
  }
 
   ::-webkit-scrollbar-thumb {
-    background: #00AEE9;
+    background: #3D3D3D;
     border-radius: 8px;
 }
 
 
 #wallet-connect-metamask{
   background-color: #FFF !important;
-  border: 1px solid #f2f2f2
+  border: 1px solid #3D3D3D
 }
 
 #wallet-connect-metamask:hover{
@@ -141,7 +141,7 @@ button:hover[aria-label="Close the dialog"] {
 
 
 a[variant="subtle"]{
-  background-color: #4c68ef;
+  background-color: #3D3D3D;
   color: white !important;
 }
 
@@ -328,16 +328,16 @@ a:focus:not(:active)[variant="subtle"]{
   border-radius: 7px;
 }
 a[variant="tertiary"]{
-  color: #4c68ef;
+  color: #3D3D3D;
 }
 .fYFWWs{
   border-radius: 5px !important;
 }
 .dUGzEl, .hXXGeJ{
-  color: #4c68ef !important;
+  color: #3D3D3D !important;
 }
 .hXXGeJ{
-  border-color: #4c68ef !important;
+  border-color: #3D3D3D !important;
 }
 .cbSyWB:disabled, .cbSyWB.button--disabled, .cgkvJQ:disabled, .cgkvJQ.button--disabled{
   color: #ccc;
@@ -364,7 +364,7 @@ a[variant="tertiary"]{
 }
 
 div.warningAlert > div > div.sc-jSgupP.gMeKF{
-  background-color: #4c68ef;
+  background-color: #3D3D3D;
 }
 
 

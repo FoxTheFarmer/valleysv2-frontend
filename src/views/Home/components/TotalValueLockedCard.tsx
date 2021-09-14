@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   margin-right: 16px;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: left;
 `
 
 const TVL = styled.div`
