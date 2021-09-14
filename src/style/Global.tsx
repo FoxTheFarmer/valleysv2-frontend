@@ -383,7 +383,7 @@ div.warningAlert > div > div.sc-jSgupP.gMeKF{
   }
 }
 button:hover:not(:disabled){
-  background-color: #778dfc !important;
+  background-color: #A8B7FF !important;
 }
 
 `

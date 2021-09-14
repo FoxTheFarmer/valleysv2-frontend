@@ -83,7 +83,7 @@ const CakeStats = () => {
             </Sub>
           </Row>
           <Row style={{'marginBottom': '0 !important'}}>
-            <Sub>New ART/Block</Sub>
+            <Sub>New $MIS/Block</Sub>
             <Sub className="lightColor">
               {vikingPerBlock}
             </Sub>

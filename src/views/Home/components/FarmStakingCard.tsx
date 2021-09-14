@@ -106,9 +106,9 @@ const FarmedStakingCard = () => {
                   {account ? (
                     <div>
                       <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
-                      <Sub>ART to Harvest</Sub>
+                      <Sub>$MIS to Settle</Sub>
                     </div>
-                  ):(<Sub>ART to Harvest</Sub>)
+                  ):(<Sub>$MIS to Settle</Sub>)
                   }
                   
                 </Block>
@@ -119,9 +119,9 @@ const FarmedStakingCard = () => {
                   {account ? (
                     <div>
                       <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
-                      <Sub>ART in Wallet</Sub>
+                      <Sub>$MIS in Wallet</Sub>
                     </div>
-                  ):(<Sub>ART in Wallet</Sub>)
+                  ):(<Sub>$MIS in Wallet</Sub>)
                   }
                 </Block>
             </div>
@@ -137,8 +137,8 @@ const FarmedStakingCard = () => {
               style={{'color': 'white', 'borderRadius': '5px !important'}}
             >
               {pendingTx
-                ? TranslateString(999, 'Collecting ART')
-                : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
+                ? TranslateString(999, 'Settling $MIS')
+                : TranslateString(999, `Settle All (${balancesWithValue.length})`)}
             </Button>
           ) : (
             <UnlockButton fullWidth/>
