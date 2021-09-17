@@ -16,10 +16,10 @@ const Farms = lazy(() => import('./views/Farms'))
 const MoneyWheel = lazy(() => import('./views/MoneyWheel'))
 const MoneyWheel2 = lazy(() => import('./views/MoneyWheel2'))
 const Lottery = lazy(() => import('./views/Lottery'))
-// const Pools = lazy(() => import('./views/Pools'))
+const Pools = lazy(() => import('./views/Pools'))
 // const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
-// const Nft = lazy(() => import('./views/Nft'))
+const Nft = lazy(() => import('./views/Nft'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -52,8 +52,8 @@ const App: React.FC = () => {
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/nests">
-              <Farms tokenMode/>
+            <Route path="/lab">
+              <Pools />
             </Route>
             <Route path="/pools">
               <Farms tokenMode/>

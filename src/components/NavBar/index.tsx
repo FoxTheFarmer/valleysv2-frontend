@@ -198,6 +198,11 @@ const NavBar = (props) => {
                             <FaFlask /> <span className="dditem">POOLS</span>
                             </Link>
                           </li>
+                          <li className="nav-tab">
+                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <FaFlask /> <span className="dditem">THE LAB</span>
+                            </Link>
+                          </li>
 
                           <li className="nav-tab dropdown" id="wheelToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>

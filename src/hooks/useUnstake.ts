@@ -8,7 +8,7 @@ import {
   updateUserPendingReward,
 } from 'state/actions'
 import { unstake, sousUnstake, sousEmegencyUnstake } from 'utils/callHelpers'
-import { useMasterchef, useSousChef } from './useContract'
+import { useMasterchef, useSousChef, useSousChef2 } from './useContract'
 
 const useUnstake = (pid: number) => {
   const dispatch = useDispatch()
@@ -32,14 +32,14 @@ const SYRUPIDS = [5, 6, 3, 1, 22, 23]
 export const useSousUnstake = (sousId) => {
   const dispatch = useDispatch()
   const { account } = useWallet()
-  const masterChefContract = useMasterchef()
+  const masterChefContract = useSousChef2()
   const sousChefContract = useSousChef(sousId)
   const isOldSyrup = SYRUPIDS.includes(sousId)
 
   const handleUnstake = useCallback(
     async (amount: string) => {
       if (sousId === 0) {
-        const txHash = await unstake(masterChefContract, 0, amount, account)
+        const txHash = await sousUnstake(masterChefContract, amount, account)
         console.info(txHash)
       } else if (isOldSyrup) {
         const txHash = await sousEmegencyUnstake(sousChefContract, amount, account)

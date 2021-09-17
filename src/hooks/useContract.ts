@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AbiItem } from 'web3-utils'
 import { ContractOptions } from 'web3-eth-contract'
 import useWeb3 from 'hooks/useWeb3'
-import { getMasterChefAddress, getCakeAddress, getLotteryAddress, getLotteryTicketAddress, getWheelAddress, getWbnbAddress, getWheel2Address } from 'utils/addressHelpers'
+import { getMasterChefAddress, getCakeAddress, getLotteryAddress, getLotteryTicketAddress, getWheelAddress, getWbnbAddress, getWheel2Address, getSousChefAddress } from 'utils/addressHelpers'
 import { poolsConfig } from 'config/constants'
 import { PoolCategory } from 'config/constants/types'
 import ifo from 'config/abi/ifo.json'
@@ -103,4 +103,8 @@ export const useSousChef = (id) => {
   return useContract(abi, config.contractAddress[process.env.REACT_APP_CHAIN_ID])
 }
 
+export const useSousChef2 = () => {
+  const abi = (masterChef as unknown) as AbiItem
+  return useContract(abi, getSousChefAddress())
+}
 export default useContract

@@ -9,6 +9,10 @@ export default {
     1666600000: labo.addr.masterChef, // cambiar
     97: '',
   },
+  sousChef: {
+    1666600000: '0xcD81CBB9248a6635e6Fd26C2991911FC6c01F85C', // cambiar
+    97: '',
+  },
   wheel: {
     1666600000: '0x57F3b7885b6bcBeaABa96779f1073Af53a2d1E65',
     97: '',
