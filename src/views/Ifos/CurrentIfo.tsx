@@ -45,23 +45,23 @@ const Ifo = () => {
       </IfoCards>
       <LaunchIfoCallout>
         <div>
-          <Title as="h2">{TranslateString(592, 'How to take part')}</Title>
-          <Heading mb="16px">{TranslateString(594, 'Before Sale')}:</Heading>
+          <Title as="h2">{TranslateString(999, 'How to take part')}</Title>
+          <Heading mb="16px">{TranslateString(999, 'Before Sale')}:</Heading>
           <List>
-            <li>{TranslateString(596, 'Buy CAKE and BNB tokens')}</li>
-            <li>{TranslateString(598, 'Get CAKE-BNB LP tokens by adding CAKE and BNB liquidity')}</li>
+            <li>{TranslateString(999, 'Buy ONE tokens')}</li>
+            <li>{TranslateString(999, 'Get ONE tokens by swapping to ONE on viperswap')}</li>
           </List>
           <Flex mb="16px">
             <LinkExternal href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
-              {TranslateString(999, 'Buy cake')}
+              {TranslateString(999, 'Buy ONE')}
             </LinkExternal>
-            <LinkExternal href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+            {/* <LinkExternal href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(999, 'Get LP tokens')}
-            </LinkExternal>
+            </LinkExternal> */}
           </Flex>
-          <Heading mb="16px">{TranslateString(600, 'During Sale')}:</Heading>
+          <Heading mb="16px">{TranslateString(999, 'During Sale')}:</Heading>
           <List>
-            <li>{TranslateString(602, 'While the sale is live, commit your CAKE-LP tokens to buy the IFO tokens')}</li>
+            <li>{TranslateString(999, 'While the sale is live, commit your ONE tokens to buy the IFO tokens')}</li>
           </List>
           <Heading mb="16px">{TranslateString(604, 'After Sale')}:</Heading>
           <List>
@@ -83,8 +83,8 @@ const Ifo = () => {
             <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
             <Text mb={3}>
               {TranslateString(
-                514,
-                'Launch your project with PancakeSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
+                999,
+                'Launch your project with Artemis Protocol, Harmony’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on Harmony.',
               )}
             </Text>
             <Button
