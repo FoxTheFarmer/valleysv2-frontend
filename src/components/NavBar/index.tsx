@@ -206,7 +206,7 @@ const NavBar = (props) => {
                               </li>
                               <li>
                                 <Link to="/pools" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                <FaFlask /><span className="dditem">SYRUP</span>
+                                  <span className="dditem">SYRUP</span>
                                 </Link>
                               </li>
                             </ul>
@@ -240,24 +240,24 @@ const NavBar = (props) => {
                             <FaRocket/> <span className="dditem">LAUNCHPAD</span>
                             </Link>
                           </li>
-                          
+
                           <li className="nav-tab dropdown" id="infoToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               ABOUT
                             </Link>
                             <ul className="dropdown-content dropdown-items">
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://vfat.tools/harmony/" className="nav-links">
                                   <FaChartLine /> <span className="dditem">VFAT</span>
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://twitter.com/TheLabFinance" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://twitter.com/ProtocolArtemis" className="nav-links">
                                 <FaTwitter />  <span className="dditem">TWITTER</span>
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://twitter.com/TheLabFinance" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://www.reddit.com/r/ArtemisProtocol/" className="nav-links">
                                 <FaReddit />  <span className="dditem">REDDIT</span>
                                 </a>
                               </li>
@@ -267,17 +267,17 @@ const NavBar = (props) => {
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://discord.gg/7z5qQgnZHE" className="nav-links">
                                 <FaDiscord />  <span className="dditem">DISCORD</span>
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://docs.thelab.finance" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis-protocol/" className="nav-links">
                                 <FaBook /> <span className="dditem">DOCS</span>
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://github.com/" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://github.com/ArtemisProtocol" className="nav-links">
                                   <FaCode /> <span className="dditem">CODE</span>
                                 </a>
                               </li>
