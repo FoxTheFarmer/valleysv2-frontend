@@ -80,7 +80,7 @@ const Ifo = () => {
         </div>
         <div>
           <div>
-            <Title as="h2">{TranslateString(512, 'Want to launch your own IFO?')}</Title>
+            <Title as="h2">{TranslateString(999, 'Want to launch your own project with our launchpad?')}</Title>
             <Text mb={3}>
               {TranslateString(
                 999,

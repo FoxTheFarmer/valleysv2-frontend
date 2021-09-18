@@ -79,7 +79,7 @@ const ifos: Ifo[] = [
   }, */
   {
     id: 'artemis',
-    address: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',
+    address: '0x319C8Fe0597f28843a7FefbAE75833b7f6Cae077',
     isActive: true,
     name: 'Artemis Protocol',
     subTitle: 'A blockchain based mutual to share the risk of DeFi on Binance Smart Chain',
@@ -92,7 +92,7 @@ const ifos: Ifo[] = [
     cakeToBurn: '$262,500',
     projectSiteUrl: 'https://soteria.finance/#/',
     currency: 'ONE',
-    currencyAddress: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
+    currencyAddress: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
     tokenDecimals: 18,
     releaseBlockNumber: 4086064,
   },
