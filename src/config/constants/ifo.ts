@@ -1,7 +1,7 @@
 import { Ifo } from './types'
 
 const ifos: Ifo[] = [
-  {
+  /* {
     id: 'blink',
     address: '0x44a9Cc8463EC00937242b660BF65B10365d99baD',
     isActive: false,
@@ -76,7 +76,7 @@ const ifos: Ifo[] = [
     currencyAddress: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
     tokenDecimals: 18,
     releaseBlockNumber: 3771926,
-  },
+  }, */
   {
     id: 'soteria',
     address: '0x9C21123D94b93361a29B2C2EFB3d5CD8B17e0A9e',

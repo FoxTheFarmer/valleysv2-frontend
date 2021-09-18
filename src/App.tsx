@@ -17,9 +17,9 @@ const MoneyWheel = lazy(() => import('./views/MoneyWheel'))
 const MoneyWheel2 = lazy(() => import('./views/MoneyWheel2'))
 const Lottery = lazy(() => import('./views/Lottery'))
 const Pools = lazy(() => import('./views/Pools'))
-// const Ifos = lazy(() => import('./views/Ifos'))
+const Ifos = lazy(() => import('./views/Ifos'))
 const NotFound = lazy(() => import('./views/NotFound'))
-const Nft = lazy(() => import('./views/Nft'))
+// const Nft = lazy(() => import('./views/Nft'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -61,20 +61,20 @@ const App: React.FC = () => {
             <Route path="/wheel">
               <MoneyWheel />
             </Route>
-            <Route path="/onewheel">
+            {/* <Route path="/onewheel">
               <MoneyWheel2 />
-            </Route>
+            </Route> */}
             {/* <Route path="/nft">
               <Nft/>
             </Route> */}
             <Route path="/lottery">
              <Lottery />
             </Route>
-            {/* <Route path="/ifo">
+            <Route path="/Launchpad">
             <Ifos />
             </Route>
-           <Route path="/nft">
-           <Nft /> 
+            {/* <Route path="/nft">
+            <Nft /> 
             </Route>  */}
             {/* Redirect */}
             <Route path="/staking">

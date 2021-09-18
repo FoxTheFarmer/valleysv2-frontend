@@ -205,7 +205,7 @@ const NavBar = (props) => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/pools" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                                   <span className="dditem">SYRUP</span>
                                 </Link>
                               </li>
@@ -236,7 +236,7 @@ const NavBar = (props) => {
                           <WheelToggle />
 
                           <li className="nav-tab">
-                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/launchpad" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                             <FaRocket/> <span className="dditem">LAUNCHPAD</span>
                             </Link>
                           </li>

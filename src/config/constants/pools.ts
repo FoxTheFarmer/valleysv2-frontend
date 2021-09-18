@@ -3,14 +3,14 @@ import { PoolConfig, QuoteToken, PoolCategory } from './types'
 const pools: PoolConfig[] = [
    {
     sousId: 0,
-    tokenName: 'LABO',
+    tokenName: 'XYA',
     stakingTokenName: QuoteToken.CAKE,
     stakingTokenAddress: '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2',
     contractAddress: {
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
       1666600000: '0xcD81CBB9248a6635e6Fd26C2991911FC6c01F85C',
     },
-    poolCategory: PoolCategory.CORE,
+    poolCategory: PoolCategory.COMMUNITY,
     projectLink: 'https: pancakeswap.finance/',
     harvest: true,
     tokenPerBlock: '0.1',
