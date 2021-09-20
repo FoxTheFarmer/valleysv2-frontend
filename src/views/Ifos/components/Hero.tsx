@@ -27,7 +27,7 @@ const Hero = () => {
     <StyledHero>
       <Container>
         <Title>{TranslateString(999, 'Launchpad')}</Title>
-        <Blurb>{TranslateString(502, 'Buy new tokens with a brand new token sale model.')}</Blurb>
+        <Blurb>{TranslateString(999, 'Overflow Method: Launchpad does not end at 100%. Stake more = get more rewards. The leftover funds will be returned after the sale ends.')}</Blurb>
       </Container>
     </StyledHero>
   )

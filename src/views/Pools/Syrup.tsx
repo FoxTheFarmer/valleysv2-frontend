@@ -18,6 +18,7 @@ import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
 import Divider from './components/Divider'
+import Hero2 from './components/Hero'
 
 const Title = styled.p`
   font-size: 2em;
@@ -78,7 +79,7 @@ const Farm: React.FC = () => {
   return (
     <Page>
       <Hero>
-        <object type="image/svg+xml" data="public/images/heros/poolhero.svg" height="270px">&nbsp;</object>
+        <Hero2 />
       </Hero>
       <PoolTabButtons />
       <Divider style={{'border': '0.01em solid #6E4EED'}}/>

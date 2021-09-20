@@ -98,7 +98,7 @@ export const soushHarvest = async (sousChefContract, account) => {
 
 export const soushHarvestBnb = async (sousChefContract, account) => {
   return sousChefContract.methods
-    .deposit()
+    .deposit('0')
     .send({ from: account, value: new BigNumber(0) })
     .on('transactionHash', (tx) => {
       return tx.transactionHash

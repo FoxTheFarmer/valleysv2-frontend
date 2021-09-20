@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    color: #3D3D3D;
+    color: #4c68ef;
   }
 
   a:hover{
@@ -141,7 +141,7 @@ button:hover[aria-label="Close the dialog"] {
 
 
 a[variant="subtle"]{
-  background-color: #3D3D3D;
+  background-color: #729ec2;
   color: white !important;
 }
 
@@ -328,7 +328,7 @@ a:focus:not(:active)[variant="subtle"]{
   border-radius: 7px;
 }
 a[variant="tertiary"]{
-  color: #3D3D3D;
+  color: #c9c4d4;
 }
 .fYFWWs{
   border-radius: 5px !important;

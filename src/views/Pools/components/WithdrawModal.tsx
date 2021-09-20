@@ -2,6 +2,7 @@ import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
 import { Button, Modal } from '@pancakeswap-libs/uikit'
 import ModalActions from 'components/ModalActions'
+import styled from 'styled-components'
 import TokenInput from '../../../components/TokenInput'
 import useI18n from '../../../hooks/useI18n'
 import { getFullDisplayBalance } from '../../../utils/formatBalance'
@@ -33,7 +34,13 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={`Withdraw ${tokenName}`} onDismiss={onDismiss}>
+    <Modal title={`Withdraw ${tokenName}` } onDismiss={onDismiss}>
+    {/* <WarningWithdraw>
+        {TranslateString(999, 'Warning! It withdraws all of your staked tokens!')}
+        <br />
+        {TranslateString(999, 'It is advised to not do so until the pool is over!')}
+        <br />
+        </WarningWithdraw> */}
       <TokenInput
         onSelectMax={handleSelectMax}
         onChange={handleChange}
@@ -60,5 +67,12 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
     </Modal>
   )
 }
+
+const WarningWithdraw = styled.div`
+  text-align: left;
+  overflow-y: auto;
+  max-height: 400px;
+  color: ${(props) => props.theme.colors.primary};
+`
 
 export default WithdrawModal

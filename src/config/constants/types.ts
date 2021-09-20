@@ -47,6 +47,7 @@ export enum QuoteToken {
   'GYA' = 'GYA',
   'DSL' = 'DSL',
   'WONE' = 'WONE',
+  'MIS' = 'MIS',
 }
 
 export enum PoolCategory {
@@ -85,7 +86,7 @@ export interface CoinPriceConfig {
 }
 
 export interface PoolConfig {
-  sousId: number
+  sousId?: number
   image?: string
   tokenName: string
   stakingTokenName: QuoteToken

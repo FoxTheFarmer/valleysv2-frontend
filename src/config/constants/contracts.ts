@@ -10,7 +10,7 @@ export default {
     97: '',
   },
   sousChef: {
-    1666600000: '0xcD81CBB9248a6635e6Fd26C2991911FC6c01F85C', // cambiar
+    1666600000: '0xbb24f8080fB72c7b83C29ed443bA3f7690B4777D', // cambiar
     97: '',
   },
   wheel: {

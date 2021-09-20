@@ -60,10 +60,6 @@ const Coming: React.FC = () => {
           {TranslateString(418, 'Apply Now')}
         </Button>
         <DetailPlaceholder>
-          <div style={{ flex: 1 }}>{TranslateString(736, 'APR')}:</div>
-          <Value>??</Value>
-        </DetailPlaceholder>
-        <DetailPlaceholder>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label="syrup">
               🥞{' '}

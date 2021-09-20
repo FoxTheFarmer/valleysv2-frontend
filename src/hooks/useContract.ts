@@ -104,7 +104,7 @@ export const useSousChef = (id) => {
 }
 
 export const useSousChef2 = () => {
-  const abi = (masterChef as unknown) as AbiItem
+  const abi = (sousChef as unknown) as AbiItem
   return useContract(abi, getSousChefAddress())
 }
 export default useContract

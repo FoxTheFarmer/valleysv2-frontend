@@ -48,12 +48,12 @@ const Ifo = () => {
           <Title as="h2">{TranslateString(999, 'How to take part')}</Title>
           <Heading mb="16px">{TranslateString(999, 'Before Sale')}:</Heading>
           <List>
-            <li>{TranslateString(999, 'Buy ONE tokens')}</li>
-            <li>{TranslateString(999, 'Get ONE tokens by swapping to ONE on viperswap')}</li>
+            <li>{TranslateString(999, 'Buy WONE tokens')}</li>
+            <li>{TranslateString(999, 'Get WONE tokens by swapping to WONE on viperswap')}</li>
           </List>
           <Flex mb="16px">
-            <LinkExternal href="https://exchange.pancakeswap.finance/#/swap" mr="16px">
-              {TranslateString(999, 'Buy ONE')}
+            <LinkExternal href="https://viper.exchange/#/swap?outputCurrency=0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a" mr="16px">
+              {TranslateString(999, 'Buy WONE')}
             </LinkExternal>
             {/* <LinkExternal href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(999, 'Get LP tokens')}
@@ -61,7 +61,7 @@ const Ifo = () => {
           </Flex>
           <Heading mb="16px">{TranslateString(999, 'During Sale')}:</Heading>
           <List>
-            <li>{TranslateString(999, 'While the sale is live, commit your ONE tokens to buy the IFO tokens')}</li>
+            <li>{TranslateString(999, 'While the sale is live, commit your WONE tokens to buy the IFO tokens')}</li>
           </List>
           <Heading mb="16px">{TranslateString(604, 'After Sale')}:</Heading>
           <List>
