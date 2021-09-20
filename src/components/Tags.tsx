@@ -20,7 +20,9 @@ const CoreTag = () => (
 )
 
 const CommunityTag = () => (
-  <p style={{'display': 'none'}}>Nada</p>
+  <Tag variant='secondary' outline startIcon={<VerifiedIcon />}>
+    Community
+  </Tag>
 )
 
 const BinanceTag = () => (

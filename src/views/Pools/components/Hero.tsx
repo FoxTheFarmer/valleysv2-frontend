@@ -69,7 +69,7 @@ const Hero2 = () => {
     <StyledHero>
       <StyledContainer>
         <LeftWrapper>
-          <Title>Syrup Pools</Title>
+          <Title>Incubator Pools</Title>
           <Blurb>Stake MIS</Blurb>
           <Blurb>Earn Tokens</Blurb>
         </LeftWrapper>

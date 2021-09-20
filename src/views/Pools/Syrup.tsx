@@ -29,6 +29,16 @@ const Sub = styled.p`
   font-size: 1em;
   color: #6E4EED;
 `
+const SvgHero = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 42px 12px;
+
+  @media all and (max-width: 1350px) { 
+    max-width: 100%;
+  }
+`
 
 const Farm: React.FC = () => {
   const { path } = useRouteMatch()
@@ -78,6 +88,9 @@ const Farm: React.FC = () => {
 
   return (
     <Page>
+      <SvgHero>
+        <object type="image/svg+xml" data="images/incubator.svg" width="250px">&nbsp;</object>
+      </SvgHero>
       <Hero>
         <Hero2 />
       </Hero>

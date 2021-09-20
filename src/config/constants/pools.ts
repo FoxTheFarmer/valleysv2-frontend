@@ -9,7 +9,7 @@ const pools: PoolConfig[] = [
       97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
       1666600000: '0xbb24f8080fB72c7b83C29ed443bA3f7690B4777D',
     },
-    poolCategory: PoolCategory.CORE,
+    poolCategory: PoolCategory.COMMUNITY,
     projectLink: 'https: pancakeswap.finance/',
     harvest: true,
     tokenPerBlock: '1',
