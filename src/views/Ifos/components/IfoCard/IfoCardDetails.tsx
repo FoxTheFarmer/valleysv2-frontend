@@ -45,7 +45,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
     <>
       <StyledIfoCardDetails>
         <Item>
-          <Display>{TranslateString(582, 'Launch Time')}</Display>
+          <Display bold>{TranslateString(582, 'Launch Time')}</Display>
           <Text>
             {launchDate},
             <Link
@@ -60,26 +60,31 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
           </Text>
         </Item>
         <Item>
-          <Display>{TranslateString(584, 'For Sale')}</Display>
+          <Display bold>{TranslateString(584, 'For Sale')}</Display>
           <Text>{saleAmount}</Text>
         </Item>
         <Item>
-          <Display>{TranslateString(999, 'To raise (USD)')}</Display>
+          <Display bold>{TranslateString(999, 'To Raise (USD)')}</Display>
           <Text>{raiseAmount}</Text>
         </Item>
+        {/*
         <Item>
           <Display>{TranslateString(999, 'ONE to burn (USD)')}</Display>
           <Text>{cakeToBurn}</Text>
         </Item>
+        */}
         <Item>
-          <Display>{TranslateString(999, 'Total raised (% of target)')}</Display>
+          <Display bold>{TranslateString(999, 'Total Raised (% of Target)')}</Display>
           <Text>{`${totalAmount.div(raisingAmount).times(100).toFixed(2)}%`}</Text>
         </Item>
       </StyledIfoCardDetails>
       <LinkExternal href={projectSiteUrl} style={{ margin: 'auto' }}>
-        {TranslateString(412, 'View project site')}
+        {TranslateString(4012, 'More on Artemis')}
       </LinkExternal>
     </>
+
+
+
   )
 }
 

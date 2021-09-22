@@ -233,6 +233,8 @@ const NavBar = (props) => {
                               </li>
                             </ul>
                           </li>
+
+
                           <WheelToggle />
 
                           <li className="nav-tab">

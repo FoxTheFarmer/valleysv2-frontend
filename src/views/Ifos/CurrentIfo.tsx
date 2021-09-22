@@ -44,58 +44,36 @@ const Ifo = () => {
         <IfoCard ifo={activeIfo} />
       </IfoCards>
       <LaunchIfoCallout>
-        <div>
-          <Title as="h2">{TranslateString(999, 'How to take part')}</Title>
-          <Heading mb="16px">{TranslateString(999, 'Before Sale')}:</Heading>
-          <List>
-            <li>{TranslateString(999, 'Buy WONE tokens')}</li>
-            <li>{TranslateString(999, 'Get WONE tokens by swapping to WONE on viperswap')}</li>
-          </List>
-          <Flex mb="16px">
-            <LinkExternal href="https://viper.exchange/#/swap?outputCurrency=0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a" mr="16px">
-              {TranslateString(999, 'Buy WONE')}
-            </LinkExternal>
-            {/* <LinkExternal href="https://exchange.pancakeswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
-              {TranslateString(999, 'Get LP tokens')}
-            </LinkExternal> */}
-          </Flex>
-          <Heading mb="16px">{TranslateString(999, 'During Sale')}:</Heading>
-          <List>
-            <li>{TranslateString(999, 'While the sale is live, commit your WONE tokens to buy the IFO tokens')}</li>
-          </List>
-          <Heading mb="16px">{TranslateString(604, 'After Sale')}:</Heading>
-          <List>
-            <li>{TranslateString(606, 'Claim the tokens you bought, along with any unspent funds.')}</li>
-            <li>{TranslateString(608, 'Done!')}</li>
-          </List>
-          <Text as="div" pt="16px">
-            <Button
-              as="a"
-              variant="secondary"
-              href="https://docs.pancakeswap.finance/core-products/ifo-initial-farm-offering"
-            >
-              {TranslateString(610, 'Read more')}
-            </Button>
-          </Text>
-        </div>
-        <div>
+      <div>
           <div>
-            <Title as="h2">{TranslateString(999, 'Want to launch your own project with our launchpad?')}</Title>
+            <Title as="h2">{TranslateString(999, 'About ArtemisPad')}</Title>
             <Text mb={3}>
               {TranslateString(
                 999,
-                'Launch your project with Artemis Protocol, Harmony’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on Harmony.',
+                'We descentralize the way ideas raise capital, by aligning interests of both users and creators via attractive incentives and yields. Projects wishing to launch on Artemis will not only be able to raise capital for liquidity, but also will be rewarded for it, this includes taking part in our incubator pools, solo staking and incentivized liquidity pools.',
               )}
             </Text>
-            <Button
-              as="a"
-              href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
-              external
-            >
-              {TranslateString(516, 'Apply to launch')}
-            </Button>
+            <LinkExternal href="https://viper.exchange/#/swap?outputCurrency=0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a" mr="16px">
+              {TranslateString(999, 'Apply for Launch')}
+            </LinkExternal>
+
           </div>
         </div>
+      <div>
+          <div>
+            <Title as="h2">{TranslateString(999, 'How to Participate on the Sale?')}</Title>
+            
+            <Text mb={3}>
+              {TranslateString(
+                999,
+                'First, Wrap your ONE tokens, then, while the sale is live, commit your WONE tokens to buy $MIS. Once the sale is over, claim the tokens you bought, along with any unspent funds.',
+              )}
+            </Text>
+
+          </div>
+        </div>
+
+        
       </LaunchIfoCallout>
     </div>
   )

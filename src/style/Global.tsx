@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   button{
-    box-shadow: 0 0 0 2px #FFF;
+    box-shadow: 0 0 0 0px #FFF;
   }
 
   a{
@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .nav-links:hover{
-    color: #3D3D3D;
+    color: #4c68ef;
   }
 
   .nav-links.price button:hover{
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   svg{
-    fill: #3D3D3D;
+    fill: #4c68ef;
   }
 
 

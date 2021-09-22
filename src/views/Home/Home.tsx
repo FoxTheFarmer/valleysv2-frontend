@@ -41,8 +41,9 @@ const Cards = styled(BaseLayout)`
 
   & > div {
     grid-column: span 10;
-    width: 100%;
+    width: 110%;
     height: 100%;
+
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {

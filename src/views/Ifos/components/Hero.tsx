@@ -14,6 +14,16 @@ const Blurb = styled(Text)`
   font-size: 20px;
   font-weight: 600;
 `
+const SvgHero = styled.div`
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 42px 12px;
+
+  @media all and (max-width: 1350px) { 
+    max-width: 100%;
+  }
+`
 
 const StyledHero = styled.div`
   padding-bottom: 40px;
@@ -23,14 +33,14 @@ const StyledHero = styled.div`
 const Hero = () => {
   const TranslateString = useI18n()
 
-  return (
-    <StyledHero>
-      <Container>
-        <Title>{TranslateString(999, 'Launchpad')}</Title>
-        <Blurb>{TranslateString(999, 'Overflow Method: Launchpad does not end at 100%. Stake more = get more rewards. The leftover funds will be returned after the sale ends.')}</Blurb>
-      </Container>
-    </StyledHero>
-  )
+return (
+  <>
+    <SvgHero>
+      <object type="image/svg+xml" data="images/launchpad.svg" width="810px">&nbsp;</object>
+    </SvgHero>
+    {/* <HowItWorks /> */}
+  </>
+)
 }
 
 export default Hero

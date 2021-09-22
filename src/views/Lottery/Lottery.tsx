@@ -69,9 +69,7 @@ const Lottery: React.FC = () => {
 
   return (
     <>
-      <SvgHero>
-        <object type="image/svg+xml" data="images/lotteryhero.svg" width="810px">&nbsp;</object>
-      </SvgHero>
+
       {/* <HowItWorks /> */}
       <Page>
         <Wrapper>

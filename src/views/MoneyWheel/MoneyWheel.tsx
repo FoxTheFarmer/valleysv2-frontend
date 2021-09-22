@@ -55,9 +55,7 @@ const MoneyWheel: React.FC = () => {
   
   return (
     <div>
-      <SvgHero>
-        <object type="image/svg+xml" data="images/lotteryhero.svg" width="810px">&nbsp;</object>
-      </SvgHero>
+
       <Page>
         <Cards>
             <div>
