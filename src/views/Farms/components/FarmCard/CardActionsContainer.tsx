@@ -5,7 +5,7 @@ import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
 import { Farm } from 'state/types'
-import { useFarmFromPid, useFarmFromSymbol, useFarmUser } from 'state/hooks'
+import {useFarmFromPid, useFarmFromSymbol, useFarmTokensToUsd, useFarmUser, usePriceCakeBusd} from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
@@ -42,6 +42,12 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const tokenAddress = tokenAddresses[process.env.REACT_APP_CHAIN_ID];
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
+  const tokenBalanceUsd = useFarmTokensToUsd(pid, tokenBalance)
+  const stakedBalanceUsd = useFarmTokensToUsd(pid, stakedBalance)
+
+  // console.log(pid)
+  // console.log(tokenBalanceUsd)
+  // console.log(stakedBalanceUsd)
 
   const lpContract = useMemo(() => {
     if(isTokenOnly){
@@ -67,7 +73,14 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
 
   const renderApprovalOrStakeButton = () => {
     return isApproved ? (
-      <StakeAction stakedBalance={stakedBalance} tokenBalance={tokenBalance} tokenName={lpName} pid={pid} depositFeeBP={depositFeeBP} />
+      <StakeAction
+          stakedBalance={stakedBalance}
+          stakedBalanceUsd={stakedBalanceUsd}
+          tokenBalance={tokenBalance}
+          tokenBalanceUsd={tokenBalanceUsd}
+          tokenName={lpName} pid={pid}
+          depositFeeBP={depositFeeBP}
+      />
     ) : (
       <span data-tip data-for='happyFace'>
       <Button style={{'borderRadius': ( true ? '5px' : '')}} mt="8px" fullWidth disabled={requestedApproval || labo.isLocked.unlockWalletButton} onClick={handleApprove}>

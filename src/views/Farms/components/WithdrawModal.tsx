@@ -11,9 +11,11 @@ interface WithdrawModalProps {
   onConfirm: (amount: string) => void
   onDismiss?: () => void
   tokenName?: string
+  valueUsd?: number
 }
 
-const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max, tokenName = '' }) => {
+const WithdrawModal: React.FC<WithdrawModalProps> = (
+    { onConfirm, onDismiss, max, tokenName = '', valueUsd= 0 }) => {
   const [val, setVal] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
@@ -39,6 +41,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ onConfirm, onDismiss, max
         onChange={handleChange}
         value={val}
         max={fullBalance}
+        valueUsd={valueUsd}
         symbol={tokenName}
       />
       <ModalActions>

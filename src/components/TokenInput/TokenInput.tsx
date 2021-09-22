@@ -10,15 +10,21 @@ interface TokenInputProps extends InputProps {
   symbol: string
   onSelectMax?: () => void
   depositFeeBP?: number
+  valueUsd?: number | string
 }
 
-const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelectMax, value, depositFeeBP = 0 }) => {
+
+const TokenInput: React.FC<TokenInputProps> = (
+    { max, symbol, onChange, onSelectMax, value, depositFeeBP = 0, valueUsd= 0 }) => {
   const TranslateString = useI18n()
   return (
     <StyledTokenInput>
       <StyledMaxText>
         {max.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
       </StyledMaxText>
+        <Staked>
+          ~${valueUsd.toLocaleString()} TODO-center this somehow
+      </Staked>
       <Input
         endAdornment={
           <StyledTokenAdornmentWrapper>
@@ -52,6 +58,11 @@ const StyledTokenInput = styled.div``
 
 const StyledSpacer = styled.div`
   width: ${(props) => props.theme.spacing[3]}px;
+`
+
+const Staked = styled.div`
+  font-size: 10px;
+  color: ${({ theme }) => theme.colors.textSubtle};
 `
 
 const StyledTokenAdornmentWrapper = styled.div`
