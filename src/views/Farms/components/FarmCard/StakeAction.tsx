@@ -13,6 +13,8 @@ import './index.css'
 interface FarmCardActionsProps {
   stakedBalance?: BigNumber
   tokenBalance?: BigNumber
+  stakedBalanceUsd?: BigNumber
+  tokenBalanceUsd?: BigNumber
   tokenName?: string
   pid?: number
   depositFeeBP?: number
@@ -25,17 +27,43 @@ const IconButtonWrapper = styled.div`
   }
 `
 
-const StakeAction: React.FC<FarmCardActionsProps> = ({ stakedBalance, tokenBalance, tokenName, pid, depositFeeBP}) => {
+const Staked = styled.div`
+  font-size: 10px;
+  color: ${({ theme }) => theme.colors.textSubtle};
+`
+
+const StakeAction: React.FC<FarmCardActionsProps> = (
+    { stakedBalance,
+      tokenBalance,
+      stakedBalanceUsd,
+      tokenBalanceUsd,
+      tokenName,
+      pid,
+      depositFeeBP
+    }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
   const { onUnstake } = useUnstake(pid)
 
   const rawStakedBalance = getBalanceNumber(stakedBalance)
   const displayBalance = rawStakedBalance.toLocaleString()
+  const rawStakedBalanceUsd = getBalanceNumber(stakedBalanceUsd)
+  const displayBalanceUsd = rawStakedBalanceUsd.toLocaleString('en-us', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
 
-  const [onPresentDeposit] = useModal(<DepositModal max={tokenBalance} onConfirm={onStake} tokenName={tokenName} depositFeeBP={depositFeeBP} />)
+  const tokenBalanceUsdNum = getBalanceNumber(tokenBalanceUsd)
+
+  const [onPresentDeposit] = useModal(<DepositModal
+      max={tokenBalance}
+      valueUsd={tokenBalanceUsdNum}
+      onConfirm={onStake}
+      tokenName={tokenName}
+      depositFeeBP={depositFeeBP} />)
   const [onPresentWithdraw] = useModal(
-    <WithdrawModal max={stakedBalance} onConfirm={onUnstake} tokenName={tokenName} />,
+    <WithdrawModal
+        max={stakedBalance}
+        valueUsd={rawStakedBalanceUsd}
+        onConfirm={onUnstake}
+        tokenName={tokenName} />,
   )
 
   const renderStakingButtons = () => {
@@ -55,7 +83,12 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({ stakedBalance, tokenBalan
 
   return (
     <Flex justifyContent="space-between" alignItems="center">
-      <Heading color={rawStakedBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
+      <Heading color={rawStakedBalance === 0 ? 'textDisabled' : 'text'}>
+        <Staked>
+          {displayBalance}
+        </Staked>
+        {stakedBalance.gt(0) && <Staked>~${displayBalanceUsd}</Staked>}
+      </Heading>
       {renderStakingButtons()}
     </Flex>
   )

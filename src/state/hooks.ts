@@ -36,6 +36,26 @@ export const useFarmFromSymbol = (lpSymbol: string): Farm => {
   return farm
 }
 
+export const useFarmTokensToUsd = (pid, farmTokens) => {
+  // farmTokens is the # of LP tokens, or just the number of tokens for single staking pools
+  // All price logic should go here for farms
+  const farm = useFarmFromPid(pid)
+  const onePrice = usePriceBnbBusd()
+  console.log(pid)
+  console.log(farm)
+
+  if (pid === 0 || pid === 2) {
+    // These all have quote symbol as a stablecoin
+    return new BigNumber(2).times(farm.quoteTokenPerLp).times(farmTokens)
+  }
+  if (pid === 1) {
+    // These all have quote symbol as ONE
+    return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens)
+  }
+
+  return new BigNumber(1)
+}
+
 export const useFarmUser = (pid) => {
   const farm = useFarmFromPid(pid)
 

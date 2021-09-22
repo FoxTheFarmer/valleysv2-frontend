@@ -13,29 +13,29 @@ const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 const fetchFarms = async () => {
   const data = await Promise.all(
     farmsConfig.map(async (farmConfig) => {
-      const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
+      const lpAddress = farmConfig.lpAddresses[CHAIN_ID]
       const calls = [
         // Balance of token in the LP contract
         {
           address: farmConfig.tokenAddresses[CHAIN_ID],
           name: 'balanceOf',
-          params: [lpAdress],
+          params: [lpAddress],
         },
         // Balance of quote token on LP contract
         {
           address: farmConfig.quoteTokenAdresses[CHAIN_ID],
           name: 'balanceOf',
-          params: [lpAdress],
+          params: [lpAddress],
         },
         // Balance of LP tokens in the master chef contract
         {
-          address: farmConfig.isTokenOnly ? farmConfig.tokenAddresses[CHAIN_ID] : lpAdress,
+          address: farmConfig.isTokenOnly ? farmConfig.tokenAddresses[CHAIN_ID] : lpAddress,
           name: 'balanceOf',
           params: [getMasterChefAddress()],
         },
         // Total supply of LP tokens
         {
-          address: lpAdress,
+          address: lpAddress,
           name: 'totalSupply',
         },
         // Token decimals
@@ -62,8 +62,18 @@ const fetchFarms = async () => {
       let tokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
+      const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
+
+      // These are for total value calculations later
+      const perc1LpOfTotal = new BigNumber(10).pow(18).div(new BigNumber(lpTotalSupply))
+      let tokenPerLp = perc1LpOfTotal.times(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals));
+      let quoteTokenPerLp = perc1LpOfTotal.times(quoteTokenBlanceLP).div(new BigNumber(10).pow(quoteTokenDecimals));
+
       if(farmConfig.isTokenOnly){
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
+        tokenPerLp = new BigNumber(1);
+        quoteTokenPerLp = new BigNumber(1);
+
         if(farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD){
           tokenPriceVsQuote = new BigNumber(1);
         }else{
@@ -72,7 +82,7 @@ const fetchFarms = async () => {
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
       }else{
         // Ratio in % a LP tokens that are in staking, vs the total number in circulation
-        const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
+
 
         // Total value in staking in quote token value
         lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
@@ -122,6 +132,8 @@ const fetchFarms = async () => {
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
         vikingPerBlock: new BigNumber(vikingPerBlock).toNumber(),
+          tokenPerLp: tokenPerLp.toJSON(),
+          quoteTokenPerLp: quoteTokenPerLp.toJSON(),
       }
     }),
   )
