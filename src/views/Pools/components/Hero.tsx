@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text } from '@pancakeswap-libs/uikit'
+import { Heading, LinkExternal, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Container from 'components/layout/Container'
 
@@ -61,6 +61,23 @@ const RightWrapper = styled.div`
     padding-left: 32px;
   }
 `
+const StyledLinkExternal = styled(LinkExternal)`
+  svg {
+    padding-left: 0px;
+    height: 16px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: ${({ theme }) => theme.colors.text};
+  display: flex;
+  align-items: right;
+
+
+`
 
 const Hero2 = () => {
   const TranslateString = useI18n()
@@ -72,6 +89,11 @@ const Hero2 = () => {
           <Title>Incubator Pools</Title>
           <Blurb>Stake MIS</Blurb>
           <Blurb>Earn Tokens</Blurb>
+          <Blurb>No fees!</Blurb>
+          <Blurb>Don`t worry about APR, just relax and earn</Blurb>
+          <LinkExternal href="https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/syrup" mr="16px">
+              {TranslateString(999, 'More Info')}
+          </LinkExternal>
         </LeftWrapper>
       </StyledContainer>
     </StyledHero>

@@ -23,7 +23,7 @@ const TokenInput: React.FC<TokenInputProps> = (
         {max.toLocaleString()} {symbol} {TranslateString(526, 'Available')}
       </StyledMaxText>
         <Staked>
-          ~${valueUsd.toLocaleString()} TODO-center this somehow
+          {/* ~${valueUsd.toLocaleString()} TODO-center this somehow */}
       </Staked>
       <Input
         endAdornment={
