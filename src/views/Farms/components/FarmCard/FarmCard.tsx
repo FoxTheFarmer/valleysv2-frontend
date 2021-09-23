@@ -69,12 +69,7 @@ const FCard = styled.div`
   text-align: center;
 `
 
-const Divider = styled.div`
-  background-color: ${({ theme }) => theme.colors.borderColor};
-  height: 1px;
-  margin: 28px auto;
-  width: 100%;
-`
+
 const Quote = styled.p`
     font-size: 15px;
     margin-bottom: 8px;
@@ -118,7 +113,15 @@ const Menu = styled(Text)`
 
   `
 
-
+  const Divider = styled.div`
+  background-color: #4c68ef;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+`
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -230,10 +233,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           <span><FaGhost/> Add Liquidity</span>
         </StyledLinkExternal>
       </Flex>
+      
+      <Divider />
+
+      
 
 
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
-      <Divider />
+
       <ExpandableSectionButton
         onClick={() => setShowExpandableSection(!showExpandableSection)}
         expanded={showExpandableSection}

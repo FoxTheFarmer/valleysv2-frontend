@@ -7,9 +7,21 @@ import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { FaLock, FaScroll } from 'react-icons/fa'
+import { useTotalRewards } from 'hooks/useTickets'
 import CardValue from './CardValue'
 import { useFarms, usePriceCakeBusd, useTotalValue } from '../../../state/hooks'
 import './index.css'
+
+const Divider = styled.div`
+background-color: #4c68ef;
+height: 1px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 30px;
+margin-bottom: 5px;
+width: 100%;
+`
+
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
@@ -34,22 +46,15 @@ const Sub = styled.p`
   color: #555;
 `
 
-const Sub3 = styled.p`
-margin-top: 5px;
+const Sub2 = styled.p`
+  margin-top: 20px;
   font-size: 0.97em;
   color: #555;
 `
 
 
-const Sub2 = styled.p`
-  margin-top: 5px;
-  font-size: 20px;
-  color: #555;
-`
-
-
 const TVL = styled.div`
-margin-top: 5px;
+margin-top: 20px;
 
 font-weight: 900 !important;
 font-size: 18px !important;
@@ -70,6 +75,7 @@ const CakeStats = () => {
 
   // const data = useGetStats()
   const totalValue = useTotalValue();
+  const lotteryPrizeAmount = useTotalRewards()
 
   const eggPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
@@ -117,12 +123,13 @@ const CakeStats = () => {
             </Sub>
           </Row>
 
-
+          <Divider />
 
           <Row style={{'marginBottom': '0 !important'}}>
-            <Sub2>Locked Value</Sub2>
-            <TVL><CardValue value={totalValue.toNumber()} prefix="$" decimals={2} /></TVL>  
+            <Sub2>Total Value Locked</Sub2>
+            <Sub2><CardValue value={totalValue.toNumber()} prefix="$" decimals={2} /></Sub2>  
           </Row>
+
 
         </Wrapper>
       </CardBody>

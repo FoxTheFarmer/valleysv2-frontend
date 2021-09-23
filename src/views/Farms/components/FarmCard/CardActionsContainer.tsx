@@ -132,6 +132,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
         <Quote>{TranslateString(999, 'Staked')}</Quote>
       </Flex>
       {!account ? <UnlockButton mt="8px" fullWidth /> : renderApprovalOrStakeButton()}
+    
     </Action>
   )
 }
