@@ -7,6 +7,7 @@ import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
 import ExpandableSectionButton from 'components/ExpandableSectionButton'
+import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { QuoteToken } from 'config/constants/types'
 import { FaCropAlt, FaFire, FaFlag, FaFlask, FaGem, FaGhost, FaLock, FaMountain, FaPiggyBank, FaTractor, FaTruck, FaTwitter } from 'react-icons/fa'
 import DetailsSection from './DetailsSection'
@@ -132,6 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
+  
 
   // const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
@@ -164,6 +166,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   })}%` : '...loading' )
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, risk } = farm
+  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
 
   return (
     <FCard>
@@ -218,7 +221,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       </Flex>
 
       <Flex justifyContent="left">
-        <StyledLinkExternal external href={`https://app.sushi.com/add/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`} bold={false} style={{"color": "#4c68ef"}}>
+        <StyledLinkExternal external href={
+          farm.isTokenOnly ?
+            `https://app.sushi.com/swap?inputCurrency=${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+            :
+            `https://app.sushi.com/add/${liquidityUrlPathParts}`
+        }>
           <span><FaGhost/> Add Liquidity</span>
         </StyledLinkExternal>
       </Flex>
