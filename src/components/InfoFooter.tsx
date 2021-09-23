@@ -17,7 +17,7 @@ const InfoFooter = () => {
 
   return (
     <StyledFooter>
-        <p><FaComment/> hello@artemis.one | @artemisprotocol</p>
+        <p>hello@artemis.one</p>
     </StyledFooter>
   )
 }

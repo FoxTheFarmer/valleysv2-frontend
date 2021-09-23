@@ -8,7 +8,8 @@ import InfoFooter from 'components/InfoFooter'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
-
+import TwitterCard from './components/TwitterCard'
+import FarmedStakingCard from './components/LotteryCard'
 
 const Column = styled.div`
   column-count: 2;
@@ -41,7 +42,7 @@ const Cards = styled(BaseLayout)`
 
   & > div {
     grid-column: span 10;
-    width: 110%;
+    width: 115%;
     height: 100%;
 
   }
@@ -92,7 +93,8 @@ const Home: React.FC = () => {
         <Cards className="CardsLayout">
                 <FarmStakingCard/>
                 <CakeStats />
-                <TotalValueLockedCard />
+
+                
         </Cards>
       </FlowRow>
     </HomePage>

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Text, Flex, Link, LinkExternal } from '@pancakeswap-libs/uikit'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { Address } from 'config/constants/types'
+import { FaScroll } from 'react-icons/fa'
 
 export interface ExpandableSectionProps {
   isTokenOnly?: boolean
@@ -54,32 +55,31 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       {!removed && (
         <Flex justifyContent="space-between">
-          <Text bold marginBottom='8px'>{TranslateString(23, '📄 Total Liquidity')}</Text>
+          <span><FaScroll/> Liquidity</span>
           <Text bold>{totalValueFormated}</Text>
         </Flex>
       )}
 
       
+
+
+
+
+      <Flex justifyContent="flex-start">
+        <StyledLinkExternal external href={bscScanAddress} bold={false} style={{"color": "#4c68ef"}}>
+          {TranslateString(999, 'View on Explorer')}
+        </StyledLinkExternal>
+      </Flex>
+
       <Flex justifyContent="flex-start">
         <StyledLinkExternal external href='https://vfat.tools/harmony/' bold={false} style={{"color": "#4c68ef"}}>
-          {TranslateString(999, 'VFAT')}
-        </StyledLinkExternal>
-      </Flex>
-
-      <Flex justifyContent="left">
-        <StyledLinkExternal style={{"color": "#4c68ef"}} href={
-          isTokenOnly ?
-            `https://app.sushi.com/swap?inputCurrency=${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
-            :
-            `https://app.sushi.com/add/${liquidityUrlPathParts}`
-        }>
-          {lpLabel}
+          {TranslateString(999, 'More on VFAT')}
         </StyledLinkExternal>
       </Flex>
 
       <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false} style={{"color": "#4c68ef"}}>
-          {TranslateString(999, 'View on Explorer')}
+        <Link external href='https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/staking' bold={false} style={{"color": "#4c68ef"}}>
+          {TranslateString(999, 'How it Works')}
         </Link>
       </Flex>
     </Wrapper>

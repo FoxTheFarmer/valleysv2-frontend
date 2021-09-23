@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Card, CardBody, Heading, Skeleton, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useGetStats } from 'hooks/api'
+import { FaLock } from 'react-icons/fa'
 import { useTotalValue } from '../../../state/hooks'
 import CardValue from './CardValue'
 
@@ -48,8 +49,9 @@ const TotalValueLockedCard = () => {
       <CardBody style={{'width': '100%'}}>
         <Wrapper>
         <Title>
-          {TranslateString(999, 'Total Value Locked (TVL)')}
+          <span> Total Value Locked</span>
         </Title>
+    
           {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
           <TVL>
             <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} />

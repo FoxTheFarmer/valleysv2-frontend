@@ -6,8 +6,9 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
+import { FaLock, FaScroll } from 'react-icons/fa'
 import CardValue from './CardValue'
-import { useFarms, usePriceCakeBusd } from '../../../state/hooks'
+import { useFarms, usePriceCakeBusd, useTotalValue } from '../../../state/hooks'
 import './index.css'
 
 const StyledCakeStats = styled(Card)`
@@ -33,16 +34,43 @@ const Sub = styled.p`
   color: #555;
 `
 
+const Sub3 = styled.p`
+margin-top: 5px;
+  font-size: 0.97em;
+  color: #555;
+`
+
+
+const Sub2 = styled.p`
+  margin-top: 5px;
+  font-size: 20px;
+  color: #555;
+`
+
+
+const TVL = styled.div`
+margin-top: 5px;
+
+font-weight: 900 !important;
+font-size: 18px !important;
+color: #555;
+`
+
 const Wrapper = styled.div`
   margin-left: 12px;
   margin-right: 12px;
 `
 
+  
 const CakeStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms();
+
+  // const data = useGetStats()
+  const totalValue = useTotalValue();
+
   const eggPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
@@ -57,9 +85,9 @@ const CakeStats = () => {
     <StyledCakeStats style={{"boxShadow":"0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05)"}}>
       <CardBody>
         <Wrapper>
-          <Title>
-            General Stats
-          </Title>
+        <Title>
+          <span><FaScroll/> Overview</span>
+        </Title>
           <Row>
             <Sub>Price</Sub>
             <Sub className="lightColor">
@@ -88,6 +116,14 @@ const CakeStats = () => {
               {vikingPerBlock}
             </Sub>
           </Row>
+
+
+
+          <Row style={{'marginBottom': '0 !important'}}>
+            <Sub2>Locked Value</Sub2>
+            <TVL><CardValue value={totalValue.toNumber()} prefix="$" decimals={2} /></TVL>  
+          </Row>
+
         </Wrapper>
       </CardBody>
     </StyledCakeStats>
