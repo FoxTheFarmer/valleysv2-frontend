@@ -28,9 +28,9 @@ interface FarmCardActionsProps {
 }
 
 const Quote = styled.p`
-      font-size: 14px;
-      margin-bottom: 0px;
-      color: #004871
+      font-size: 16px;
+      margin-bottom: 2px;
+      color: #4c68ef
 `
 
 const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }) => {

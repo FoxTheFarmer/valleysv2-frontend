@@ -54,10 +54,17 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       {!removed && (
         <Flex justifyContent="space-between">
-          <Text bold>{TranslateString(23, 'Total Liquidity')}:</Text>
+          <Text bold marginBottom='8px'>{TranslateString(23, 'Total Liquidity 📄')}</Text>
           <Text bold>{totalValueFormated}</Text>
         </Flex>
       )}
+
+      
+      <Flex justifyContent="flex-start">
+        <StyledLinkExternal external href='https://vfat.tools/harmony/' bold={false} style={{"color": "#4c68ef"}}>
+          {TranslateString(999, 'VFAT')}
+        </StyledLinkExternal>
+      </Flex>
 
       <Flex justifyContent="left">
         <StyledLinkExternal style={{"color": "#4c68ef"}} href={

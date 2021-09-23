@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text, Skeleton } from '@pancakeswap-libs/uikit'
+import { Flex, Text, Skeleton, LinkExternal } from '@pancakeswap-libs/uikit'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
@@ -87,6 +87,21 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
   overflow: hidden;
 `
 
+const StyledLinkExternal = styled(LinkExternal)`
+  text-decoration: none;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.text};
+  display: flex;
+  align-items: right;
+
+  svg {
+    padding-left: 4px;
+    height: 18px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
@@ -148,7 +163,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
       {!removed && (
         <Flex justifyContent='space-between' alignItems='center' mt="5px">
-          <APRTEXT>{TranslateString(352, 'APR')}</APRTEXT>
+          <APRTEXT>{TranslateString(359, '🌾 APR')}</APRTEXT>
           <APRTEXT style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
@@ -170,13 +185,21 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       )}
 
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(10005, 'Earn')}</Quote>
-        <Quote>{TranslateString(10006, 'ART + Fees')}</Quote>
+        <Quote>{TranslateString(10005, '🏳️ Earn')}</Quote>
+
+        <Quote>{TranslateString(10006, 'MIS + Fees')}</Quote>
+      </Flex>
+
+      <Flex justifyContent='space-between'>
+        <Quote>{TranslateString(10005, '🔓 Lockup')}</Quote>
+
+        <Quote>{TranslateString(10006, '0 Hours')}</Quote>
       </Flex>
 
 
+
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(10001, 'Deposit Fee')}</Quote>
+        <Quote>{TranslateString(100081, '🔥 Deposit Fee')}</Quote>
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
       </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />

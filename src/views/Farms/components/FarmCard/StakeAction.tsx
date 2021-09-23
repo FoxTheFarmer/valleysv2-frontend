@@ -81,13 +81,21 @@ const StakeAction: React.FC<FarmCardActionsProps> = (
     )
   }
 
+  const USDStaked = styled.text`
+  font-size: 15px;
+  align-items: center;
+  color: #8E8E8E;
+  display: flex;
+  margin-top: 3px;
+  justify-content: flex-start;
+`
   return (
     <Flex justifyContent="space-between" alignItems="center">
       <Heading color={rawStakedBalance === 0 ? 'textDisabled' : 'text'}>
         <Staked>
           {displayBalance}
         </Staked>
-        {stakedBalance.gt(0) && <Staked>~${displayBalanceUsd}</Staked>}
+        {stakedBalance.gt(0) && <USDStaked>~${displayBalanceUsd}</USDStaked>}
       </Heading>
       {renderStakingButtons()}
     </Flex>

@@ -100,7 +100,7 @@ const CardFooter: React.FC<Props> = ({
       {isOpen && (
         <Details>
           <TokenLink href={projectLink} target="_blank">
-            {TranslateString(412, 'View project site')}
+            {TranslateString(4212, 'More Information')}
           </TokenLink>
         </Details>
       )}

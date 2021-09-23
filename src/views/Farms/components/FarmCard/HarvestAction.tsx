@@ -19,7 +19,17 @@ const Staked = styled.div`
   align-items: center;
   color: ${(props) => props.theme.colors.primary};
   display: flex;
+  margin-top: 3px;
   justify-content: flex-end;
+`
+
+const USDStaked = styled.text`
+  font-size: 15px;
+  align-items: center;
+  color: #8E8E8E;
+  display: flex;
+  margin-top: 3px;
+  justify-content: flex-start;
 `
 
 const BalanceAndCompound = styled.div`
@@ -42,13 +52,18 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
   const displayBalanceUsd = rawEarningsUsdBalance.toLocaleString('en-us',{ maximumFractionDigits: 2, minimumFractionDigits: 2 })
 
   return (
-    <Flex mb='8px' justifyContent='space-between' alignItems='center'>
+    <Flex mb='10px' justifyContent='space-between' alignItems='center'>
       <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'}>
           <Staked>
               {displayBalance}
           </Staked>
-          {earnings.gt(0) && <Staked>~${displayBalanceUsd}</Staked>}
+
+          {earnings.gt(0) && <USDStaked>~${displayBalanceUsd}</USDStaked>}
+
       </Heading>
+
+
+
       <BalanceAndCompound>
         {pid === labo.pids.pidLabo ?
           <Button
@@ -63,7 +78,9 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
             }}
             style={{
               'borderRadius': '5px',
-              'height': '42px'
+              'height': '40px',
+              'width': '103px',
+              'marginRight': '1px'
             }}
           >
             {TranslateString(999, 'Compound')}
@@ -79,6 +96,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid }) => {
           style={{
             'borderRadius': '5px',
             'height': '42px',
+            'width': '103px',
             'color': 'white'
           }}
         >

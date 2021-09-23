@@ -27,7 +27,7 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 437px;
+  max-width: 600px;
   width: 100%;
 `
 
