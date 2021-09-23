@@ -58,7 +58,7 @@ const CakeStats = () => {
       <CardBody>
         <Wrapper>
           <Title>
-            Stats
+            General Stats
           </Title>
           <Row>
             <Sub>Price</Sub>

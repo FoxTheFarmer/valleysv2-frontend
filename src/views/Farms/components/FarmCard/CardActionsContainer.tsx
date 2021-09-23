@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
-import { Button, Flex, Text } from '@pancakeswap-libs/uikit'
+import { Button, Flex, LinkExternal, Text } from '@pancakeswap-libs/uikit'
 import { Farm } from 'state/types'
 import {useFarmFromPid, useFarmFromSymbol, useFarmTokensToUsd, useFarmUser, usePriceCakeBusd} from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -11,6 +11,7 @@ import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
 import ReactTooltip from 'react-tooltip';
 import labo from 'config/constants/labo'
+import { Address } from 'config/constants/types'
 import StakeAction from './StakeAction'
 import HarvestAction from './HarvestAction'
 
@@ -26,6 +27,22 @@ interface FarmCardActionsProps {
   ethereum?: provider
   account?: string
 }
+const StyledLinkExternal = styled(LinkExternal)`
+  text-decoration: none;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.text};
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+
+  svg {
+    padding-left: 4px;
+    height: 18px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
 
 const Quote = styled.p`
       font-size: 16px;
@@ -113,7 +130,6 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       
       <Flex>
         <Quote>{TranslateString(999, 'Staked')}</Quote>
-
       </Flex>
       {!account ? <UnlockButton mt="8px" fullWidth /> : renderApprovalOrStakeButton()}
     </Action>

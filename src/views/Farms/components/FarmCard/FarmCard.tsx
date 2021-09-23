@@ -1,13 +1,14 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text, Skeleton, LinkExternal } from '@pancakeswap-libs/uikit'
+import { Flex, Text, Skeleton, LinkExternal, Link } from '@pancakeswap-libs/uikit'
 import { communityFarms } from 'config/constants'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
 import ExpandableSectionButton from 'components/ExpandableSectionButton'
 import { QuoteToken } from 'config/constants/types'
+import { FaCropAlt, FaFire, FaFlag, FaFlask, FaGem, FaGhost, FaLock, FaMountain, FaPiggyBank, FaTractor, FaTruck, FaTwitter } from 'react-icons/fa'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
@@ -88,19 +89,35 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
 `
 
 const StyledLinkExternal = styled(LinkExternal)`
+  svg {
+    padding-left: 0px;
+    height: 16px;
+    width: auto;
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
   color: ${({ theme }) => theme.colors.text};
   display: flex;
   align-items: right;
 
-  svg {
-    padding-left: 4px;
-    height: 18px;
-    width: auto;
-    fill: ${({ theme }) => theme.colors.primary};
-  }
+
 `
+
+const Menu = styled(Text)`
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: ${({ theme }) => theme.colors.text};
+  display: flex;
+  align-items: right;
+
+  `
+
+
 
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -163,7 +180,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
       {!removed && (
         <Flex justifyContent='space-between' alignItems='center' mt="5px">
-          <APRTEXT>{TranslateString(359, '🌾 APR')}</APRTEXT>
+          <span><FaMountain/> APR</span>
           <APRTEXT style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
@@ -185,23 +202,28 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       )}
 
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(10005, '🏳️ Earn')}</Quote>
-
+        <span><FaFlask/> Earn</span>
         <Quote>{TranslateString(10006, 'MIS + Fees')}</Quote>
       </Flex>
 
+      {/* */}
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(10005, '🔓 Lockup')}</Quote>
-
+        <span><FaLock/> Lockup</span>
         <Quote>{TranslateString(10006, '0 Hours')}</Quote>
       </Flex>
 
-
-
       <Flex justifyContent='space-between'>
-        <Quote>{TranslateString(100081, '🔥 Deposit Fee')}</Quote>
+        <span><FaFire/> Deposit Fee</span>
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
       </Flex>
+
+      <Flex justifyContent="left">
+        <StyledLinkExternal external href={`https://app.sushi.com/add/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`} bold={false} style={{"color": "#4c68ef"}}>
+          <span><FaGhost/> Add Liquidity</span>
+        </StyledLinkExternal>
+      </Flex>
+
+
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
       <Divider />
       <ExpandableSectionButton

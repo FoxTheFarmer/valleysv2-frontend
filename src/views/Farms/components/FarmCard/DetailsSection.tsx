@@ -54,7 +54,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       {!removed && (
         <Flex justifyContent="space-between">
-          <Text bold marginBottom='8px'>{TranslateString(23, 'Total Liquidity 📄')}</Text>
+          <Text bold marginBottom='8px'>{TranslateString(23, '📄 Total Liquidity')}</Text>
           <Text bold>{totalValueFormated}</Text>
         </Flex>
       )}
