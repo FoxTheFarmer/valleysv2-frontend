@@ -123,6 +123,16 @@ const Menu = styled(Text)`
   width: 100%;
 `
 
+const Divider2 = styled.div`
+background-color: #4c68ef;
+height: 0px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 5px;
+width: 0%;
+`
+
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
@@ -236,14 +246,13 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       
       <Divider />
 
-      
-
-
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
+
+      <Divider2 />
 
       <ExpandableSectionButton
         onClick={() => setShowExpandableSection(!showExpandableSection)}
-        expanded={showExpandableSection}
+
       />
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection

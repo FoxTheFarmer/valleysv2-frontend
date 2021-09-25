@@ -5,19 +5,44 @@ import { ButtonMenu, ButtonMenuItem, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Switch from "react-switch";
 
+const Divider = styled.div`
+background-color: #4c68ef;
+height: 3px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 25px;
+width: 30%;
+
+`
+
 const FarmTabButtons = ({ stakedOnly, setStakedOnly, tokenMode }) => {
   const { url, isExact } = useRouteMatch()
   const TranslateString = useI18n()
 
+
   return (
     <Wrapper>
+      <Divider />
       <ActionsWrapper>
+        {/*
         <ToggleWrapper>
-          <Switch checked={stakedOnly} onChange={() => setStakedOnly(!stakedOnly)} onColor='#6E4EED' />
-        <Text> {TranslateString(699, 'Staked only')}</Text>
+          <Switch checked={stakedOnly} onChange={() => setStakedOnly(!stakedOnly)} onColor='#fff' />
+        <Text> {TranslateString(699, 'Staked Only')}</Text>
         </ToggleWrapper>
-        <ButtonMenu activeIndex={isExact ? 0 : 1} size="sm" variant="subtle">
-          <ButtonMenuItem as={Link} to={`${url}`}>
+        */}
+
+        
+        { !tokenMode ?
+        <Blablabla >
+          Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis-protocol/guides/bridge-fantom-greater-than-harmony"><GuideLink>Here</GuideLink></a>
+        </Blablabla>
+       : 
+       "" 
+       }
+
+        <ButtonMenu activeIndex={isExact ? 0 : 1} size="sm" >
+          <ButtonMenuItem as={Link} to={`${url}`} >
             {TranslateString(698, 'Active')}
           </ButtonMenuItem>
           <ButtonMenuItem as={Link} to={`${url}/history`}>
@@ -25,13 +50,7 @@ const FarmTabButtons = ({ stakedOnly, setStakedOnly, tokenMode }) => {
           </ButtonMenuItem>
         </ButtonMenu>
       </ActionsWrapper>
-      { !tokenMode ?
-        <Blablabla >
-          Follow <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis-protocol/guides/bridge-fantom-greater-than-harmony"><GuideLink>these steps</GuideLink></a> to get started on Artemis.
-        </Blablabla>
-       : 
-       "" 
-       }
+
     </Wrapper>
   )
 }
@@ -43,7 +62,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
   
 `
 
@@ -51,7 +70,7 @@ const ActionsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 21px;
+  margin-bottom: 2px;
   @media all and (max-width: 480px) {
       flex-flow: column;
   }
@@ -60,7 +79,7 @@ const ActionsWrapper = styled.div`
 `
 const Blablabla = styled.div`
   text-color: red;
-  margin: 0px 21px;
+  margin: 0px 18px;
 `
 const GuideLink = styled.span`
   color: #0073ff;
