@@ -89,13 +89,10 @@ const Farm: React.FC = () => {
   return (
     <Page>
       <SvgHero>
-        <object type="image/svg+xml" data="images/incubator.svg" width="250px">&nbsp;</object>
+        <object type="image/svg+xml" data="images/incubator.svg" width="600x">&nbsp;</object>
       </SvgHero>
-      <Hero>
-        <Hero2 />
-      </Hero>
-      <PoolTabButtons />
-      <Divider style={{'border': '0.01em solid #6E4EED'}}/>
+
+
       <FlexLayout>
         <Route exact path={`${path}`}>
           <>

@@ -86,13 +86,10 @@ const Hero2 = () => {
     <StyledHero>
       <StyledContainer>
         <LeftWrapper>
-          <Title>Incubator Pools</Title>
-          <Blurb>Stake MIS</Blurb>
-          <Blurb>Earn Tokens</Blurb>
-          <Blurb>No fees!</Blurb>
-          <Blurb>Don`t worry about APR, just relax and earn</Blurb>
+          <Title>Incubator</Title>
+          <Blurb>Stake MIS or MIS-xToken and earn xToken!</Blurb>
           <LinkExternal href="https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/syrup" mr="16px">
-              {TranslateString(999, 'More Info')}
+              {TranslateString(999, 'About')}
           </LinkExternal>
         </LeftWrapper>
       </StyledContainer>

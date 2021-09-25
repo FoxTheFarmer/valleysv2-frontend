@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Button } from '@pancakeswap-libs/uikit'
+import { Image, Button, LinkExternal } from '@pancakeswap-libs/uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import Card from './Card'
@@ -15,7 +15,25 @@ const Balance = styled.div`
 const Label = styled.div`
   color: ${({ theme }) => theme.colors.textSubtle};
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+`
+
+const Divider = styled.div`
+background-color: #4c68ef;
+height: 2px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 5px;
+width: 100%;
+`
+
+const Label2 = styled.div`
+  color: ${({ theme }) => theme.colors.textSubtle};
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-top: 20px;
 `
 
 const DetailPlaceholder = styled.div`
@@ -36,42 +54,43 @@ const Coming: React.FC = () => {
 
   return (
     <Card>
-      <div style={{ padding: '24px' }}>
-        <CardTitle>
-          {TranslateString(414, 'Your Project?')}{' '}
-          <span role="img" aria-label="eyes">
-            👀
-          </span>
-        </CardTitle>
-        <Image src="/images/bunny-question.svg" width={64} height={64} alt="Your project here" />
-        <Balance>???</Balance>
-        <Label>{TranslateString(416, 'Create a pool for your token')}</Label>
+      <div style={{ padding: '34px' }}>
+
+
+        <Image src="/images/incubatorbanner.svg" width={300} height={130} />
+
+
+        <Label>{TranslateString(4216, 'Join Artemis Liquidity as a Service program and distribute your token while building liquidity for it. ')}</Label>
+
+
+
+        <Label2>{TranslateString(4216, 'Bear in mind that applications will go through governance.')}</Label2>
+
+        <Divider />
+        <LinkExternal href="https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/syrup" mr="16px" mt='20px'>
+              {TranslateString(999, 'Read More')}
+        </LinkExternal>
+        
+        
+
         <Button
           variant="secondary"
           as="a"
-          href="https://docs.google.com/forms/d/e/1FAIpQLScGdT5rrVMr4WOWr08pvcroSeuIOtEJf1sVdQGVdcAOqryigQ/viewform"
+          href="https://forms.gle/EcY6KfGz8yhDbMX67"
           external
           fullWidth
-          mb="16px"
+          mb="0px"
+          mt='20px'
           style={{
             'borderRadius': '5px'
           }}
         >
           {TranslateString(418, 'Apply Now')}
         </Button>
-        <DetailPlaceholder>
-          <div style={{ flex: 1 }}>
-            <span role="img" aria-label="syrup">
-              🔷{' '}
-            </span>
-            {TranslateString(384, 'Your Stake')}:
-          </div>
-          <Value>??? MIS</Value>
-        </DetailPlaceholder>
+
+
       </div>
-      <Footer>
-        <CommunityTag />
-      </Footer>
+
     </Card>
   )
 }

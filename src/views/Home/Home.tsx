@@ -4,7 +4,6 @@ import { Heading, Text, BaseLayout, Alert } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import HomePage from 'components/layout/HomePage'
 import labo from 'config/constants/labo'
-import InfoFooter from 'components/InfoFooter'
 import FarmStakingCard from './components/FarmStakingCard'
 import CakeStats from './components/CakeStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
@@ -98,7 +97,6 @@ const Home: React.FC = () => {
         </Cards>
       </FlowRow>
     </HomePage>
-    <InfoFooter />
     </div>
   )
 }
