@@ -80,7 +80,7 @@ const NavBar = (props) => {
     return (
         <li className="nav-tab dropdown">
         <Link to="/" className="nav-links" onClick={decoratedOnClick}>
-          INFO
+          ABOUT
         </Link>
         </li>
     );
@@ -98,17 +98,17 @@ const NavBar = (props) => {
             <ul className="dropdown-items">
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/" className="nav-links">
-                    <FaCode /> <span className="dditem">CODE</span>
+                    <FaBroadcastTower /> <span className="dditem">BRIDGE</span>
                   </a>
                 </li>
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
-                    <FaChartLine /> <span className="dditem">VFAT</span>
+                    <FaBook /> <span className="dditem">DOCS</span>
                   </a>
                 </li>
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://docs.thelab.finance" className="nav-links">
-                    <FaFileAlt /> <span className="dditem">DOCS</span>
+                    <FaCode /> <span className="dditem">CODE</span>
                   </a>
                 </li>
 
@@ -120,47 +120,24 @@ const NavBar = (props) => {
 
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://t.me/thelabfinance" className="nav-links">
-                    <FaTelegramPlane /> <span className="dditem">TELEGRAM</span>
+                    <FaReddit /> <span className="dditem">REDDIT</span>
                   </a>
                 </li>
 
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
-                    <FaDiscord />  <span className="dditem">DISCORD</span>
+                    <FaTelegramPlane />  <span className="dditem">TELEGRAM</span>
                   </a>
                 </li>
                 <li>
                   <a target="_blanK" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links">
-                    <FaChartBar />  <span className="dditem">CHART</span>
+                    <FaDiscord />  <span className="dditem">DISCORD</span>
                   </a>
                 </li>
               </ul>
             </Card.Body>
           </Accordion.Collapse>
         </Card>
-      </Accordion>
-    );
-  }
-
-  function WheelToggle() {
-    return (
-      <Accordion id="wheelToggleMobile">
-          <Accordion.Collapse eventKey="0">
-            <Card.Body style={{"backgroundColor": "white", "border": "0"}}>
-            <ul className="dropdown-items">
-                <li>
-                  <Link to="/wheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}> 
-                    <FaTicketAlt /> <span className="dditem">LABO WHEEL</span>
-                  </Link>
-                </li>
-                <li>
-                  <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
-                    <FaMoneyBillAlt /> <span className="dditem">ONE WHEEL</span>
-                  </a>
-                </li>
-              </ul>
-            </Card.Body>
-          </Accordion.Collapse>
       </Accordion>
     );
   }
@@ -189,7 +166,7 @@ const NavBar = (props) => {
                             </Link>
                           </li>
 
-                          <li className="nav-tab dropdown" id="infoToggleDesktop">
+                          <li className="nav-tab dropdown" id="farmToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <FaTractor /> <span className="dditem">EARN</span>
                             </Link>
@@ -211,7 +188,7 @@ const NavBar = (props) => {
                               </li>
                             </ul>
                           </li>
-                          <InfoToggle />
+                          
 
 
 
@@ -239,8 +216,6 @@ const NavBar = (props) => {
                             </ul>
                           </li>
 
-
-                          <WheelToggle />
 
                           <li className="nav-tab">
                             <Link to="/launchpad" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>

@@ -210,7 +210,7 @@ const farms: FarmConfig[] = [
   {
     pid:labo.pids.pidList[1],
     risk: 5,
-    lpSymbol: 'LABO-BNB LP',
+    lpSymbol: 'LABO-ONE LP',
     lpAddresses: {
       1666700000: labo.addr.LaboBnbAddrTestnet,
       1666600000: labo.addr.LaboBnbAddr, // (to LABO BNB LP ) 
