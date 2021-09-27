@@ -156,6 +156,12 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <Page>
 
+<div className="warningAlert" style={{'display': ( modalOpen ? 'block' : 'none' )}}>
+        <Alert title="" variant="warning" onClick={handleModal}>
+        <p>Farming will start on block <a target="_blank" rel="noreferrer" style={{"color": "#0073ff"}} href="https://explorer.harmony.one/block/15403096">123456789.</a></p>
+      </Alert>
+    </div>    
+
       <Hero>
         {tokenMode ? 
         <object type="image/svg+xml" data="images/poolhero.svg" height="370px">&nbsp;</object> :

@@ -31,6 +31,29 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   width: 100%;
 `
 
+const Column = styled.div`
+  margin-top: 1em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`
+
+const StyledCardContentInner = styled(Card)<{ ifoId: string }>`
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: ${({ ifoId }) => `url('/images/ifos/${ifoId}-bg.svg')`};
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 112px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  width: 100%;
+`
+
 const getStatus = (currentBlock: number, startBlock: number, endBlock: number): IfoStatus | null => {
   if (currentBlock < startBlock) {
     return 'coming_soon'
@@ -140,8 +163,9 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
   const isFinished = state.status === 'finished'
 
   return (
-    <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
+    <StyledCardContentInner ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
+        <Column>
         <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
         <IfoCardProgress progress={state.progress} />
         <IfoCardTime
@@ -151,6 +175,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           secondsUntilEnd={state.secondsUntilEnd}
           block={isActive || isFinished ? state.endBlockNum : state.startBlockNum}
         />
+        </Column>
         {!account && <UnlockButton fullWidth />}
         {(isActive || isFinished) && (
           <IfoCardContribute
@@ -175,7 +200,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           totalAmount={state.totalAmount}
         />
       </CardBody>
-    </StyledIfoCard>
+    </StyledCardContentInner>
   )
 }
 

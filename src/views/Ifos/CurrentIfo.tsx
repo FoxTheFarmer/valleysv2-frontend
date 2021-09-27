@@ -69,6 +69,9 @@ const Ifo = () => {
                 'First, wrap your ONE tokens and when the sale is live, commit your WONE to buy a share of the pooled MIS. Once the launchpad sale is over, claim the tokens you bought, along with any unspent funds.',
               )}
             </Text>
+            <LinkExternal href="https://viper.exchange/#/swap?outputCurrency=0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2" mr="16px">
+              {TranslateString(999, 'Wrap your ONE tokens')}
+            </LinkExternal>
 
           </div>
         </div>
