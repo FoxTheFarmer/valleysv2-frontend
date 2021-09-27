@@ -50,7 +50,7 @@ const Ifo = () => {
             <Text mb={3}>
               {TranslateString(
                 999,
-                'We descentralize the way ideas raise capital, by aligning interests of both users and creators via attractive incentives and yields. Projects wishing to launch on Artemis will not only be able to raise capital for liquidity, but also will be rewarded for it, this includes taking part in our incubator pools, solo staking and incentivized liquidity pools.',
+                'We decentralize the way ideas raise capital, by aligning interests of both users and creators via attractive incentives and yields. Projects wishing to launch on Artemis will not only be able to raise capital for liquidity, but also will be rewarded for it, this includes taking part in our incubator pools, solo staking and incentivized liquidity pools.',
               )}
             </Text>
             <LinkExternal href="https://viper.exchange/#/swap?outputCurrency=0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a" mr="16px">
@@ -66,7 +66,7 @@ const Ifo = () => {
             <Text mb={3}>
               {TranslateString(
                 999,
-                'First, Wrap your ONE tokens, then, while the sale is live, commit your WONE tokens to buy $MIS. Once the sale is over, claim the tokens you bought, along with any unspent funds.',
+                'First, wrap your ONE tokens and when the sale is live, commit your WONE to buy a share of the pooled MIS. Once the launchpad sale is over, claim the tokens you bought, along with any unspent funds.',
               )}
             </Text>
 

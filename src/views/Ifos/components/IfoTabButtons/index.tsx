@@ -15,12 +15,12 @@ const IfoTabButtons = () => {
 
   return (
     <Wrapper>
-      <ButtonMenu activeIndex={!isExact ? 1 : 0} size="sm" variant="subtle">
+      <ButtonMenu activeIndex={!isExact ? 1 : 0} size="sm" >
         <ButtonMenuItem as={Link} to={`${url}`}>
-          Next IFO
+          Current Projects
         </ButtonMenuItem>
         <ButtonMenuItem as={Link} to={`${url}/history`}>
-          Past IFOs
+          Past Projects
         </ButtonMenuItem>
       </ButtonMenu>
     </Wrapper>

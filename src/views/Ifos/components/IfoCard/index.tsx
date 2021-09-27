@@ -27,7 +27,7 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
 `
 
@@ -53,7 +53,7 @@ const getRibbonComponent = (status: IfoStatus, TranslateString: (translationId: 
   }
 
   if (status === 'live') {
-    return <CardRibbon variantColor="primary" text={TranslateString(999, 'LIVE NOW!')} />
+    return <CardRibbon variantColor="primary" text={TranslateString(999, 'Live')} />
   }
 
   return null

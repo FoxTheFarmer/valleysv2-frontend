@@ -14,11 +14,11 @@ const StyledIfoCardDescription = styled.div`
 `
 
 const Divider = styled.div`
-  background-color: ${({ theme }) => theme.colors.borderColor};
-  height: 1px;
+  background-color: #4C68EF;
+  height: 2px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 50%;
 `
 
 const ToggleButton = styled.button`
@@ -48,7 +48,7 @@ const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen =
     <StyledIfoCardDescription>
       <Divider />
       <ToggleButton onClick={handleClick}>
-        {isOpen ? TranslateString(999, 'Hide') : TranslateString(999, 'Show')}
+        {isOpen ? TranslateString(999, 'Hide') : TranslateString(999, 'Details')}
       </ToggleButton>
       <Description isOpen={isOpen}>{description}</Description>
     </StyledIfoCardDescription>
