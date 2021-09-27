@@ -62,7 +62,7 @@ const MoneyWheel: React.FC = () => {
               <WheelCard prizeNumber={prizeNumber} mustSpin={mustSpin} onStopping={onStopping}/>
             </div>
             <div>
-              <BetCard max={new BigNumber(cakeBalance)} tokenName="ART" onResult={onResult}/>
+              <BetCard max={new BigNumber(cakeBalance)} tokenName="MIS" onResult={onResult}/>
             </div>
           </Cards>
       </Page>

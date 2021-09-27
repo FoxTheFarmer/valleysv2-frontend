@@ -181,7 +181,7 @@ const ClaimNftRewardsModal: React.FC<ClaimNftRewardsModalProps> = ({ nft, balanc
 
   const handleProcess = async (address, tokenSymbol) => {
     try {
-      if(String(tokenSymbol) === 'ART'){
+      if(String(tokenSymbol) === 'MIS'){
         await devFeeProcessorContract.methods
         .processLabo().send({
           from: account
