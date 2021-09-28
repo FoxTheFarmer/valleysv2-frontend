@@ -8,7 +8,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import UnlockButton from 'components/UnlockButton'
 import {Accordion, Button, Card, useAccordionToggle} from 'react-bootstrap';
-import { FaChartLine, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaTicketAlt, FaChartBar, FaMoneyBillAlt, FaTractor, FaHome, FaPrescriptionBottleAlt, FaTumblrSquare, FaCode, FaFlask, FaBook, FaReddit, FaRocketchat, FaRocket, FaBroadcastTower } from 'react-icons/fa';
+import { FaChartLine, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaTicketAlt, FaChartBar, FaMoneyBillAlt, FaTractor, FaHome, FaPrescriptionBottleAlt, FaTumblrSquare, FaCode, FaFlask, FaBook, FaReddit, FaRocketchat, FaRocket, FaBroadcastTower, FaLayerGroup, FaSeedling } from 'react-icons/fa';
 import ReactTooltip from 'react-tooltip';
 import labo from 'config/constants/labo';
 
@@ -168,12 +168,12 @@ const NavBar = (props) => {
 
                           <li className="nav-tab dropdown" id="farmToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                              <FaTractor /> <span className="dditem">EARN</span>
+                              <FaSeedling /> <span className="dditem">EARN</span>
                             </Link>
                             <ul className="dropdown-content dropdown-items">
                               <li>
                                 <Link to="/farms" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">FARMS</span>
+                                  <span className="dditem">POOLS</span>
                                 </Link>
                               </li>
                               <li>
@@ -181,26 +181,38 @@ const NavBar = (props) => {
                                   <span className="dditem">STAKING</span>
                                 </Link>
                               </li>
-                              <li>
-                                <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">INCUBATOR</span>
+                            </ul>
+                          </li>
+                          
+                          <li className="nav-tab dropdown" id="wheelToggleDesktop">
+                            <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                              <FaLayerGroup /> <span className="dditem">LAUNCHPAD</span>
+                            </Link>
+                            
+                            <ul className="dropdown-content dropdown-items">
+                            <li className="nav-tab">
+                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                              <span className="dditem">INCUBATOR</span>
+                            </Link>
+                          </li>
+                             <li>
+                                <Link to="/launchpad" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <span className="dditem">ARTEMISPAD</span>
                                 </Link>
                               </li>
                             </ul>
                           </li>
-                          
-
 
 
                           <li className="nav-tab dropdown" id="wheelToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                              <FaTicketAlt /> <span className="dditem">CASINO</span>
+                              <FaTicketAlt /> <span className="dditem">GAMES</span>
                             </Link>
                             
                             <ul className="dropdown-content dropdown-items">
                             <li className="nav-tab">
                             <Link to="/lottery" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                              <span className="dditem">LOTTO</span>
+                              <span className="dditem">LOTTERY</span>
                             </Link>
                           </li>
                              <li>
@@ -210,18 +222,13 @@ const NavBar = (props) => {
                               </li>
                               <li>
                                 <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">CRATES</span>
+                                  <span className="dditem">LOOT CRATES</span>
                                 </Link>
                               </li>
                             </ul>
                           </li>
 
 
-                          <li className="nav-tab">
-                            <Link to="/launchpad" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                            <FaRocket/> <span className="dditem">LAUNCHPAD</span>
-                            </Link>
-                          </li>
 
                           <li className="nav-tab dropdown" id="infoToggleDesktop">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>

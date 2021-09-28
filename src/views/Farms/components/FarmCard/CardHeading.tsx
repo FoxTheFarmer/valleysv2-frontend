@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Tag, Flex, Heading, Image } from '@pancakeswap-libs/uikit'
 import { CommunityTag, CoreTag, RiskTag, NoFeeTag } from 'components/Tags'
+import { FaSeedling } from 'react-icons/fa';
 
 export interface ExpandableSectionProps {
   lpLabel?: string
@@ -38,12 +39,12 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
       {/* <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} /> */}
       <object type="image/svg+xml" data={`/images/farms/${farmImage}.svg`} width="85px">&nbsp;</object>
       <Flex flexDirection="column" alignItems="flex-end">
-        <Heading size="md" mb="8px" marginRight="2px">{lpLabel}</Heading>
+        <Heading size="md" mb="8px" marginRight="2px"><FaSeedling/>{lpLabel}</Heading>
         <Flex justifyContent="center">
-          {depositFee === 0 ? <NoFeeTag /> : null}
+          {/* {depositFee === 0 ? <NoFeeTag /> : null} */}
           {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
           {/* <RiskTag risk={risk} /> */}
-          <MultiplierTag variant="secondary">{multiplier}</MultiplierTag>
+          <MultiplierTag variant="secondary">Allocation {multiplier}</MultiplierTag>
         </Flex>
       </Flex>
     </Wrapper>
