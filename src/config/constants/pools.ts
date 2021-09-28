@@ -4,10 +4,10 @@ const pools: PoolConfig[] = [
   {
     tokenName: 'WONE',
     stakingTokenName: QuoteToken.MISONE,
-    stakingTokenAddress: '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2',
+    stakingTokenAddress: '0x31222d37568BD54be95eCE3749f0559c45a85634',
     contractAddress: {
       1666700000: '0x736E9c99cb9f9c39e25eF61181eeC83d484F9120',
-      1666600000: '0x736E9c99cb9f9c39e25eF61181eeC83d484F9120',
+      1666600000: '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2',
     },
     poolCategory: PoolCategory.CORE,
     projectLink: 'https: pancakeswap.finance/',

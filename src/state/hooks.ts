@@ -41,16 +41,21 @@ export const useFarmTokensToUsd = (pid, farmTokens) => {
   // All price logic should go here for farms
   const farm = useFarmFromPid(pid)
   const onePrice = usePriceBnbBusd()
+  const misPrice = usePriceCakeBusd()
   console.log(pid)
   console.log(farm)
 
-  if (pid === 0 || pid === 2) {
+  if (pid === 0 || pid === 0) {
     // These all have quote symbol as a stablecoin
     return new BigNumber(2).times(farm.quoteTokenPerLp).times(farmTokens)
   }
   if (pid === 1) {
     // These all have quote symbol as ONE
     return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens)
+  }
+  if (pid === 2) {
+    // This is MIS Single staking
+    return new BigNumber(2).times(misPrice).times(farmTokens)
   }
 
   return new BigNumber(1)
