@@ -38,11 +38,14 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
     <Wrapper justifyContent="space-between" alignItems="center" mb="20px">
       {/* <Image src={`/images/farms/${farmImage}.png`} alt={tokenSymbol} width={64} height={64} /> */}
       <object type="image/svg+xml" data={`/images/farms/${farmImage}.svg`} width="85px">&nbsp;</object>
+
       <Flex flexDirection="column" alignItems="flex-end">
+
         <Heading size="md" mb="8px" marginRight="2px"><FaSeedling/>{lpLabel}</Heading>
+
         <Flex justifyContent="center">
           {/* {depositFee === 0 ? <NoFeeTag /> : null} */}
-          {/* {isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
+          {/* isCommunityFarm ? <CommunityTag /> : <CoreTag />} */}
           {/* <RiskTag risk={risk} /> */}
           <MultiplierTag variant="secondary">Allocation {multiplier}</MultiplierTag>
         </Flex>

@@ -225,6 +225,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       <Flex justifyContent='space-between'>
         <span><FaLock/> Lockup</span>
         <Quote>{TranslateString(10006, '0 Hours')}</Quote>
+
       </Flex>
 
       <Flex justifyContent='space-between'>
@@ -249,11 +250,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
       <Divider2 />
 
-      <ExpandableSectionButton
-        onClick={() => setShowExpandableSection(!showExpandableSection)}
+      <Flex justifyContent='right'>
+        <ExpandableSectionButton onClick={() => setShowExpandableSection(!showExpandableSection)}/>
+      </Flex>
 
-      />
       
+      
+
+
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           removed={removed}
