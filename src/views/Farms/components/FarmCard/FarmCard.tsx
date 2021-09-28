@@ -128,11 +128,10 @@ background-color: #4c68ef;
 height: 0px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 20px;
-margin-bottom: 5px;
+margin-top: 10px;
+margin-bottom: 20px;
 width: 0%;
 `
-
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
@@ -254,6 +253,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         onClick={() => setShowExpandableSection(!showExpandableSection)}
 
       />
+      
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           removed={removed}
@@ -271,6 +271,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           tokenAddresses={tokenAddresses}
         />
       </ExpandingWrapper>
+      
     </FCard>
   )
 }

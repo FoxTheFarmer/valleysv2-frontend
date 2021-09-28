@@ -55,10 +55,11 @@ const Feature = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  margin: 12px;
-  font-size: 1.2em !important;
+  margin: 19px;
+  font-size: 1.1em !important;
   max-width: 180px;
   text-align: center;
+
 
   @media screen and (max-width: 680px){
     max-width: 64%;
@@ -156,9 +157,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <Page>
 
-<div className="warningAlert" style={{'display': ( modalOpen ? 'block' : 'none' )}}>
-        <Alert title="" variant="warning" onClick={handleModal}>
-        <p>Farming will start on block <a target="_blank" rel="noreferrer" style={{"color": "#0073ff"}} href="https://explorer.harmony.one/block/15403096">123456789.</a></p>
+  <div className="warningAlert" style={{'display': ( modalOpen ? 'block' : 'none' )}}>
+      <Alert title="" variant="warning" onClick={handleModal}>
+        <p>This is a WebApp in Beta (Live on <a target="_blank" rel="noreferrer" style={{"color": "#0073ff"}} href="https://docs.harmony.one/home/network/wallets/browser-extensions-wallets/metamask-wallet">Testnet</a>)</p>
       </Alert>
     </div>    
 
@@ -191,6 +192,16 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           <Route exact path={`${path}/history`}>
             {farmsList(inactiveFarms, true)}
           </Route>
+
+
+
+        </FlexLayout>
+        <FlexLayout>
+        <Feature >
+            <FaHistory /><br />
+            <p>The base emission rate is currently 5 MIS per block.</p>
+          </Feature>
+          
         </FlexLayout>
       </div>
     </Page>

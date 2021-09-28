@@ -75,6 +75,7 @@ const Hero = styled.div`
 const Home: React.FC = () => {
   const TranslateString = useI18n()
 
+
   return (
     <div>
     <HomePage>
