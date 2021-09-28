@@ -236,9 +236,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       <Flex justifyContent="left">
         <StyledLinkExternal external href={
           farm.isTokenOnly ?
-            `https://app.sushi.com/swap?inputCurrency=${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+            `https://viperswap.one/swap?inputCurrency=${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
             :
-            `https://app.sushi.com/add/${liquidityUrlPathParts}`
+            `https://viperswap.one/#/add/${liquidityUrlPathParts}`
         }>
           <span><FaGhost/> Add Liquidity</span>
         </StyledLinkExternal>

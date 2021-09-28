@@ -97,7 +97,7 @@ const CakeStats = () => {
           <Row>
             <Sub>Price</Sub>
             <Sub className="lightColor">
-              <CardValue value={eggPrice.toNumber()} prefix="$" />
+              <CardValue value={eggPrice.toNumber()} prefix="$" decimals={2}/>
             </Sub>
           </Row>
           <Row>

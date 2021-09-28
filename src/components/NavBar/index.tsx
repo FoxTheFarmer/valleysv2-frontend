@@ -167,13 +167,13 @@ const NavBar = (props) => {
                           </li>
 
                           <li className="nav-tab dropdown" id="farmToggleDesktop">
-                            <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/farms" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <FaSeedling /> <span className="dditem">EARN</span>
                             </Link>
                             <ul className="dropdown-content dropdown-items">
                               <li>
                                 <Link to="/farms" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">POOLS</span>
+                                  <span className="dditem">LP POOLS</span>
                                 </Link>
                               </li>
                               <li>
@@ -185,7 +185,7 @@ const NavBar = (props) => {
                           </li>
                           
                           <li className="nav-tab dropdown" id="wheelToggleDesktop">
-                            <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <FaLayerGroup /> <span className="dditem">LAUNCHPAD</span>
                             </Link>
                             
@@ -314,14 +314,14 @@ const NavBar = (props) => {
               </nav>
               <ul className="nav-tabs outsideMainNav">
               <li className="web3li">
-                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.sushi.com/swap?outputCurrency=${labo.addr.LaboAddr}` } className="nav-links connect">
+                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://viperswap.one/#/swap?outputCurrency=${labo.addr.LaboAddr}` } className="nav-links connect">
                       <Button style={{'fontSize': '15px', 'borderRadius': '15px', 'width': '100% !important'}}>
                         <b>Swap</b>
                       </Button>
                     </a>
                   </li>
                 <li className="web3li">
-                  <a target="_blank" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links price">
+                  <a target="_blank" rel="noreferrer" href="https://viperswap.one/#/" className="nav-links price">
                   <Price
                     style={{ 
                       marginRight: '0px',
