@@ -7,6 +7,7 @@ import BigNumber from 'bignumber.js/bignumber'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
+import { FaClock, FaUserClock } from 'react-icons/fa'
 import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 import useAllEarnings from '../../../hooks/useAllEarnings'
@@ -95,20 +96,20 @@ const FarmedStakingCard = () => {
       <CardBody>
         <Wrapper>
         <Title>
-          Farms and Staking
+          <span><FaUserClock/> Pending Rewards</span>
         </Title>
         <FlowRow>
           <object type="image/svg+xml" data="images/farms/labo.svg" width="97px">&nbsp;</object>
           <FlowCol>
-            <div style={{'display':'inline-block', 'paddingLeft': '15px', 'lineHeight': '19px', 'marginBottom': '5px'}}>
+            <div style={{'display':'inline-block', 'paddingLeft': '15px', 'lineHeight': '19px', 'marginBottom': '5px', 'marginTop': '15px'}}>
                 <Block>
                   <CakeHarvestBalance earningsSum={earningsSum}/>
                   {account ? (
                     <div>
                       <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
-                      <Sub>$MIS to Settle</Sub>
+                      <Sub>MIS to Settle</Sub>
                     </div>
-                  ):(<Sub>$MIS to Settle</Sub>)
+                  ):(<Sub>MIS to Settle</Sub>)
                   }
                   
                 </Block>
@@ -119,9 +120,9 @@ const FarmedStakingCard = () => {
                   {account ? (
                     <div>
                       <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
-                      <Sub>$MIS in Wallet</Sub>
+                      <Sub>MIS in Wallet</Sub>
                     </div>
-                  ):(<Sub>$MIS in Wallet</Sub>)
+                  ):(<Sub>MIS in Wallet</Sub>)
                   }
                 </Block>
             </div>
@@ -137,7 +138,7 @@ const FarmedStakingCard = () => {
               style={{'color': 'white', 'borderRadius': '5px !important'}}
             >
               {pendingTx
-                ? TranslateString(999, 'Settling $MIS')
+                ? TranslateString(999, 'Settling MIS')
                 : TranslateString(999, `Settle All (${balancesWithValue.length})`)}
             </Button>
           ) : (

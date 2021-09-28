@@ -55,14 +55,10 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
       {!removed && (
         <Flex justifyContent="space-between">
-          <span><FaScroll/> Liquidity</span>
-          <Text bold>{totalValueFormated}</Text>
+          <span><FaScroll/> Total Deposited</span><Text bold>{totalValueFormated}</Text>
+          
         </Flex>
       )}
-
-      
-
-
 
 
       <Flex justifyContent="flex-start">
@@ -77,11 +73,6 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         </StyledLinkExternal>
       </Flex>
 
-      <Flex justifyContent="flex-start">
-        <Link external href='https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/staking' bold={false} style={{"color": "#4c68ef"}}>
-          {TranslateString(999, 'How it Works')}
-        </Link>
-      </Flex>
     </Wrapper>
   )
 }

@@ -162,7 +162,7 @@ const NavBar = (props) => {
                       <ul className="nav-tabs">
                           <li className="nav-tab">
                             <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                              <span className="dditem">HOME</span>
+                              <span className="dditem">MY PAGE</span>
                             </Link>
                           </li>
 
@@ -189,7 +189,7 @@ const NavBar = (props) => {
                               <FaLayerGroup /> <span className="dditem">LAUNCHPAD</span>
                             </Link>
                             
-                            <ul className="dropdown-content dropdown-items">
+                            <ul className="dropdown-content dropdown-items" >
                             <li className="nav-tab">
                             <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <span className="dditem">INCUBATOR</span>
@@ -253,11 +253,6 @@ const NavBar = (props) => {
                               <li>
                                 <a target="_blanK" rel="noreferrer" href="https://twitter.com/ArtemisProtoco1" className="nav-links">
                                 <FaTwitter />  <span className="dditem">TWITTER</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a target="_blanK" rel="noreferrer" href="https://www.reddit.com/r/ArtemisProtocol/" className="nav-links">
-                                <FaReddit />  <span className="dditem">REDDIT</span>
                                 </a>
                               </li>
                               <li>

@@ -14,7 +14,7 @@ import './index.css'
 
 const Divider = styled.div`
 background-color: #4c68ef;
-height: 2px;
+height: 3px;
 margin-left: auto;
 margin-right: auto;
 margin-top: 30px;
@@ -117,7 +117,7 @@ const CakeStats = () => {
             </Sub>
           </Row>
           <Row style={{'marginBottom': '0 !important'}}>
-            <Sub>New $MIS/Block</Sub>
+            <Sub>Minted MIS/Block</Sub>
             <Sub className="lightColor">
               {vikingPerBlock}
             </Sub>
