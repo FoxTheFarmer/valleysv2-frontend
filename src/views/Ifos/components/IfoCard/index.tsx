@@ -44,9 +44,9 @@ const StyledCardContentInner = styled(Card)<{ ifoId: string }>`
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  background-image: ${({ ifoId }) => `url('/images/ifos/${ifoId}-bg.svg')`};
+  background-image: url('/images/bg.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding-top: 112px;
   margin-left: auto;
   margin-right: auto;

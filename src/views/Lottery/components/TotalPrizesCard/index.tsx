@@ -92,7 +92,7 @@ const TotalPrizesCard = () => {
         </CardFooter>
       </ExpandingWrapper>
     </Card>
-  )
+  ) 
 }
 
 export default TotalPrizesCard
