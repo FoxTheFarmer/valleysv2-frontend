@@ -65,7 +65,6 @@ export const fetchPoolsUserDataAsync = (account) => async (dispatch) => {
   const pendingRewards = await fetchUserPendingRewards(account)
 
   const userData = poolsConfig.map((pool) => ({
-    sousId: pool.sousId,
     allowance: allowances[pool.sousId],
     stakingTokenBalance: stakingTokenBalances[pool.sousId],
     stakedBalance: stakedBalances[pool.sousId],

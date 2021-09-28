@@ -194,12 +194,12 @@ const farms: FarmConfig[] = [
   {
     pid:labo.pids.pidList[0],
     risk: 5,
-    lpSymbol: 'LABO-BUSD LP',
+    lpSymbol: 'MIS-BUSD LP',
     lpAddresses: {
       1666700000: labo.addr.LaboBusdAddrTestnet,
       1666600000: labo.addr.LaboBusdAddr, // (to LABO BUSD LP)
     },
-    tokenSymbol: 'LABO',
+    tokenSymbol: 'MIS',
     tokenAddresses: {
       1666700000: labo.addr.LaboAddrTestnet,
       1666600000: labo.addr.LaboAddr,
@@ -210,12 +210,12 @@ const farms: FarmConfig[] = [
   {
     pid:labo.pids.pidList[1],
     risk: 5,
-    lpSymbol: 'LABO-ONE LP',
+    lpSymbol: 'MIS-ONE LP',
     lpAddresses: {
       1666700000: labo.addr.LaboBnbAddrTestnet,
       1666600000: labo.addr.LaboBnbAddr, // (to LABO BNB LP ) 
     },
-    tokenSymbol: 'LABO',
+    tokenSymbol: 'MIS',
     tokenAddresses: {
       1666700000: labo.addr.LaboAddrTestnet,
       1666600000: labo.addr.LaboAddr,
@@ -227,12 +227,12 @@ const farms: FarmConfig[] = [
     pid: labo.pids.pidList[2],
     risk: 5,
     isTokenOnly: true,
-    lpSymbol: 'LABO',
+    lpSymbol: 'MIS',
     lpAddresses: {
       1666700000: labo.addr.LaboBusdAddrTestnet,
       1666600000: labo.addr.LaboBusdAddr, // change (to LABO BUSD LP)
     },
-    tokenSymbol: 'LABO',
+    tokenSymbol: 'MIS',
     tokenAddresses: {
       1666700000: labo.addr.LaboAddrTestnet,
       1666600000: labo.addr.LaboAddr,
@@ -243,18 +243,34 @@ const farms: FarmConfig[] = [
   {
     pid:labo.pids.pidList[3],
     risk: 3,
-    lpSymbol: 'WONE-BUSD LP',
+    lpSymbol: 'ONE-BUSD LP',
     lpAddresses: {
       1666700000: '0x0fd43eb53e9c80eb439dc47da7539d8b6f71dc1e',
       1666600000: '0x8c36Ede15c5E4B0E1f9764351a7A7A0037c5e103',
     },
-    tokenSymbol: 'WONE',
+    tokenSymbol: 'ONE',
     tokenAddresses: {
       1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
       1666600000: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid:labo.pids.pidList[4],
+    risk: 3,
+    lpSymbol: 'ONE-1ETH LP',
+    lpAddresses: {
+      1666700000: '0x16d34ea43d76fb55b613748f15cfbe011b36227a',
+      1666600000: '0x16d34ea43d76fb55b613748f15cfbe011b36227a',
+    },
+    tokenSymbol: 'ONE',
+    tokenAddresses: {
+      1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
+      1666600000: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
+    },
+    quoteTokenSymbol: QuoteToken.ONEETH,
+    quoteTokenAdresses: contracts.oneeth,
   },
   /* {
     pid:labo.pids.pidList[3],

@@ -1,22 +1,22 @@
 import { PoolConfig, QuoteToken, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
-  /*  {
-    tokenName: 'XYA',
-    stakingTokenName: QuoteToken.MIS,
+  {
+    tokenName: 'WONE',
+    stakingTokenName: QuoteToken.MISONE,
     stakingTokenAddress: '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2',
     contractAddress: {
-      1666700000: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-      1666600000: '0xbb24f8080fB72c7b83C29ed443bA3f7690B4777D',
+      1666700000: '0x736E9c99cb9f9c39e25eF61181eeC83d484F9120',
+      1666600000: '0x736E9c99cb9f9c39e25eF61181eeC83d484F9120',
     },
-    poolCategory: PoolCategory.COMMUNITY,
+    poolCategory: PoolCategory.CORE,
     projectLink: 'https: pancakeswap.finance/',
     harvest: true,
     tokenPerBlock: '1',
     sortOrder: 1,
     isFinished: false,
     tokenDecimals: 18,
-   }, */
+   }, 
   // {
   //   sousId: 1,
   //   tokenName: 'TWT',

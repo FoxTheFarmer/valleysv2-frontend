@@ -48,6 +48,8 @@ export enum QuoteToken {
   'DSL' = 'DSL',
   'WONE' = 'WONE',
   'MIS' = 'MIS',
+  'ONEETH' = 'ONEETH',
+  'MISONE' = 'MIS-ONE',
 }
 
 export enum PoolCategory {
