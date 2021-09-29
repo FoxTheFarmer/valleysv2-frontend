@@ -55,7 +55,7 @@ export const useFarmTokensToUsd = (pid, farmTokens) => {
   }
   if (pid === 2) {
     // This is MIS Single staking
-    return new BigNumber(2).times(misPrice).times(farmTokens)
+    return  (misPrice).times(farmTokens)
   }
 
   return new BigNumber(1)

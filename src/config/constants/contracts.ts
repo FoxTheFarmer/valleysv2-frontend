@@ -26,6 +26,11 @@ export default {
     1666600000: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
     1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
   },
+  // this is WONE "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a"
+  wone: {
+    1666600000: '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a',
+    1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
+  },
   one: {
     1666600000: '0x00eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     1666700000: '',
