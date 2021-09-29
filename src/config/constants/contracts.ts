@@ -11,7 +11,7 @@ export default {
   },
   sousChef: {
     1666600000: '0xbb24f8080fB72c7b83C29ed443bA3f7690B4777D', // cambiar
-    1666700000: '',
+    1666700000: '0x736E9c99cb9f9c39e25eF61181eeC83d484F9120',
   },
   wheel: {
     1666600000: '0x57F3b7885b6bcBeaABa96779f1073Af53a2d1E65',
