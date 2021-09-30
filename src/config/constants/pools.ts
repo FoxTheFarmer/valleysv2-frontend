@@ -15,6 +15,8 @@ const pools: PoolConfig[] = [
     tokenPerBlock: '1',
     sortOrder: 1,
     isFinished: false,
+    startBlock: 15499711,
+    endBlock: 20499711,
     tokenDecimals: 18,
    }, 
   // {

@@ -191,7 +191,7 @@ const NavBar = (props) => {
                             
                             <ul className="dropdown-content dropdown-items" >
                             <li className="nav-tab">
-                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/incubator" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <span className="dditem">INCUBATOR</span>
                             </Link>
                           </li>

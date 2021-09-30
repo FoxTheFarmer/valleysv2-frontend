@@ -98,6 +98,8 @@ export interface PoolConfig {
   poolCategory: PoolCategory
   projectLink: string
   tokenPerBlock: string
+  startBlock?: number
+  endBlock?: number
   sortOrder?: number
   harvest?: boolean
   isFinished?: boolean
