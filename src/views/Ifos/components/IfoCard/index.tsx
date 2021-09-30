@@ -75,10 +75,6 @@ const getRibbonComponent = (status: IfoStatus, TranslateString: (translationId: 
     return <CardRibbon variantColor="textDisabled" text={TranslateString(999, 'Coming Soon')} />
   }
 
-  if (status === 'live') {
-    return <CardRibbon variantColor="primary" text={TranslateString(999, 'Live')} />
-  }
-
   return null
 }
 

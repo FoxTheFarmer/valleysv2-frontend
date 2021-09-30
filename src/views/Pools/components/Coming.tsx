@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Image, Button, LinkExternal } from '@pancakeswap-libs/uikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
+import { FaBuilding, FaMountain, FaRegBuilding, FaToolbox, FaTools } from 'react-icons/fa'
 import Card from './Card'
 import CardTitle from './CardTitle'
 
@@ -10,6 +11,10 @@ const Balance = styled.div`
   color: ${({ theme }) => theme.colors.text};
   font-size: 40px;
   font-weight: 600;
+`
+
+const FlexFull = styled.div`
+  flex: 1;
 `
 
 const Label = styled.div`
@@ -60,14 +65,14 @@ const Coming: React.FC = () => {
         <Image src="/images/incubatorbanner.svg" width={300} height={130} />
 
 
-        <Label>{TranslateString(4216, 'Join Artemis Liquidity as a Service program and distribute your token while building liquidity for it. ')}</Label>
+        <Label>{TranslateString(4216, 'Join Artemis Liquidity as a Service / Incubator program and distribute your token while building liquidity for it. ')}</Label>
 
+        <Label2>{TranslateString(4216, 'Bear in mind that applications will go through governance and be reviewed by a third party up until permissionless listings are implemented.')}</Label2>
 
-
-        <Label2>{TranslateString(4216, 'Bear in mind that applications will go through governance.')}</Label2>
-
+        <Label2><FaTools/> {TranslateString(4216, "Let's build, together. ")}</Label2>
+        
         <Divider />
-        <LinkExternal href="https://artemis-protocol.gitbook.io/artemis-protocol/roadmap/syrup" mr="16px" mt='20px'>
+        <LinkExternal href="https://artemis-protocol.gitbook.io/artemis/the-protocol/launchpad-1/incubator" mr="16px" mt='20px'>
               {TranslateString(999, 'Read More')}
         </LinkExternal>
         

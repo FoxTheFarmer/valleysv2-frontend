@@ -16,7 +16,7 @@ import { useSousHarvest } from 'hooks/useHarvest'
 import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
-import { FaFire, FaFlask, FaLightbulb, FaLock, FaMountain, FaTractor } from 'react-icons/fa'
+import { FaClock, FaFire, FaFlask, FaLightbulb, FaLock, FaMountain, FaTractor } from 'react-icons/fa'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
@@ -89,7 +89,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const earnings = new BigNumber(userData?.pendingReward || 0)
 
   const blocksUntilStart = Math.max(startBlock - block, 0)
+
   const blocksRemaining = Math.max(endBlock - block, 0)
+  
   const isOldSyrup = stakingTokenName === QuoteToken.SYRUP
   const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
@@ -156,7 +158,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 'color': 'white'
               }}
             >
-              {TranslateString(9929, 'Harvest')}
+              {TranslateString(9929, 'Settle')}
             </Button>
           )}
         </div>
@@ -166,6 +168,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <span><FaFlask/> Earn</span>
           <Quote>{tokenName}{TranslateString(10006, '')}</Quote>
         </Flex>
+
+
 
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaLock/> Lockup</span>
@@ -178,6 +182,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </Flex>   
 
         <Divider />
+
+
 
         <Flex justifyContent='space-between' marginTop='25px'>
           <span><FaTractor/> Your Stake</span>
@@ -196,6 +202,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(999, 'Compound')}
                 onClick={onPresentCompound}/>)} 
         </Flex>
+
+
 
 
 
