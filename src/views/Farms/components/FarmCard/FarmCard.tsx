@@ -1,15 +1,14 @@
 import React, { useMemo, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text, Skeleton, LinkExternal, Link } from '@pancakeswap-libs/uikit'
-import { communityFarms } from 'config/constants'
+import { Flex, Skeleton, LinkExternal } from '@pancakeswap-libs/uikit'
 import { Farm } from 'state/types'
 import { provider } from 'web3-core'
 import useI18n from 'hooks/useI18n'
 import ExpandableSectionButton from 'components/ExpandableSectionButton'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
-import { QuoteToken } from 'config/constants/types'
-import { FaCropAlt, FaFire, FaFlag, FaFlask, FaGem, FaGhost, FaLock, FaMountain, FaPiggyBank, FaTractor, FaTruck, FaTwitter } from 'react-icons/fa'
+import { PoolCategory, QuoteToken } from 'config/constants/types'
+import { FaFire, FaFlask, FaGhost, FaLock, FaMountain, } from 'react-icons/fa'
 import DetailsSection from './DetailsSection'
 import CardHeading from './CardHeading'
 import CardActionsContainer from './CardActionsContainer'
@@ -98,39 +97,25 @@ const StyledLinkExternal = styled(LinkExternal)`
   color: ${({ theme }) => theme.colors.text};
   display: flex;
   align-items: right;
-
-
 `
 
-const Menu = styled(Text)`
-
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  color: ${({ theme }) => theme.colors.text};
-  display: flex;
-  align-items: right;
-
-  `
-
-  const Divider = styled.div`
+const Divider = styled.div`
   background-color: #4c68ef;
   height: 2px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 5px;
-  width: 100%;
-`
+  width: 100%;`
 
 const Divider2 = styled.div`
-background-color: #4c68ef;
-height: 0px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10px;
-margin-bottom: 20px;
-width: 0%;
+  background-color: #4c68ef;
+  height: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 0%;
 `
 interface FarmCardProps {
   farm: FarmWithStakedValue
@@ -139,20 +124,32 @@ interface FarmCardProps {
   bnbPrice?: BigNumber
   ethereum?: provider
   account?: string
+  poolCategory?: PoolCategory
+
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account }) => {
-  const TranslateString = useI18n()
-
-  const [showExpandableSection, setShowExpandableSection] = useState(false)
-  
+const FarmCard: React.FC<FarmCardProps> = ({ 
+  farm, 
+  removed, 
+  cakePrice, 
+  bnbPrice, 
+  ethereum, 
+  account, 
+}) => {
 
   // const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
   // NAR-CAKE LP. The images should be cake-bnb.svg, link-bnb.svg, nar-cake.svg
   // const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
-  const farmImage = farm.isTokenOnly ? farm.tokenSymbol.toLowerCase() : `${farm.tokenSymbol.toLowerCase()}-${farm.quoteTokenSymbol.toLowerCase()}`
 
+  const lpLabel = ( farm.version ? `${farm.lpSymbol} V${farm.version}` : `${farm.lpSymbol}` )
+  const earnLabel = 'MIS'
+  const TranslateString = useI18n()
+  const [showExpandableSection, setShowExpandableSection] = useState(false)
+  const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, risk } = farm
+  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
+  const farmImage = farm.isTokenOnly ? farm.tokenSymbol.toLowerCase() : `${farm.tokenSymbol.toLowerCase()}-${farm.quoteTokenSymbol.toLowerCase()}`
+  
   const totalValue: BigNumber = useMemo(() => {
       if (farm.pid === 2) {
         // MIS Pool
@@ -174,19 +171,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  const lpLabel = ( farm.version ? `${farm.lpSymbol} V${farm.version}` : `${farm.lpSymbol}` )
-  const earnLabel = 'LABO'
   const farmAPY = ( !farm.apy.isNaN() ? ` ${farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}%` : '...loading' )
-
-  const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, risk } = farm
-  const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
-
+  
   return (
     <FCard>
-      {farm.tokenSymbol === 'LABO' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'MIS' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -195,7 +187,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
       />
-
 
       {!removed && (
         <Flex justifyContent='space-between' alignItems='center' mt="5px">
@@ -225,11 +216,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         <Quote>{TranslateString(10006, 'MIS + Fees')}</Quote>
       </Flex>
 
-      {/* */}
       <Flex justifyContent='space-between'>
         <span><FaLock/> Lockup</span>
         <Quote>{TranslateString(10006, '0 Hours')}</Quote>
-
       </Flex>
 
       <Flex justifyContent='space-between'>
@@ -248,19 +237,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         </StyledLinkExternal>
       </Flex>
       
-      <Divider />
+      <Divider/>
 
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
 
-      <Divider2 />
+      <Divider2/>
 
       <Flex justifyContent='right'>
         <ExpandableSectionButton onClick={() => setShowExpandableSection(!showExpandableSection)}/>
       </Flex>
-
-      
-      
-
 
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
@@ -279,7 +264,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
           tokenAddresses={tokenAddresses}
         />
       </ExpandingWrapper>
-      
     </FCard>
   )
 }

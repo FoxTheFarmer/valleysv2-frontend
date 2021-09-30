@@ -191,7 +191,7 @@ const NavBar = (props) => {
                             
                             <ul className="dropdown-content dropdown-items" >
                             <li className="nav-tab">
-                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/incubator" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <span className="dditem">INCUBATOR</span>
                             </Link>
                           </li>
@@ -314,7 +314,7 @@ const NavBar = (props) => {
               </nav>
               <ul className="nav-tabs outsideMainNav">
               <li className="web3li">
-                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://viperswap.one/#/swap?outputCurrency=${labo.addr.LaboAddr}` } className="nav-links connect">
+                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://viperswap.one/#/swap?outputCurrency=${labo.addr.LaboAddrTestnet}` } className="nav-links connect">
                       <Button style={{'fontSize': '15px', 'borderRadius': '15px', 'width': '100% !important'}}>
                         <b>Swap</b>
                       </Button>

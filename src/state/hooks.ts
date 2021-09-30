@@ -56,6 +56,10 @@ export const useFarmTokensToUsd = (pid, farmTokens) => {
     // One as quote token
     return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens)
   }
+  if (pid === 2) {
+    // This is MIS Single staking
+    return  (misPrice).times(farmTokens)
+  }
 
   console.log("No price found for pid = ", pid)
   return new BigNumber(0)

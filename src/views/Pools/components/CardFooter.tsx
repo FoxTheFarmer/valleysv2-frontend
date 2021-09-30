@@ -3,10 +3,12 @@ import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
-import { ChevronDown, ChevronUp } from 'react-feather'
+import { ChevronDown, ChevronUp, ExternalLink } from 'react-feather'
 import Balance from 'components/Balance'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
-import { PoolCategory } from 'config/constants/types'
+import { PoolCategory, QuoteToken } from 'config/constants/types'
+import { Flex, LinkExternal } from '@pancakeswap-libs/uikit'
+import ExpandableSectionButton from 'components/ExpandableSectionButton'
 
 const tags = {
   [PoolCategory.BINANCE]: BinanceTag,
@@ -72,6 +74,11 @@ const TokenLink = styled.a`
   color: #12aab5;
 `
 
+const Quote = styled.p`
+    font-size: 15px;
+    margin-bottom: 0px;
+`
+
 const CardFooter: React.FC<Props> = ({
   projectLink,
   totalStaked,
@@ -80,10 +87,10 @@ const CardFooter: React.FC<Props> = ({
   blocksUntilStart,
   poolCategory,
 }) => {
+
   const [isOpen, setIsOpen] = useState(false)
   const TranslateString = useI18n()
   const Icon = isOpen ? ChevronUp : ChevronDown
-
   const handleClick = () => setIsOpen(!isOpen)
   const Tag = tags[poolCategory]
 
@@ -93,15 +100,23 @@ const CardFooter: React.FC<Props> = ({
         <FlexFull>
           <Tag />
         </FlexFull>
-        <StyledDetailsButton onClick={handleClick}>
-          {isOpen ? 'Hide' : 'Details'} <Icon />
-        </StyledDetailsButton>
+        <ExpandableSectionButton onClick={handleClick}>
+          {isOpen ? 'Details' : 'Details'} <Icon />
+        </ExpandableSectionButton>
       </Row>
+
       {isOpen && (
+
         <Details>
-          <TokenLink href={projectLink} target="_blank">
-            {TranslateString(4212, 'More Information')}
-          </TokenLink>
+
+          <LinkExternal href={projectLink} target="_blank">
+            {TranslateString(4212, 'About the Project')}
+          </LinkExternal>
+
+          <LinkExternal href='https://viperswap.one/#/add/0xF2f587fD8A423880037F39828d593d4cE1961A98' target="_blank">
+            {TranslateString(4212, 'Get LP Tokens')}
+          </LinkExternal>
+        
         </Details>
       )}
     </StyledFooter>
@@ -109,3 +124,7 @@ const CardFooter: React.FC<Props> = ({
 }
 
 export default React.memo(CardFooter)
+function setShowExpandableSection(arg0: boolean): void {
+  throw new Error('Function not implemented.')
+}
+
