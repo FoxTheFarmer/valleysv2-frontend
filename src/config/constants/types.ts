@@ -49,6 +49,7 @@ export enum QuoteToken {
   'WONE' = 'WONE',
   'MIS' = 'MIS',
   'ONEETH' = 'ONEETH',
+  'ONE' = 'ONE',
   'MISONE' = 'MIS-ONE',
 }
 

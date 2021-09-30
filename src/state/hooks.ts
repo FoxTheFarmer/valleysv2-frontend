@@ -36,24 +36,29 @@ export const useFarmFromSymbol = (lpSymbol: string): Farm => {
   return farm
 }
 
+
 export const useFarmTokensToUsd = (pid, farmTokens) => {
   // farmTokens is the # of LP tokens, or just the number of tokens for single staking pools
   // All price logic should go here for farms
   const farm = useFarmFromPid(pid)
   const onePrice = usePriceBnbBusd()
-  console.log(pid)
-  console.log(farm)
+  const misPrice = usePriceCakeBusd()
 
-  if (pid === 0 || pid === 2) {
+  if (pid === 2) {
+    // MIS Pool
+    return new BigNumber(misPrice).times(farmTokens)
+  }
+  if (pid === 0 || pid === 3) {
     // These all have quote symbol as a stablecoin
     return new BigNumber(2).times(farm.quoteTokenPerLp).times(farmTokens)
   }
-  if (pid === 1) {
-    // These all have quote symbol as ONE
+  if (pid === 1 || pid === 4) {
+    // One as quote token
     return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens)
   }
 
-  return new BigNumber(1)
+  console.log("No price found for pid = ", pid)
+  return new BigNumber(0)
 }
 
 export const useFarmUser = (pid) => {
@@ -156,12 +161,17 @@ export const useTotalValue = (): BigNumber => {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
       let val;
-      if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
-      }else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = (cakePrice.times(farm.lpTotalInQuoteToken));
-      }else{
-        val = (farm.lpTotalInQuoteToken);
+      if (farm.pid === 2) {
+        // MIS Pool
+        val = cakePrice.times(farm.tokenAmount)
+      }
+      if (farm.pid === 0 || farm.pid === 3) {
+        // These all have quote symbol as a stablecoin
+        val = new BigNumber(2).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+      }
+      if (farm.pid === 1 || farm.pid === 4) {
+        // One as quote token
+        val = new BigNumber(2).times(bnbPrice).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
       }
       value = value.plus(val);
 

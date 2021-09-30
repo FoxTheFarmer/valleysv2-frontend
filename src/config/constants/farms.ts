@@ -264,13 +264,13 @@ const farms: FarmConfig[] = [
       1666700000: '0x16d34ea43d76fb55b613748f15cfbe011b36227a',
       1666600000: '0x16d34ea43d76fb55b613748f15cfbe011b36227a',
     },
-    tokenSymbol: 'ONE',
-    tokenAddresses: {
+    quoteTokenSymbol: QuoteToken.ONE,
+    quoteTokenAdresses: {
       1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
       1666600000: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
     },
-    quoteTokenSymbol: QuoteToken.ONEETH,
-    quoteTokenAdresses: contracts.oneeth,
+    tokenSymbol: QuoteToken.ONEETH,
+    tokenAddresses: contracts.oneeth,
   },
   /* {
     pid:labo.pids.pidList[3],

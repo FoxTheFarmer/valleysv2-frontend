@@ -60,6 +60,7 @@ const fetchFarms = async () => {
       ] = await multicall(erc20, calls)
 
       let tokenAmount;
+      let quoteTokenAmount;
       let lpTotalInQuoteToken;
       let tokenPriceVsQuote;
       const lpTokenRatio = new BigNumber(lpTokenBalanceMC).div(new BigNumber(lpTotalSupply))
@@ -71,6 +72,7 @@ const fetchFarms = async () => {
 
       if(farmConfig.isTokenOnly){
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals));
+        quoteTokenAmount = tokenAmount;
         tokenPerLp = new BigNumber(1);
         quoteTokenPerLp = new BigNumber(1);
 
@@ -82,8 +84,6 @@ const fetchFarms = async () => {
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote);
       }else{
         // Ratio in % a LP tokens that are in staking, vs the total number in circulation
-
-
         // Total value in staking in quote token value
         lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
           .div(new BigNumber(10).pow(18))
@@ -92,9 +92,7 @@ const fetchFarms = async () => {
 
         // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
         tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
-        const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(quoteTokenDecimals))
-          .times(lpTokenRatio)
+        quoteTokenAmount = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(10).pow(quoteTokenDecimals)).times(lpTokenRatio)
 
         if(tokenAmount.comparedTo(0) > 0){
           tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount);
@@ -125,15 +123,15 @@ const fetchFarms = async () => {
       return {
         ...farmConfig,
         tokenAmount: tokenAmount.toJSON(),
-        // quoteTokenAmount: quoteTokenAmount,
+        quoteTokenAmount: quoteTokenAmount.toJSON(),
         lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
         tokenPriceVsQuote: tokenPriceVsQuote.toJSON(),
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
         vikingPerBlock: new BigNumber(vikingPerBlock).toNumber(),
-          tokenPerLp: tokenPerLp.toJSON(),
-          quoteTokenPerLp: quoteTokenPerLp.toJSON(),
+        tokenPerLp: tokenPerLp.toJSON(),
+        quoteTokenPerLp: quoteTokenPerLp.toJSON(),
       }
     }),
   )

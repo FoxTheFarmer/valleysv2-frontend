@@ -154,17 +154,21 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
   const farmImage = farm.isTokenOnly ? farm.tokenSymbol.toLowerCase() : `${farm.tokenSymbol.toLowerCase()}-${farm.quoteTokenSymbol.toLowerCase()}`
 
   const totalValue: BigNumber = useMemo(() => {
-    if (!farm.lpTotalInQuoteToken) {
-      return null
-    }
-    if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-      return bnbPrice.times(farm.lpTotalInQuoteToken)
-    }
-    if (farm.lpSymbol === "LABO") {
-      return cakePrice.times(farm.lpTotalInQuoteToken)
-    }
-    return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.lpSymbol ,farm.quoteTokenSymbol])
+      if (farm.pid === 2) {
+        // MIS Pool
+        return cakePrice.times(farm.tokenAmount)
+      }
+      if (farm.pid === 0 || farm.pid === 3) {
+          // These all have quote symbol as a stablecoin
+          return new BigNumber(2).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+      }
+      if (farm.pid === 1 || farm.pid === 4) {
+          // One as quote token
+          return new BigNumber(2).times(bnbPrice).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+      }
+      console.log("No price found for pid = ", farm.pid)
+      return new BigNumber(0)
+  }, [bnbPrice, cakePrice, farm])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
