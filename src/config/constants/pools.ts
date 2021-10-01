@@ -10,7 +10,7 @@ const pools: PoolConfig[] = [
       1666600000: '0xc078b878ae6BB14a8734d8a788F496984Cc7dde2',
     },
     poolCategory: PoolCategory.CORE,
-    projectLink: 'https: pancakeswap.finance/',
+    projectLink: 'https://www.harmony.one/',
     harvest: true,
     tokenPerBlock: '1',
     sortOrder: 1,
