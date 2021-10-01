@@ -97,40 +97,34 @@ const NavBar = (props) => {
             <Card.Body style={{"backgroundColor": "white", "border": "0"}}>
             <ul className="dropdown-items">
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://github.com/" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://bridge.harmony.one/erc20" className="nav-links">
                     <FaBroadcastTower /> <span className="dditem">BRIDGE</span>
                   </a>
                 </li>
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://thelabfinance.medium.com/" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/" className="nav-links">
                     <FaBook /> <span className="dditem">DOCS</span>
                   </a>
                 </li>
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://docs.thelab.finance" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://github.com/ArtemisProtocol" className="nav-links">
                     <FaCode /> <span className="dditem">CODE</span>
                   </a>
                 </li>
 
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://twitter.com/TheLabFinance" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://twitter.com/ArtemisProtoco1" className="nav-links">
                     <FaTwitter />  <span className="dditem">TWITTER</span>
                   </a>
                 </li>
 
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://t.me/thelabfinance" className="nav-links">
-                    <FaReddit /> <span className="dditem">REDDIT</span>
-                  </a>
-                </li>
-
-                <li>
-                  <a target="_blanK" rel="noreferrer" href="https://github.com/thelabfinance/audits/blob/main/TheLabFinance_SolidGroup.pdf" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://t.me/ProtocolArtemis" className="nav-links">
                     <FaTelegramPlane />  <span className="dditem">TELEGRAM</span>
                   </a>
                 </li>
                 <li>
-                  <a target="_blanK" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links">
+                  <a target="_blanK" rel="noreferrer" href="https://discord.gg/zqkTCQS8" className="nav-links">
                     <FaDiscord />  <span className="dditem">DISCORD</span>
                   </a>
                 </li>
@@ -173,7 +167,7 @@ const NavBar = (props) => {
                             <ul className="dropdown-content dropdown-items">
                               <li>
                                 <Link to="/farms" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">LP POOLS</span>
+                                  <span className="dditem">POOLS</span>
                                 </Link>
                               </li>
                               <li>
@@ -185,7 +179,7 @@ const NavBar = (props) => {
                           </li>
                           
                           <li className="nav-tab dropdown" id="wheelToggleDesktop">
-                            <Link to="/lab" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/incubator" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <FaLayerGroup /> <span className="dditem">LAUNCHPAD</span>
                             </Link>
                             
@@ -205,7 +199,7 @@ const NavBar = (props) => {
 
 
                           <li className="nav-tab dropdown" id="wheelToggleDesktop">
-                            <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                            <Link to="/lottery" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                               <FaTicketAlt /> <span className="dditem">GAMES</span>
                             </Link>
                             
@@ -216,13 +210,13 @@ const NavBar = (props) => {
                             </Link>
                           </li>
                              <li>
-                                <Link to="/wheel" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">WHEEL</span>
+                                <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <span className="dditem">WHEEL (DISABLED)</span>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">LOOT CRATES</span>
+                                  <span className="dditem">CRATES (DISABLED)</span>
                                 </Link>
                               </li>
                             </ul>
@@ -256,7 +250,7 @@ const NavBar = (props) => {
                                 </a>
                               </li>
                               <li>
-                                <a target="_blanK" rel="noreferrer" href="https://t.me/thelabfinance" className="nav-links">
+                                <a target="_blanK" rel="noreferrer" href="https://t.me/protocolartemis" className="nav-links">
                                 <FaTelegramPlane /> <span className="dditem">TELEGRAM</span>
                                 </a>
                               </li>
