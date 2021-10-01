@@ -169,10 +169,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <Quote>{tokenName}{TranslateString(10006, '')}</Quote>
         </Flex>
         
-        <Flex justifyContent='space-between' marginTop='6px'>
-          <span><FaCubes/> Blocks Remaining</span>
-          <Quote>{blocksRemaining}{TranslateString(10006, '')}</Quote>
-        </Flex>
+
 
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaLock/> Lockup</span>
@@ -204,6 +201,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 disabled={!earnings.toNumber() || pendingTx}
                 text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(999, 'Compound')}
                 onClick={onPresentCompound}/>)} 
+        </Flex>
+
+        <Flex justifyContent='space-between' marginTop='6px'>
+          <span><FaCubes/> Blocks Remaining</span>
+          <Quote>{blocksRemaining}{TranslateString(10006, '')}</Quote>
         </Flex>
 
 

@@ -55,8 +55,6 @@ const Ifo = () => {
                   '',
                 )}
               </Text>
-
-
             </div>
       </Flex>
       </div>
