@@ -159,7 +159,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   <div className="warningAlert" style={{'display': ( modalOpen ? 'block' : 'none' )}}>
       <Alert title="" variant="warning" onClick={handleModal}>
-        <p>This is a WebApp in Beta (Live on <a target="_blank" rel="noreferrer" style={{"color": "#0073ff"}} href="https://docs.harmony.one/home/network/wallets/browser-extensions-wallets/metamask-wallet">Testnet</a>)</p>
+        <p>Artemis Protocol is Live on <a target="_blank" rel="noreferrer" style={{"color": "#0073ff"}} href="https://docs.harmony.one/home/network/wallets/browser-extensions-wallets/metamask-wallet">Testnet.</a> Mainnet launch soon.</p>
       </Alert>
     </div>    
 
