@@ -70,9 +70,9 @@ const App: React.FC = () => {
             <Route path="/lottery">
              <Lottery />
             </Route>
-            <Route path="/Launchpad">
+            {/* <Route path="/Launchpad">
             <Ifos />
-            </Route>
+            </Route> */}
             {/* <Route path="/nft">
             <Nft /> 
             </Route>  */}
