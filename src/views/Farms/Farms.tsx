@@ -127,7 +127,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
         let totalValue = new BigNumber(farm.lpTotalInQuoteToken || 0);
 
-        if (process.env.REACT_APP_DEBUG === "true") console.log(farm.poolWeight, 'hey')
+        // if (process.env.REACT_APP_DEBUG === "true") console.log(farm.poolWeight, 'hey')
 
         if (farm.quoteTokenSymbol === QuoteToken.BNB) {
           totalValue = totalValue.times(bnbPrice);
