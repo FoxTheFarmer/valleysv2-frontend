@@ -272,7 +272,7 @@ const NavBar = (props) => {
                  </ul>
                  <ul className="web3buttons">
                  <li className="web3li insideMainNav">
-                   <a target="_blank" rel="noreferrer" href="https://dex.guru/token/0x171401a3d18b21bfa3f9bf4f9637f3691158365a-bsc" className="nav-links price">
+                   <a target="_blank" rel="noreferrer" href="https://viperswap.one/#/" className="nav-links price">
                   <Price
                     style={{ marginRight: '4px',
                             backgroundColor: 'transparent' }}
@@ -281,7 +281,7 @@ const NavBar = (props) => {
                     <p>{ ( !cakePriceUsd.isNaN() ? cakePriceUsd.toNumber().toFixed(5).concat("$") : '...loading') }</p></Price>
                   </a></li>
                   <li className="web3li insideMainNav">
-                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://app.1inch.io/#/56/swap/BNB/${labo.addr.LaboAddr}` } className="nav-links connect">
+                    <a target="_blank" rel="noreferrer" style={{'width': '100% !important' }} href={ `https://viperswap.one/#/swap?outputCurrency=${labo.addr.LaboAddrTestnet}` } className="nav-links connect">
                       <Button style={{'fontSize': '15px', 'borderRadius': '16px', 'width': '100% !important'}}>
                         <b>Swap</b>
                       </Button>
