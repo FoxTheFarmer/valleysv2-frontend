@@ -223,7 +223,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.WONE,
     quoteTokenAdresses: contracts.wbnb,
   },
-  {
+  /* {
     pid: labo.pids.pidList[2],
     risk: 5,
     isTokenOnly: true,
@@ -239,7 +239,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
-  },
+  }, */
   {
     pid:labo.pids.pidList[3],
     risk: 3,
