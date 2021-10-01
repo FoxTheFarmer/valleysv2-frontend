@@ -176,11 +176,11 @@ const NavBar = (props) => {
                                   <span className="dditem">LP POOLS</span>
                                 </Link>
                               </li>
-                              {/* <li>
+                              <li>
                                 <Link to="/pools" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                                   <span className="dditem">STAKING</span>
                                 </Link>
-                              </li> */}
+                              </li> 
                             </ul>
                           </li>
                           

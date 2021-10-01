@@ -15,7 +15,7 @@ const StyledIfoCardHeader = styled(Flex)`
 `
 
 const Name = styled(Heading).attrs({ as: 'h3', size: 'lg' })`
-  margin-bottom: 60px;
+  margin-bottom: 4px;
   text-align: right;
 `
 
