@@ -61,6 +61,8 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const tokenBalanceUsd = useFarmTokensToUsd(pid, tokenBalance)
   const stakedBalanceUsd = useFarmTokensToUsd(pid, stakedBalance)
+  console.log("StakedBalance", farm.pid, stakedBalance && stakedBalance.toNumber())
+  console.log("StakedBalanceUsd", farm.pid, stakedBalanceUsd && stakedBalanceUsd.toNumber())
 
   // console.log(pid)
   // console.log(tokenBalanceUsd)

@@ -157,11 +157,11 @@ const FarmCard: React.FC<FarmCardProps> = ({
       }
       if (farm.pid === 0 || farm.pid === 3) {
           // These all have quote symbol as a stablecoin
-          return new BigNumber(2).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+          return new BigNumber(2).times(farm.quoteTokenAmount)
       }
       if (farm.pid === 1 || farm.pid === 4) {
           // One as quote token
-          return new BigNumber(2).times(bnbPrice).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+          return new BigNumber(2).times(bnbPrice).times(farm.quoteTokenAmount)
       }
       console.log("No price found for pid = ", farm.pid)
       return new BigNumber(0)
@@ -170,6 +170,7 @@ const FarmCard: React.FC<FarmCardProps> = ({
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
+
 
   const farmAPY = ( !farm.apy.isNaN() ? ` ${farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
     minimumFractionDigits: 2,

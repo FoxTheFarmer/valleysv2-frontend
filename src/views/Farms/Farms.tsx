@@ -90,7 +90,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const handleModal = async () => {
     setModalOpen(!modalOpen)
   }  
-  if (process.env.REACT_APP_DEBUG === "true") console.log(cakePrice, "testingg cakePrice");
+  // if (process.env.REACT_APP_DEBUG === "true") console.log(cakePrice, "testingg cakePrice");
 
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
