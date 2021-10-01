@@ -9,6 +9,7 @@ import { State, Farm, Pool } from './types'
 import { QuoteToken } from '../config/constants/types'
 
 const ZERO = new BigNumber(0)
+const TEN_POW_18 = new BigNumber(10).pow(18)
 
 export const useFetchPublicData = () => {
   const dispatch = useDispatch()
@@ -46,19 +47,19 @@ export const useFarmTokensToUsd = (pid, farmTokens) => {
 
   if (pid === 2) {
     // MIS Pool
-    return new BigNumber(misPrice).times(farmTokens)
+    return new BigNumber(misPrice).times(farmTokens).div(TEN_POW_18)
   }
   if (pid === 0 || pid === 3) {
     // These all have quote symbol as a stablecoin
-    return new BigNumber(2).times(farm.quoteTokenPerLp).times(farmTokens)
+    return new BigNumber(2).times(farm.quoteTokenPerLp).times(farmTokens).div(TEN_POW_18)
   }
   if (pid === 1 || pid === 4) {
     // One as quote token
-    return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens)
+    return new BigNumber(2).times(onePrice).times(farm.quoteTokenPerLp).times(farmTokens).div(TEN_POW_18)
   }
   if (pid === 2) {
     // This is MIS Single staking
-    return  (misPrice).times(farmTokens)
+    return  (misPrice).times(farmTokens).div(TEN_POW_18)
   }
 
   console.log("No price found for pid = ", pid)
@@ -164,19 +165,16 @@ export const useTotalValue = (): BigNumber => {
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
-      let val;
-      if (farm.pid === 2) {
-        // MIS Pool
-        val = cakePrice.times(farm.tokenAmount)
-      }
+      let val = new BigNumber(0);
       if (farm.pid === 0 || farm.pid === 3) {
         // These all have quote symbol as a stablecoin
-        val = new BigNumber(2).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+        val = new BigNumber(2).times(farm.quoteTokenAmount)
       }
       if (farm.pid === 1 || farm.pid === 4) {
         // One as quote token
-        val = new BigNumber(2).times(bnbPrice).times(farm.quoteTokenPerLp).times(farm.quoteTokenAmount)
+        val = new BigNumber(2).times(bnbPrice).times(farm.quoteTokenAmount)
       }
+      // console.log("TVL", farm.pid, val && val.toNumber())
       value = value.plus(val);
 
     }

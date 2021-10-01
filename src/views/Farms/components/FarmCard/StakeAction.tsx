@@ -45,9 +45,9 @@ const StakeAction: React.FC<FarmCardActionsProps> = (
   const { onStake } = useStake(pid)
   const { onUnstake } = useUnstake(pid)
 
-  const rawStakedBalance = getBalanceNumber(stakedBalance)
+  const rawStakedBalance = getBalanceNumber(stakedBalance, 18)
   const displayBalance = rawStakedBalance.toLocaleString()
-  const rawStakedBalanceUsd = getBalanceNumber(stakedBalanceUsd)
+  const rawStakedBalanceUsd = getBalanceNumber(stakedBalanceUsd, 0)
   const displayBalanceUsd = rawStakedBalanceUsd.toLocaleString('en-us', { maximumFractionDigits: 2, minimumFractionDigits: 2 })
 
   const tokenBalanceUsdNum = getBalanceNumber(tokenBalanceUsd)
