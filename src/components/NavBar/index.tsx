@@ -8,7 +8,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import UnlockButton from 'components/UnlockButton'
 import {Accordion, Button, Card, useAccordionToggle} from 'react-bootstrap';
-import { FaChartLine, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaTicketAlt, FaChartBar, FaMoneyBillAlt, FaTractor, FaHome, FaPrescriptionBottleAlt, FaTumblrSquare, FaCode, FaFlask, FaBook, FaReddit, FaRocketchat, FaRocket, FaBroadcastTower, FaLayerGroup, FaSeedling } from 'react-icons/fa';
+import { FaChartLine, FaTelegramPlane, FaTwitter, FaDiscord, FaFileAlt, FaGithub, FaTicketAlt, FaChartBar, FaMoneyBillAlt, FaTractor, FaHome, FaPrescriptionBottleAlt, FaTumblrSquare, FaCode, FaFlask, FaBook, FaReddit, FaRocketchat, FaRocket, FaBroadcastTower, FaLayerGroup, FaSeedling, FaExclamationTriangle } from 'react-icons/fa';
 import ReactTooltip from 'react-tooltip';
 import labo from 'config/constants/labo';
 
@@ -191,7 +191,7 @@ const NavBar = (props) => {
                           </li>
                              <li>
                                 <Link to="/mainnet" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">ARTEMISPAD</span>
+                                  <FaExclamationTriangle/><span className="dditem">ARTEMISPAD</span>
                                 </Link>
                              </li>
                             </ul>
@@ -211,12 +211,12 @@ const NavBar = (props) => {
                           </li>
                              <li>
                                 <Link to="mainnet/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">WHEEL</span>
+                                <FaExclamationTriangle/><span className="dditem">WHEEL</span>
                                 </Link>
                               </li>
                               <li>
                                 <Link to="/mainnet" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">CRATES</span>
+                                <FaExclamationTriangle/><span className="dditem">CRATES</span>
                                 </Link>
                               </li>
                             </ul>

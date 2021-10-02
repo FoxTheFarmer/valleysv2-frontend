@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text } from '@pancakeswap-libs/uikit'
+import { Heading, LinkExternal, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Container from 'components/layout/Container'
 import LotteryProgress from './LotteryProgress'
 
 const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   margin-bottom: 24px;
 `
 
@@ -71,9 +71,10 @@ const Hero = () => {
       <StyledContainer>
         <LeftWrapper>
           <Title>Lottery</Title>
-          <Blurb>Buy Tickets With MIS</Blurb>
-          <Blurb>Win if 2, 3, or 4 of your ticket numbers match!</Blurb>
-        </LeftWrapper>
+          <Blurb>Get tickets with MIS</Blurb>
+          <LinkExternal href='https://artemis-protocol.gitbook.io/artemis/the-protocol/gamefi/lottery' >How the lottery works</LinkExternal>
+          
+          </LeftWrapper>
         <RightWrapper>
           <LotteryProgress />
         </RightWrapper>
