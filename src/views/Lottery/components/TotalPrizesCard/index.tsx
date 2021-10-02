@@ -72,7 +72,7 @@ const TotalPrizesCard = () => {
         <CardHeading>
           <Left>
             <IconWrapper>
-              <object type="image/svg+xml" data="images/farms/minimal/labo.svg" width="42px">&nbsp;</object>
+              <object type="image/svg+xml" data="images/farms/minimal/lotto.svg" width="0px">&nbsp;</object>
             </IconWrapper>
             <PrizeCountWrapper>
               <Text fontSize="14px" color="textSubtle">

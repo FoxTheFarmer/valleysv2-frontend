@@ -210,7 +210,7 @@ const NavBar = (props) => {
                             </Link>
                           </li>
                              <li>
-                                <Link to="mainnet/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                <Link to="mainnet" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
                                 <FaExclamationTriangle/><span className="dditem">WHEEL</span>
                                 </Link>
                               </li>

@@ -10,7 +10,7 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
   return (
     <Modal title={TranslateString(466, 'Warning')} onDismiss={onDismiss}>
       <TicketsList>
-        {TranslateString(468, 'Lottery ticket purchases are final.')}
+        {TranslateString(468, 'Lottery ticket purchases are final. ')}
         <br />
         {TranslateString(470, 'Your MIS will not be returned to you after you spend it to buy tickets.')}
         <br />
@@ -20,6 +20,9 @@ const WarningModal: React.FC<{ onDismiss?: () => void }> = ({ onDismiss }) => {
           474,
           'Buying tickets does not guarantee you will win anything. Please only participate once you understand the risks.',
         )}
+        <br />
+        {TranslateString(4972, 'Do not participate if you are under 21 years old.')}
+        <br />
       </TicketsList>
       <ModalActions>
         <Button fullWidth onClick={onDismiss}>
