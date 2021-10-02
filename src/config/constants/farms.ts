@@ -215,13 +215,13 @@ const farms: FarmConfig[] = [
       1666700000: labo.addr.LaboBnbAddrTestnet,
       1666600000: labo.addr.LaboBnbAddr, // (to LABO BNB LP ) 
     },
-    tokenSymbol: 'MIS',
+    tokenSymbol: 'ONE',
     tokenAddresses: {
-      1666700000: labo.addr.LaboAddrTestnet,
-      1666600000: labo.addr.LaboAddr,
+      1666700000: '0x7466d7d0c21fa05f32f5a0fa27e12bdc06348ce2',
+      1666600000: '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a',
     },
-    quoteTokenSymbol: QuoteToken.WONE,
-    quoteTokenAdresses: contracts.wbnb,
+    quoteTokenSymbol: QuoteToken.MIS,
+    quoteTokenAdresses: contracts.cake,
   },
   /* {
     pid: labo.pids.pidList[2],
