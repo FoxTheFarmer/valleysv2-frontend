@@ -190,8 +190,8 @@ const NavBar = (props) => {
                             </Link>
                           </li>
                              <li>
-                                <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">ARTEMISPAD (DISABLED)</span>
+                                <Link to="/mainnet" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <span className="dditem">ARTEMISPAD</span>
                                 </Link>
                              </li>
                             </ul>
@@ -210,13 +210,13 @@ const NavBar = (props) => {
                             </Link>
                           </li>
                              <li>
-                                <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">WHEEL (DISABLED)</span>
+                                <Link to="mainnet/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <span className="dditem">WHEEL</span>
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
-                                  <span className="dditem">CRATES (DISABLED)</span>
+                                <Link to="/mainnet" className="nav-links" onClick={()=>{setIsChecked(!isChecked)}}>
+                                  <span className="dditem">CRATES</span>
                                 </Link>
                               </li>
                             </ul>

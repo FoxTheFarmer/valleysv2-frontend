@@ -18,11 +18,10 @@ const NotFound = () => {
   return (
     <Page>
       <StyledNotFound>
-        <LogoIcon width="64px" mb="8px" />
-        <Heading size="xxl">404</Heading>
-        <Text mb="16px">{TranslateString(999, 'Oops, page not found.')}</Text>
-        <Button as="a" href="/" size="sm">
-          {TranslateString(999, 'Back Home')}
+        <object type="image/svg+xml" data="images/ppltalking.svg" height="370px">&nbsp;</object>
+        <Heading size="xl" mt='15px' mb='25px'  >Await for Mainnet Launch</Heading>
+        <Button as="a" href="/" size="md">
+          {TranslateString(999, 'My Page')}
         </Button>
       </StyledNotFound>
     </Page>
