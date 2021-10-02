@@ -43,22 +43,16 @@ const Ifo = () => {
         <IfoCards isSingle>
           <IfoCard ifo={activeIfo} />
         </IfoCards>
-        <LaunchIfoCallout>
-      <div>
-        
-      <Flex justifyContent='center'>
-        <div>
-              <Title as="h2">{TranslateString(999, '')}</Title>
-              <Text mb={3}>
-                {TranslateString(
-                  999,
-                  '',
-                )}
-              </Text>
-            </div>
-      </Flex>
-      </div>
 
+      <LaunchIfoCallout>
+        <div>
+          <Flex justifyContent='center'>
+            <div>
+              <Title as="h2">{TranslateString(999, '')}</Title>
+              <Text mb={3}>{TranslateString(999,'',)}</Text>
+            </div>
+          </Flex>
+        </div>
       </LaunchIfoCallout>
     </div>
   )

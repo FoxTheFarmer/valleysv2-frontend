@@ -128,20 +128,19 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   }, [onApprove, setRequestedApproval])
 
 
-  
 
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
 
       <div style={{ padding: '34px' }}>
-        <CardTitle isFinished={isFinished && sousId !== 0}>
+        <CardTitle isFinished={isFinished && sousId !== 0}  >
           {isOldSyrup && '[OLD]'} {TranslateString(3000, 'Stake ')}{stakingTokenName}, earn {tokenName} 
         </CardTitle>
         <div style={{ marginBottom: '30px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <Image src={`/images/tokens/${image || tokenName}.png`} width={64} height={64} alt={tokenName} />
-            
+            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.svg`} width="65px">&nbsp;</object>
+
           </div>
           {account && harvest && !isOldSyrup && (
             <Button
