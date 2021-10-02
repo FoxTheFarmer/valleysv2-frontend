@@ -227,6 +227,7 @@ const FarmCard: React.FC<FarmCardProps> = ({
         <Quote>{ ( !Number.isNaN(farm.depositFeeBP) ? `${(farm.depositFeeBP / 100)}%` : '...loading') }</Quote>
       </Flex>
 
+
       <Flex justifyContent="left">
         <StyledLinkExternal external href={
           farm.isTokenOnly ?
@@ -234,7 +235,7 @@ const FarmCard: React.FC<FarmCardProps> = ({
             :
             `https://viperswap.one/#/add/${liquidityUrlPathParts}`
         }>
-          <span><FaGhost/> Add Liquidity</span>
+          <span><FaGhost/> Get LP Tokens</span>
         </StyledLinkExternal>
       </Flex>
       
@@ -254,9 +255,9 @@ const FarmCard: React.FC<FarmCardProps> = ({
           isTokenOnly={farm.isTokenOnly}
           bscScanAddress={
             farm.isTokenOnly ?
-              `https://explorer.harmony.one/token/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              `https://explorer.harmony.one/address/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
               :
-              `https://explorer.harmony.one/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              `https://explorer.harmony.one/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
           totalValueFormated={totalValueFormated}
           lpLabel={lpLabel}

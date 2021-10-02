@@ -3,7 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from '@pancakeswap-libs/uikit'
+import { Heading, LinkExternal } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -14,21 +14,58 @@ import { useFarms, usePriceBnbBusd, usePools } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
+import { FaQuestionCircle } from 'react-icons/fa'
 import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
-import Divider from './components/Divider'
 import Hero2 from './components/Hero'
 
 const Title = styled.p`
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  color: #2E2E2E;
 
 `
 const Sub = styled.p`
   font-size: 1em;
   color: #6E4EED;
 `
+
+const ActionsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+  @media all and (max-width: 480px) {
+      flex-flow: column;
+  }
+  
+  
+`
+
+
+const Blablabla = styled.div`
+  text-color: red;
+  margin: 0px 18px;
+  margin-bottom: 50px;
+`
+const GuideLink = styled.span`
+  color: #0073ff;
+`
+const Divider = styled.div`
+background-color: #4c68ef;
+height: 3px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+margin-bottom: 25px;
+width: 20%;
+
+`
+
 const SvgHero = styled.div`
   display: flex;
   flex-flow: row;
@@ -91,7 +128,12 @@ const Farm: React.FC = () => {
       <SvgHero>
         <object type="image/svg+xml" data="images/incubator.svg" width="600x">&nbsp;</object>
       </SvgHero>
-
+      <Divider />
+      <ActionsWrapper>
+        <Blablabla >
+          <FaQuestionCircle/> Learn How to Use the Incubator <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/"><GuideLink>Here</GuideLink></a>
+        </Blablabla>
+        </ActionsWrapper>
 
       <FlexLayout>
         <Route exact path={`${path}`}>

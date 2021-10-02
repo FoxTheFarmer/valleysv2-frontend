@@ -17,6 +17,15 @@ export interface ExpandableSectionProps {
   tokenAddresses: Address
 }
 
+const Divider3 = styled.div`
+  background-color: #4c68ef;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;`
+
 const Wrapper = styled.div`
   margin-top: 24px;
 `
@@ -60,6 +69,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         </Flex>
       )}
 
+<Divider3/>
 
       <Flex justifyContent="flex-start">
         <StyledLinkExternal external href={bscScanAddress} bold={false} style={{"color": "#4c68ef"}}>

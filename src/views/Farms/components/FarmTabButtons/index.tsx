@@ -4,6 +4,7 @@ import { useRouteMatch, Link } from 'react-router-dom'
 import { ButtonMenu, ButtonMenuItem, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Switch from "react-switch";
+import { FaQuestionCircle } from 'react-icons/fa'
 
 const Divider = styled.div`
 background-color: #4c68ef;
@@ -35,7 +36,7 @@ const FarmTabButtons = ({ stakedOnly, setStakedOnly, tokenMode }) => {
         
         { !tokenMode ?
         <Blablabla >
-          Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/guides/metamask"><GuideLink>Here</GuideLink></a>
+          <FaQuestionCircle/> Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/guides/metamask"><GuideLink>Here</GuideLink></a>
         </Blablabla>
        : 
        "" 
