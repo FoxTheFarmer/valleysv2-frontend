@@ -35,7 +35,7 @@ const FarmTabButtons = ({ stakedOnly, setStakedOnly, tokenMode }) => {
         
         { !tokenMode ?
         <Blablabla >
-          Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis-protocol/guides/bridge-fantom-greater-than-harmony"><GuideLink>Here</GuideLink></a>
+          Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/guides/metamask"><GuideLink>Here</GuideLink></a>
         </Blablabla>
        : 
        "" 
