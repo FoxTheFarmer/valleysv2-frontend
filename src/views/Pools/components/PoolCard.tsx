@@ -140,20 +140,32 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
 
   return (
-    <Card 
-    isActive={isCardActive} 
-    isFinished={isFinished && sousId !== 0}>
-    {isFinished && sousId !== 0 && <PoolFinishedSash />}
+    <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
+      {isFinished && sousId !== 0 && <PoolFinishedSash />}
 
       <div style={{ padding: '34px' }}>
 
-        <Image src={`/images/pools/${tokenName}.png`} width={300} height={140} />
-        <Divider2/>
-        
+          <div style={{ flex: 1 }}>
+            <object type="image/svg+xml" data={`/images/pools/${image || tokenName}.png`} width="300px" height='140'>&nbsp;</object>
+          </div>
+
+          <Divider2/>
+
+
+
+
         <Flex justifyContent='space-between'>
           <span><FaFlask/> Earn</span>
           <Quote>{tokenName}{TranslateString(10006, '')}</Quote>
         </Flex>
+        
+
+{/*
+        <Flex justifyContent='space-between' marginTop='6px'>
+          <span><FaLock/> Lockup</span>
+          <Quote>{TranslateString(10006, '0 Hours')}</Quote>
+</Flex> */}
+
 
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaFire/> Deposit Fee</span>
@@ -162,10 +174,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <Divider />
 
+
+
         <Flex justifyContent='space-between' marginTop='25px'>
           <span><FaTractor/> Your Stake</span>
           <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
         </Flex>
+
 
         <Flex marginTop='2px' justifyContent='space-between'>
 
@@ -183,6 +198,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           <span><FaCubes/> Blocks Remaining</span>
           <Quote>{blocksRemaining}{TranslateString(10006, '')}</Quote>
         </Flex>
+
+
+
+
+
 
 
         {/* {!isOldSyrup ? (
