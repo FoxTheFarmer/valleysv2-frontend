@@ -6,7 +6,7 @@ import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import labo from 'config/constants/labo'
 import { provider } from 'web3-core'
-import { Image, Heading, Alert } from '@pancakeswap-libs/uikit'
+import { Image, Heading, Alert, LinkExternal } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -197,10 +197,12 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
         </FlexLayout>
         <FlexLayout>
+
         <Feature >
-            <FaHistory /><br />
-            <p>The base emission rate is currently 5 MIS per block.</p>
-          </Feature>
+          <FaHistory /><br />
+
+          <p>The base emission rate is currently 5 MIS per block.</p>
+        </Feature>
           
         </FlexLayout>
       </div>
