@@ -50,6 +50,16 @@ margin-bottom: 5px;
 width: 100%;
 `
 
+const Divider2 = styled.div`
+background-color: #4c68ef;
+height: 2px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+margin-bottom: 5px;
+width: 0%;
+`
+
 const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const {
     sousId,
@@ -135,10 +145,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
       <div style={{ padding: '34px' }}>
 
-          <div style={{ flex: 1 }}>
-            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.svg`} width="300px" height='140'>&nbsp;</object>
-          </div>
+          
+          <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.svg`} width="300px" height='140'>&nbsp;</object>
+          <Image src={`/images/farms/${image || tokenName}.svg`} width={300} height={140} />
 
+
+          <Divider2/>
+          
 
 
 
