@@ -77,10 +77,10 @@ const CakeStats = () => {
   const totalValue = useTotalValue();
   const lotteryPrizeAmount = useTotalRewards()
 
-  const eggPrice = usePriceCakeBusd();
+  const misPrice = usePriceCakeBusd();
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0);
   const cakeSupply = getBalanceNumber(circSupply);
-  const marketCap = ( eggPrice.times(circSupply).isNaN() || ! eggPrice.times(circSupply).isFinite() ? new BigNumber(0) : eggPrice.times(circSupply) );
+  const marketCap = ( misPrice.times(circSupply).isNaN() || ! misPrice.times(circSupply).isFinite() ? new BigNumber(0) : misPrice.times(circSupply) );
   let vikingPerBlock = 0;
   if (process.env.REACT_APP_DEBUG === "true"){ console.log(farms[0], 'testing viking per block') }
   if(farms && farms[0] && farms[0].vikingPerBlock){
@@ -97,7 +97,7 @@ const CakeStats = () => {
           <Row>
             <Sub>Price</Sub>
             <Sub className="lightColor">
-              <CardValue value={eggPrice.toNumber()} prefix="$" decimals={0}/>
+              <CardValue value={misPrice.toNumber()} decimals={2} prefix="$" />
             </Sub>
           </Row>
           <Row>
