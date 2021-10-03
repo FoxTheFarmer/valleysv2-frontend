@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading, LinkExternal, Text } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js/bignumber'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -128,6 +128,10 @@ const CakeStats = () => {
           <Row style={{'marginBottom': '0 !important'}}>
             <Sub2>Total Value Locked</Sub2>
             <Sub2><CardValue value={totalValue.toNumber()} prefix="$" decimals={2} /></Sub2>  
+          </Row>
+
+          <Row style={{'marginBottom': '0 !important'}}>
+            <LinkExternal href='https://mysteria.one/faucet/'>Testnet ONE Faucet</LinkExternal>
           </Row>
 
 
