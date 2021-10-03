@@ -14,7 +14,7 @@ import { useFarms, usePriceBnbBusd, usePools } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { FaQuestionCircle } from 'react-icons/fa'
+import { FaQuestionCircle , FaUserCheck, FaLock, FaHistory, FaExchangeAlt } from 'react-icons/fa'
 import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
@@ -34,6 +34,30 @@ const Sub = styled.p`
   color: #6E4EED;
 `
 
+const Feature = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 19px;
+  font-size: 1.1em !important;
+  max-width: 180px;
+  text-align: center;
+
+
+  @media screen and (max-width: 680px){
+    max-width: 64%;
+    flex-flow: row;
+    align-items: flex-start;
+    & > svg{
+      width: 42px;
+    }
+    & > p{
+      text-align: left;
+      margin-left: 15px;
+    }
+  
+`
 const ActionsWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -131,7 +155,7 @@ const Farm: React.FC = () => {
       <Divider />
       <ActionsWrapper>
         <Blablabla >
-          <FaQuestionCircle/> Learn How to Use the Incubator <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/"><GuideLink>Here</GuideLink></a>
+          <FaQuestionCircle/> Learn how to earn with the Incubator <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/"><GuideLink>here</GuideLink></a>
         </Blablabla>
         </ActionsWrapper>
 
@@ -150,6 +174,15 @@ const Farm: React.FC = () => {
           ))}
         </Route>
       </FlexLayout>
+
+      <FlexLayout>
+          <Feature >
+            <FaExchangeAlt /><br />
+            <LinkExternal href='https://viperswap.one/#/swap'>Defi Kingdoms</LinkExternal>
+            <LinkExternal href='https://app.defikingdoms.com/#/swap'>Viperswap</LinkExternal>
+          </Feature>
+      </FlexLayout>
+          
     </Page>
   )
 }

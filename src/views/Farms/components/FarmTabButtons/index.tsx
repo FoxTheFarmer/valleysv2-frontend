@@ -36,7 +36,7 @@ const FarmTabButtons = ({ stakedOnly, setStakedOnly, tokenMode }) => {
         
         { !tokenMode ?
         <Blablabla >
-          <FaQuestionCircle/> Read our First Steps Guide <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/guides/metamask"><GuideLink>Here</GuideLink></a>
+          <FaQuestionCircle/> First time? Read our <a target="_blanK" rel="noreferrer" href="https://artemis-protocol.gitbook.io/artemis/"><GuideLink>guide</GuideLink></a>
         </Blablabla>
        : 
        "" 
