@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image, Flex } from '@pancakeswap-libs/uikit'
+import { Button, IconButton, useModal, AddIcon, Image, Flex, MinusIcon } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -134,33 +134,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
 
       <div style={{ padding: '34px' }}>
-        <CardTitle isFinished={isFinished && sousId !== 0}  >
-          {isOldSyrup && '[OLD]'} {TranslateString(3000, 'Stake ')}{stakingTokenName}, earn {tokenName} 
-        </CardTitle>
-        <div style={{ marginBottom: '30px', display: 'flex', alignItems: 'center' }}>
-          <div style={{ flex: 1 }}>
-            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.png`} width="80px">&nbsp;</object>
 
+          <div style={{ flex: 1 }}>
+            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.svg`} width="300px" height='140'>&nbsp;</object>
           </div>
-          {account && harvest && !isOldSyrup && (
-            <Button
-              disabled={!earnings.toNumber() || pendingTx}
-              onClick={async () => {
-                setPendingTx(true)
-                await onReward()
-                setPendingTx(false)
-              }}
-              style={{
-                'borderRadius': '5px',
-                'height': '42px',
-                'width': '103px',
-                'color': 'white'
-              }}
-            >
-              {TranslateString(9929, 'Settle')}
-            </Button>
-          )}
-        </div>
+
+
+
 
 
         <Flex justifyContent='space-between'>
@@ -212,6 +192,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
 
 
+
+
         {/* {!isOldSyrup ? (
           <BalanceAndCompound>
             <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
@@ -231,19 +213,20 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         */}
 
         <StyledCardActions  >
+
+          
           {!account && <UnlockButton />}
           {account &&
             (needsApproval && !isOldSyrup ? (
               <div style={{ flex: 1 }}>
-                <Button disabled={isFinished || requestedApproval} onClick={handleApprove} fullWidth>
-                  {`Approve ${stakingTokenName}`}
+                <Button disabled={isFinished || requestedApproval} marginTop='12px' onClick={handleApprove} fullWidth >
+                  Approve
                 </Button>
               </div>
             ) : (
               <>
-                <Button marginTop='20px'
+                <IconButton marginTop='20px'
                   disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
-                  variant='secondary'
                   onClick={
                     isOldSyrup
                       ? async () => {
@@ -252,18 +235,39 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                           setPendingTx(false)
                         }
                       : onPresentWithdraw
-                  }
-                >
-                  {`Unstake ${stakingTokenName}`}
-                </Button >
+                  }>
+                <MinusIcon color="background" />
+                </IconButton>
+
                 <StyledActionSpacer />
+
                 {!isOldSyrup && (
-                  <IconButton marginTop='20px' disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                    <AddIcon color="background" />
-                  </IconButton>
-                )}
+                <IconButton marginTop='20px' disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
+                  <AddIcon color="background" />
+                </IconButton>)}
               </>
             ))}
+
+<div style={{ marginTop: '17px', display: 'flex', alignItems: 'center', marginLeft:'15px' }}>
+          {account && harvest && !isOldSyrup && (
+            <Button
+              disabled={!earnings.toNumber() || pendingTx}
+              onClick={async () => {
+                setPendingTx(true)
+                await onReward()
+                setPendingTx(false)
+              }}
+              style={{
+                'borderRadius': '5px',
+                'height': '42px',
+                'width': '103px',
+                'color': 'white'
+              }}
+            >
+              {TranslateString(9929, 'Settle')}
+            </Button>
+          )}
+        </div>
         </StyledCardActions>
         {/* <StyledDetails>
           <div style={{ flex: 1 }}>{TranslateString(736, 'APY')}:</div>

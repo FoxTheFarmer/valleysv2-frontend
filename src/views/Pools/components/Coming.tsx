@@ -62,7 +62,7 @@ const Coming: React.FC = () => {
       <div style={{ padding: '34px' }}>
 
 
-        <Image src="/images/incubatorbanner.svg" width={300} height={130} />
+        <Image src="/images/incubatorbanner.svg" width={300} height={140} />
 
 
         <Label>{TranslateString(4216, 'Join Artemis Liquidity as a Service / Incubator program and distribute your token while building liquidity for it. ')}</Label>
