@@ -171,11 +171,19 @@ const FarmCard: React.FC<FarmCardProps> = ({
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-
-  const farmAPY = ( !farm.apy.isNaN() ? ` ${farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
+  const BLOCKS_PER_YEAR = new BigNumber(30 * 60 * 24 * 365) // first 30 is for 2s block times
+  const rewPerYear = new BigNumber(farm.vikingPerBlock).times(farm.poolWeight) .div(new BigNumber(10).pow(18)).times(BLOCKS_PER_YEAR)
+  const farmApyFixed = rewPerYear.times(cakePrice).div(totalValue).times(100)
+  const farmAPY = ( farmApyFixed ? ` ${farmApyFixed && farmApyFixed.toNumber().toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}%` : '...loading' )
+    
+    // console.log("APY", farm.pid)
+    // console.log("rewPerYear", rewPerYear && rewPerYear.toNumber())
+    // console.log("cakePrice", cakePrice && cakePrice.toNumber())
+    // console.log("totalValue", totalValue && totalValue.toNumber())
+    // console.log("farmAPY", farmAPY)
   
   return (
     <FCard>
