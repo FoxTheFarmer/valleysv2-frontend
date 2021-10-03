@@ -139,7 +139,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '30px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1 }}>
-            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.svg`} width="65px">&nbsp;</object>
+            <object type="image/svg+xml" data={`/images/farms/${image || tokenName}.png`} width="80px">&nbsp;</object>
 
           </div>
           {account && harvest && !isOldSyrup && (
@@ -169,11 +169,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </Flex>
         
 
-
+{/*
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaLock/> Lockup</span>
           <Quote>{TranslateString(10006, '0 Hours')}</Quote>
-        </Flex>
+</Flex> */}
+
 
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaFire/> Deposit Fee</span>

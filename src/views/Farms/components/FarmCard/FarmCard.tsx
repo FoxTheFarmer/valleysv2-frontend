@@ -217,10 +217,12 @@ const FarmCard: React.FC<FarmCardProps> = ({
         <Quote>{TranslateString(10006, 'MIS + Fees')}</Quote>
       </Flex>
 
+      {/*
       <Flex justifyContent='space-between'>
         <span><FaLock/> Lockup</span>
         <Quote>{TranslateString(10006, '0 Hours')}</Quote>
       </Flex>
+      */}
 
       <Flex justifyContent='space-between'>
         <span><FaFire/> Deposit Fee</span>

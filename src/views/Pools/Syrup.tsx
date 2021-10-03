@@ -178,8 +178,10 @@ const Farm: React.FC = () => {
       <FlexLayout>
           <Feature >
             <FaExchangeAlt /><br />
-            <LinkExternal href='https://viperswap.one/#/swap'>Defi Kingdoms</LinkExternal>
-            <LinkExternal href='https://app.defikingdoms.com/#/swap'>Viperswap</LinkExternal>
+
+            <LinkExternal href='https://app.defikingdoms.com/#/swap'>Defi Kingdoms</LinkExternal>
+            <LinkExternal href='https://viperswap.one/#/swap'>Viperswap</LinkExternal>
+
           </Feature>
       </FlexLayout>
           
