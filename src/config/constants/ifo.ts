@@ -57,11 +57,12 @@ const ifos: Ifo[] = [
     currencyAddress: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
     tokenDecimals: 18,
     releaseBlockNumber: 3483883,
-  },
+  }, */
   {
     id: 'helmet',
     address: '0xa32509d760ee47Eb2Be96D338b5d69B5FBa4eFEB',
     isActive: false,
+    isActive2: true,
     name: 'Helmet.insure (Helmet)',
     subTitle: 'Crypto-assets insurance trading platform',
     description:
@@ -76,7 +77,7 @@ const ifos: Ifo[] = [
     currencyAddress: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
     tokenDecimals: 18,
     releaseBlockNumber: 3771926,
-  }, */
+  },
   {
     id: 'artemis',
     address: '0x823beD678EE82E000833f451aC3B2673Ba2b3DDA',

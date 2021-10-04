@@ -34,6 +34,7 @@ const List = styled.ul`
  * Note: currently there should be only 1 active IFO at a time
  */
 const activeIfo = ifosConfig.find((ifo) => ifo.isActive)
+const activeIfo2 = ifosConfig.find((ifo) => ifo.isActive2)
 
 const Ifo = () => {
   const TranslateString = useI18n()
@@ -42,6 +43,7 @@ const Ifo = () => {
       <div>
         <IfoCards isSingle>
           <IfoCard ifo={activeIfo} />
+          <IfoCard ifo={activeIfo2} />
         </IfoCards>
 
       <LaunchIfoCallout>
