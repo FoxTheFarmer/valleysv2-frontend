@@ -2,7 +2,7 @@ export type IfoStatus = 'coming_soon' | 'live' | 'finished'
 
 export interface Ifo {
   id: string
-  isActive: boolean
+  isActive?: boolean
   address: string
   name: string
   subTitle?: string

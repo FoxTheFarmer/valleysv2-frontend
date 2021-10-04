@@ -60,7 +60,7 @@ const ifos: Ifo[] = [
   }, */
   {
     id: 'helmet',
-    address: '0xa32509d760ee47Eb2Be96D338b5d69B5FBa4eFEB',
+    address: '0x823beD678EE82E000833f451aC3B2673Ba2b3DDA',
     isActive: false,
     isActive2: true,
     name: 'Helmet.insure (Helmet)',
@@ -74,7 +74,7 @@ const ifos: Ifo[] = [
     cakeToBurn: '$500,000',
     projectSiteUrl: 'https://www.helmet.insure/',
     currency: 'CAKE-BNB LP',
-    currencyAddress: '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6',
+    currencyAddress: '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2',
     tokenDecimals: 18,
     releaseBlockNumber: 3771926,
   },
@@ -82,6 +82,7 @@ const ifos: Ifo[] = [
     id: 'artemis',
     address: '0x823beD678EE82E000833f451aC3B2673Ba2b3DDA',
     isActive: true,
+    isActive2: true,
     name: 'Artemis Protocol',
     subTitle: 'A multi-product DeFi protocol',
     description:
