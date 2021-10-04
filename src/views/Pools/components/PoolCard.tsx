@@ -147,23 +147,26 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <Image src={`/images/pools/${tokenName}.svg`} width={300} height={140} />
 
-          {/* <div style={{ flex: 1 }}>
+          {/* 
+          <div style={{ flex: 1 }}>
             <object type="image/svg+xml" data={`/images/pools/${image || tokenName}.png`} width="300px" height='140'>&nbsp;</object>
-  </div> */}
+          </div> 
+          */}
 
         <Divider2/>
 
         <Flex justifyContent='space-between'>
           <span><FaFlask/> Earn</span>
-          <Quote>{tokenName}{TranslateString(10006, '')}</Quote>
+          <Quote>{tokenName}</Quote>
         </Flex>
         
 
-{/*
+        {/*
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaLock/> Lockup</span>
           <Quote>{TranslateString(10006, '0 Hours')}</Quote>
-</Flex> */}
+        </Flex> 
+        */}
 
 
         <Flex justifyContent='space-between' marginTop='6px'>
@@ -173,16 +176,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <Divider />
 
-
-
         <Flex justifyContent='space-between' marginTop='25px'>
           <span><FaTractor/> Your Stake</span>
           <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
         </Flex>
 
-
         <Flex marginTop='2px' justifyContent='space-between'>
-
           <span><FaMountain/> Pending {tokenName}</span>
           <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
 
@@ -195,14 +194,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
         <Flex justifyContent='space-between' marginTop='6px'>
           <span><FaCubes/> Blocks Remaining</span>
-          <Quote>{blocksRemaining}{TranslateString(10006, '')}</Quote>
+          <Quote>{blocksRemaining}</Quote>
         </Flex>
-
-
-
-
-
-
 
         {/* {!isOldSyrup ? (
           <BalanceAndCompound>
@@ -223,7 +216,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         */}
 
         <StyledCardActions  >
-
           
           {!account && <UnlockButton />}
           {account &&
