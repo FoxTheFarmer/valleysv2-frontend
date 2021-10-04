@@ -145,10 +145,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
       <div style={{padding: '34px'}}>
         
-        <object type="image/svg+xml" data={`/images/farms/${tokenName}.svg`} width="300px">&nbsp;</object>
+        <Image src="/images/pools/wone.svg" width={300} height={140}>w</Image>
 
 
-        <Flex justifyContent='space-between' marginTop='20px'  >
+        <Divider2/>
+
+        <Flex justifyContent='space-between'>
           <span><FaFlask/> Earn</span>
           <Quote>{tokenName}</Quote>
         </Flex>
