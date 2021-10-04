@@ -27,7 +27,7 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
   padding-top: 112px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 500px;
+  max-width: 437px;
   width: 100%;
 `
 
@@ -159,7 +159,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
   const isFinished = state.status === 'finished'
 
   return (
-    <StyledCardContentInner ifoId={id} ribbon={Ribbon} isActive={isActive}>
+    <StyledIfoCard ifoId={id} ribbon={Ribbon} isActive={isActive}>
       <CardBody>
         <Column>
         <IfoCardHeader ifoId={id} name={name} subTitle={subTitle} />
@@ -196,7 +196,7 @@ const IfoCard: React.FC<IfoCardProps> = ({ ifo }) => {
           totalAmount={state.totalAmount}
         />
       </CardBody>
-    </StyledCardContentInner>
+    </StyledIfoCard>
   )
 }
 
