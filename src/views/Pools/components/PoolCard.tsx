@@ -144,14 +144,9 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
 
       <div style={{padding: '34px'}}>
-      <Image src={`/images/pools/${tokenName}.svg`} width={300} height={140}>w</Image>
+        
+        <Image src="/images/pools/wone.svg" width={300} height={140}>w</Image>
 
-
-          {/* 
-          <div style={{ flex: 1 }}>
-            <object type="image/svg+xml" data={`/images/pools/${image || tokenName}.png`} width="300px" height='140'>&nbsp;</object>
-          </div> 
-          */}
 
         <Divider2/>
 
