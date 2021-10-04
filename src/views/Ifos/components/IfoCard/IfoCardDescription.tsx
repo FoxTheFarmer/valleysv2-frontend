@@ -18,7 +18,7 @@ const Divider = styled.div`
   height: 2px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 0%;
 `
 
 const ToggleButton = styled.button`
@@ -47,10 +47,7 @@ const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen =
   return (
     <StyledIfoCardDescription>
       <Divider />
-      <ToggleButton onClick={handleClick}>
-        {isOpen ? TranslateString(999, 'Hide') : TranslateString(999, 'Details')}
-      </ToggleButton>
-      <Description isOpen={isOpen}>{description}</Description>
+
     </StyledIfoCardDescription>
   )
 }

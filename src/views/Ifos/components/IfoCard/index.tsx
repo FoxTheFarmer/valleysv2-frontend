@@ -34,8 +34,7 @@ const StyledIfoCard = styled(Card)<{ ifoId: string }>`
 const Column = styled.div`
   margin-top: 1em;
   align-items: center;
-  display: flex;
-  flex-direction: column;
+
 `
 
 const StyledCardContentInner = styled(Card)<{ ifoId: string }>`

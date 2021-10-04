@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Text, Heading, BaseLayout, Button, LinkExternal, Flex, Image } from '@pancakeswap-libs/uikit'
 import { ifosConfig } from 'config/constants'
 import useI18n from 'hooks/useI18n'
+import FlexLayout from 'components/layout/Flex'
 import IfoCard from './components/IfoCard'
 import Title from './components/Title'
 import IfoCards from './components/IfoCards'
@@ -30,6 +31,20 @@ const List = styled.ul`
   }
 `
 
+const LaunchpadLayout = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  & > * {
+    min-width: 280px;
+    max-width: 47%;
+    width: 90%;
+    margin: 0 8px;
+    margin-bottom: 28px;
+  }
+`
+
+
 /**
  * Note: currently there should be only 1 active IFO at a time
  */
@@ -40,23 +55,18 @@ const Ifo = () => {
   const TranslateString = useI18n()
 
   return (
-      <div>
+    <LaunchpadLayout>
+
         <IfoCards isSingle>
           <IfoCard ifo={activeIfo} />
+        </IfoCards>    
+          
+        <IfoCards isSingle>
           <IfoCard ifo={activeIfo2} />
         </IfoCards>
 
-      <LaunchIfoCallout>
-        <div>
-          <Flex justifyContent='center'>
-            <div>
-              <Title as="h2">{TranslateString(999, '')}</Title>
-              <Text mb={3}>{TranslateString(999,'',)}</Text>
-            </div>
-          </Flex>
-        </div>
-      </LaunchIfoCallout>
-    </div>
+
+    </LaunchpadLayout>
   )
 }
 

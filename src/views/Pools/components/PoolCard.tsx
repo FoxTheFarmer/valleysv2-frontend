@@ -147,7 +147,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         
         <Image src="/images/pools/wone.svg" width={300} height={140}>w</Image>
 
-
         <Divider2/>
 
         <Flex justifyContent='space-between'>
